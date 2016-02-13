@@ -114,6 +114,9 @@ add_action( 'widgets_init', 'tsumugi_widgets_init' );
  * Enqueue scripts and styles.
  */
 function tsumugi_scripts() {
+	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css' );
+	wp_enqueue_style( 'bootstrap-map', get_template_directory_uri() . '/css/bootstrap.min.css.map' );
+
 	wp_enqueue_style( 'tsumugi-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'tsumugi-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
