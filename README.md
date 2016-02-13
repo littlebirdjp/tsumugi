@@ -2,13 +2,13 @@
 
 A simple WordPress theme for everyone, build with Underscores and Bootstrap 4.
 
-## 制作過程
-
 ## Requrements
 
 - [VCCW](http://vccw.cc/)
 - [Underscores](http://underscores.me/)
 - [Bootstrap 4](http://v4-alpha.getbootstrap.com/)
+
+## 制作過程
 
 ### VCCWによるローカル環境の構築
 
