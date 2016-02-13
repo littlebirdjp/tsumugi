@@ -26,7 +26,7 @@ A simple WordPress theme for everyone, build with Underscores and Bootstrap 4.
 
 ### Bootstrapのインストール
 
-下記コマンドでBootstrap 4アルファ版をインストール。  
+下記コマンドでテーマフォルダ内にBootstrap 4アルファ版をインストール。  
 `package.json`に依存関係を記述した。
 
 ```
