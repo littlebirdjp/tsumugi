@@ -1,4 +1,6 @@
 !*.gitignore
+node_modules/
+bower_components/
 .vagrant
 /www/wordpress/.editorconfig
 /www/wordpress/.htaccess
