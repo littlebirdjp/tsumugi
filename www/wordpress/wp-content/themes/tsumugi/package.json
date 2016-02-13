@@ -1,0 +1,22 @@
+{
+  "name": "tsumugi",
+  "version": "1.0.0",
+  "description": "A simple WordPress theme for everyone",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/littlebirdjp/tsumugi.git"
+  },
+  "author": "Yusuke Takahashi <youthkee@gmail.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/littlebirdjp/tsumugi/issues"
+  },
+  "homepage": "http://littlebird.mobi",
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.2",
+  }
+}
