@@ -35,3 +35,17 @@ bowerを使ってテーマフォルダ内にBootstrap 4アルファ版をイン�
 `npm run cpsass`を実行すると、`/bower_components/bootstrap/`内のSassファイルをコピーして、`/sass/bootstrap/`配下へ配置するように設定。  
 これによって、作業用のSassファイルを`/sass/`配下に集約することとした。  
 Bootstrapがアップデートされた際は、再度`npm run cpsass`を実行することで、マスターのファイルだけが更新されるようになる。
+
+### Sassのコンパイル設定を追加
+
+`gulpfile.js`にタスクを記述して、Sassのコンパイル設定を追加。  
+`/sass/`配下で編集したファイルが、`/`配下の各ディレクトリへCSSとして書き出される。  
+ただし、BootstrapとUnderscoresのオリジナルのCSSは、基本上書きを行わず、BootstrapのSassをコピーした`tsumugi.scss`のみ編集することとする。
+
+今回のテーマで読み込まれるCSSは、下記の3ファイルとなる予定。
+
+```
+/wp-content/themes/tsumugi/bower_components/bootstrap/dist/css/bootstrap.min.css
+/wp-content/themes/tsumugi/style.css
+/wp-content/themes/tsumugi/bootstrap/tsumugi.css
+```
