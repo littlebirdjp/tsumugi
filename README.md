@@ -26,9 +26,6 @@ A simple WordPress theme for everyone, build with Underscores and Bootstrap 4.
 
 ### Bootstrapのインストール
 
-下記コマンドでテーマフォルダ内にBootstrap 4アルファ版をインストール。  
-`package.json`に依存関係を記述した。
-
-```
-$ npm install bootstrap@4.0.0-alpha.2 --save
-```
+bowerを使ってテーマフォルダ内にBootstrap 4アルファ版をインストール。  
+また、インストールと同時に不要ファイルを削除し、CSSとJS、Sass、jQueryのファイルだけを残すように設定。  
+上記の一連の処理は、`package.json`に記述してあるので、`npm i`を実行するだけでBootstrapのインストール（アップデート）が可能になるようにした。
