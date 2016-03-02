@@ -42,7 +42,7 @@ Bootstrapがアップデートされた際は、再度`npm run cpsass`を実行�
 `/sass/`配下で編集したファイルが、`/`配下の各ディレクトリへCSSとして書き出される。  
 ただし、BootstrapとUnderscoresのオリジナルのCSSは、基本上書きを行わず、BootstrapのSassをコピーした`tsumugi.scss`のみ編集することとする。
 
-今回のテーマで読み込まれるCSSは、下記の3ファイルとなる予定。
+今回のテーマで読み込まれるCSSファイルおよびその読み込み順は、以下の通りとなる予定。
 
 ```
 /wp-content/themes/tsumugi/bower_components/bootstrap/dist/css/bootstrap.min.css
