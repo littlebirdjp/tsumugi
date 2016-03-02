@@ -29,3 +29,9 @@ A simple WordPress theme for everyone, build with Underscores and Bootstrap 4.
 bowerを使ってテーマフォルダ内にBootstrap 4アルファ版をインストール。  
 また、インストールと同時に不要ファイルを削除し、CSSとJS、Sass、jQueryのファイルだけを残すように設定。  
 上記の一連の処理は、`package.json`に記述してあるので、`npm i`を実行するだけでBootstrapのインストール（アップデート）が可能になるようにした。
+
+## BootstrapのSassファイルを抽出
+
+`npm run cpsass`を実行すると、`/bower_components/bootstrap/`内のSassファイルをコピーして、`/sass/bootstrap/`配下へ配置するように設定。  
+これによって、作業用のSassファイルを`/sass/`配下に集約することとした。  
+Bootstrapがアプデートされた際は、再度`npm run cpsass`を実行することで、マスターのファイルだけが更新されるようになる。
