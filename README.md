@@ -34,4 +34,4 @@ bowerを使ってテーマフォルダ内にBootstrap 4アルファ版をイン�
 
 `npm run cpsass`を実行すると、`/bower_components/bootstrap/`内のSassファイルをコピーして、`/sass/bootstrap/`配下へ配置するように設定。  
 これによって、作業用のSassファイルを`/sass/`配下に集約することとした。  
-Bootstrapがアプデートされた際は、再度`npm run cpsass`を実行することで、マスターのファイルだけが更新されるようになる。
+Bootstrapがアップデートされた際は、再度`npm run cpsass`を実行することで、マスターのファイルだけが更新されるようになる。
