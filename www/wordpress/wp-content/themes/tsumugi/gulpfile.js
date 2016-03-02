@@ -16,16 +16,16 @@ var paths = {
 
 gulp.task("css", function() {
   return gulp.src([
-//    paths.src + '**/*.scss',
-//    '!' + paths.src + '**/_*.scss'
-    paths.src + 'bootstrap/tsumugi.scss'
+    paths.src + '**/*.scss',
+    '!' + paths.src + '**/_*.scss',
+    '!' + paths.src + '**/bootstrap*.scss',
+    '!' + paths.src + '**/style.scss'
     ])
     .pipe(changed(paths.dist))
     .pipe(sass({
       outputStyle: 'expanded'
     }))
-//    .pipe(gulp.dest(paths.dist))
-    .pipe(gulp.dest(paths.dist + 'bootstrap/'))
+    .pipe(gulp.dest(paths.dist))
 });
 
 gulp.task('watch', function() {
