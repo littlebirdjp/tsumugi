@@ -1,6 +1,5 @@
 !*.gitignore
 node_modules/
-bower_components/
 .vagrant
 /www/wordpress/.editorconfig
 /www/wordpress/.htaccess
@@ -36,6 +35,7 @@ bower_components/
 /www/wordpress/wp-content/themes/twentyfifteen/
 /www/wordpress/wp-content/themes/twentyfourteen/
 /www/wordpress/wp-content/themes/twentysixteen/
+/www/wordpress/wp-content/themes/tsumugi/bower_components/bootstrap/scss/
 /www/wordpress/wp-content/upgrade/
 #/www/wordpress/wp-content/uploads/
 /www/wordpress/wp-content/wp-cache-config.php

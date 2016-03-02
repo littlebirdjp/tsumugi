@@ -20,6 +20,6 @@
   },
   "preen": {
     "bootstrap": ["scss/**", "dist/css/*.min.css", "dist/js/*.min.js"],
-    "jquery": ["dist/*.min.js"]
+    "jquery": ["dist/jquery.min.js"]
   }
 }
