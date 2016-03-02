@@ -1,3 +1,4 @@
 #!/bin/bash
 
-cp -r _bower/bootstrap/scss src/scss
+cp bower_components/bootstrap/scss/*.scss sass/bootstrap/
+cp bower_components/bootstrap/scss/mixins/*.scss sass/bootstrap/mixins/
