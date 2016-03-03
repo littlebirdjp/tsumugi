@@ -23,7 +23,9 @@ gulp.task("css", function() {
     ])
     .pipe(changed(paths.dist))
     .pipe(sass({
-      outputStyle: 'expanded'
+      outputStyle: 'expanded',
+      indentType: 'tab',
+      indentWidth: 1
     }))
     .pipe(gulp.dest(paths.dist))
 });
