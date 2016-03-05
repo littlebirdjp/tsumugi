@@ -114,10 +114,11 @@ add_action( 'widgets_init', 'tsumugi_widgets_init' );
  * Enqueue scripts and styles.
  */
 function tsumugi_scripts() {
-	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css' );
-	wp_enqueue_style( 'bootstrap-map', get_template_directory_uri() . '/css/bootstrap.min.css.map' );
+	wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/bower_components/bootstrap/dist/css/bootstrap.min.css', array(), '4.0.0-alpha.2', 'all' );
+	wp_enqueue_style( 'underscores-style', get_stylesheet_uri(), array('bootstrap-style'), '1.0.0', 'all' );
+	wp_enqueue_style( 'tsumugi-style', get_template_directory_uri() . '/bootstrap/tsumugi.css', array('underscores-style'), '1.0.0', 'all' );
 
-	wp_enqueue_style( 'tsumugi-style', get_stylesheet_uri() );
+	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/bower_components/bootstrap/dist/js/bootstrap.min.js', array('jquery'), '4.0.0-alpha.2', true );
 
 	wp_enqueue_script( 'tsumugi-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

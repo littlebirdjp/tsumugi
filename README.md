@@ -40,7 +40,8 @@ Bootstrapがアップデートされた際は、再度`npm run bsupdate`を実�
 
 `gulpfile.js`にタスクを記述して、Sassのコンパイル設定を追加。  
 `/sass/`配下で編集したファイルが、`/`配下の各ディレクトリへCSSとして書き出される。  
-ただし、BootstrapとUnderscoresのオリジナルのCSSは、基本上書きを行わず、BootstrapのSassをコピーした`tsumugi.scss`のみ編集することとする。
+ただし、BootstrapとUnderscoresのオリジナルのCSSは、基本上書きを行わず、BootstrapのSassをコピーした`tsumugi.scss`のみ編集することとする。  
+※ビルドツールは、Underscoreの元CSSのフォーマットになるべく合わせるため、Ruby Sassを使い、csscombとgulp-frepで整形を行なっている。
 
 今回のテーマで読み込まれるCSSファイルおよびその読み込み順は、以下の通りとなる予定。
 
@@ -48,4 +49,29 @@ Bootstrapがアップデートされた際は、再度`npm run bsupdate`を実�
 /wp-content/themes/tsumugi/bower_components/bootstrap/dist/css/bootstrap.min.css
 /wp-content/themes/tsumugi/style.css
 /wp-content/themes/tsumugi/bootstrap/tsumugi.css
+```
+
+### CSSとJSの読み込みを追加
+
+`functions.php`に以下の記述を追加して、CSSとJavaScriptの読み込みを指定した。  
+jQueryはWordPressデフォルトのjQueryを使用し、BootstrapのJSはフッタに読み込ませている。  
+各CSS, JSには、それぞれ適切な依存関係とバージョンを指定した。
+
+```
+function tsumugi_scripts() {
+	wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/bower_components/bootstrap/dist/css/bootstrap.min.css', array(), '4.0.0-alpha.2', 'all' );
+	wp_enqueue_style( 'underscores-style', get_stylesheet_uri(), array('bootstrap-style'), '1.0.0', 'all' );
+	wp_enqueue_style( 'tsumugi-style', get_template_directory_uri() . '/bootstrap/tsumugi.css', array('underscores-style'), '1.0.0', 'all' );
+
+	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/bower_components/bootstrap/dist/js/bootstrap.min.js', array('jquery'), '4.0.0-alpha.2', true );
+
+	wp_enqueue_script( 'tsumugi-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'tsumugi-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'tsumugi_scripts' );
 ```
