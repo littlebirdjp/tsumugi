@@ -16,10 +16,20 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "v4.0.0-alpha.2"
+    "bootstrap": "v4.0.0-alpha.2",
+    "tether": "~1.2.0"
   },
   "preen": {
-    "bootstrap": ["scss/**", "dist/css/*.min.css", "dist/js/*.min.js"],
-    "jquery": ["dist/jquery.min.js"]
+    "bootstrap": [
+      "scss/**",
+      "dist/css/*.min.css",
+      "dist/js/*.min.js"
+    ],
+    "jquery": [
+      "dist/jquery.min.js"
+    ],
+    "tether": [
+      "dist/js/tether.min.js"
+    ]
   }
 }

@@ -118,7 +118,8 @@ function tsumugi_scripts() {
 	wp_enqueue_style( 'underscores-style', get_stylesheet_uri(), array('bootstrap-style'), '1.0.0', 'all' );
 	wp_enqueue_style( 'tsumugi-style', get_template_directory_uri() . '/bootstrap/tsumugi.css', array('underscores-style'), '1.0.0', 'all' );
 
-	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/bower_components/bootstrap/dist/js/bootstrap.min.js', array('jquery'), '4.0.0-alpha.2', true );
+	wp_enqueue_script( 'tether-js', get_template_directory_uri() . '/bower_components/tether/dist/js/tether.min.js', array('jquery'), '1.2.0', true );
+	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/bower_components/bootstrap/dist/js/bootstrap.min.js', array('tether-js'), '4.0.0-alpha.2', true );
 
 	wp_enqueue_script( 'tsumugi-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
