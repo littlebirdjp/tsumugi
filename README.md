@@ -10,33 +10,35 @@ A simple WordPress theme for everyone, build with Underscores and Bootstrap 4.
 
 ## 制作過程
 
-### VCCWによるローカル環境の構築
+### テーマ制作環境の構築
+
+#### VCCWによるローカル環境の構築
 
 今回はvccw本体を外部ディレクトリである`/vccw/`配下へ配置。  
 プロジェクトフォルダ内には、`Vagrantfile`と`site.yml`だけ設置する形でローカル環境を構築した。
 
-### テーマユニットテストデータのインポート
+#### テーマユニットテストデータのインポート
 
 [テーマユニットテストデータ](https://wpdocs.osdn.jp/%E3%83%86%E3%83%BC%E3%83%9E%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88%E3%83%86%E3%82%B9%E3%83%88)をインポート。  
 その状態で、WordPress内のデータを`import.sql`にエクスポートした。
 
-### Underscoresのインストール
+#### Underscoresのインストール
 
 [Underscores](http://underscores.me/)のファイル一式をダウンロードし、`www/wordpress/wp-content/themes/tsumugi`配下に設置。
 
-### Bootstrapのインストール
+#### Bootstrapのインストール
 
 bowerを使ってテーマフォルダ内にBootstrap 4アルファ版をインストール。  
 また、インストールと同時に不要ファイルを削除し、CSSとJS、Sass、jQueryのファイルだけを残すように設定。  
 上記の一連の処理は、`package.json`に記述してあるので、`npm run bsupdate`を実行するだけでBootstrapのインストール（アップデート）が可能になるようにした。
 
-### BootstrapのSassファイルを抽出
+#### BootstrapのSassファイルを抽出
 
 `npm run bsupdate`を実行すると、`/bower_components/bootstrap/`内のSassファイルをコピーして、`/sass/bootstrap/`配下へ配置するように設定。  
 これによって、作業用のSassファイルを`/sass/`配下に集約することとした。  
 Bootstrapがアップデートされた際は、再度`npm run bsupdate`を実行することで、マスターのファイルだけが更新されるようになる。
 
-### Sassのコンパイル設定を追加
+#### Sassのコンパイル設定を追加
 
 `gulpfile.js`にタスクを記述して、Sassのコンパイル設定を追加。  
 `/sass/`配下で編集したファイルが、`/`配下の各ディレクトリへCSSとして書き出される。  
@@ -51,7 +53,9 @@ Bootstrapがアップデートされた際は、再度`npm run bsupdate`を実�
 /wp-content/themes/tsumugi/bootstrap/tsumugi.css
 ```
 
-### CSSとJSの読み込みを追加
+### テーマの編集
+
+#### CSSとJSの読み込みを追加
 
 `functions.php`に以下の記述を追加して、CSSとJavaScriptの読み込みを指定した。  
 jQueryはWordPressデフォルトのjQueryを使用し、BootstrapのJSはフッタに読み込ませている。  
