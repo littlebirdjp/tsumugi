@@ -1,6 +1,8 @@
 !*.gitignore
 node_modules/
+vendor/
 .vagrant
+.bundle
 /www/wordpress/.editorconfig
 /www/wordpress/.htaccess
 /www/wordpress/index.php
