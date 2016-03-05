@@ -80,3 +80,7 @@ function tsumugi_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'tsumugi_scripts' );
 ```
+
+#### normalize.cssの重複分を削除
+
+BootstrapとUnderscoresでは、デフォルトのCSSに同じ`normalize.css`が使われているので、後から読み込まれるUnderscoresのSassからインクルードを解除し、重複しているスタイル記述を削除した。
