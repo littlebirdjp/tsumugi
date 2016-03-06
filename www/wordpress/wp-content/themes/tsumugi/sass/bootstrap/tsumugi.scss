@@ -1,59 +1,59 @@
 /*!
- * Bootstrap v4.0.0-alpha.2 (http://getbootstrap.com)
- * Copyright 2011-2015 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * tsumugi v1.0.0 (http://littlebird.mobi/)
+ * Copyright 2016 littlebird
+ * Licensed under GNU General Public License v2 or later
  */
 
 // Core variables and mixins
-@import "variables";
-@import "mixins";
+@import "variables_tm";
+//@import "mixins_tm";
 
 // Reset and dependencies
-@import "normalize";
-@import "print";
+//@import "normalize_tm";
+//@import "print_tm";
 
 // Core CSS
-@import "reboot";
-@import "type";
-@import "images";
-@import "code";
-@import "grid";
-@import "tables";
-@import "forms";
-@import "buttons";
+//@import "reboot_tm";
+//@import "type_tm";
+//@import "images_tm";
+//@import "code_tm";
+//@import "grid_tm";
+//@import "tables_tm";
+//@import "forms_tm";
+//@import "buttons_tm";
 
 // Components
-@import "animation";
-@import "dropdown";
-@import "button-group";
-@import "input-group";
-@import "custom-forms";
-@import "nav";
-@import "navbar";
-@import "card";
-@import "breadcrumb";
-@import "pagination";
-@import "pager";
-@import "labels";
-@import "jumbotron";
-@import "alert";
-@import "progress";
-@import "media";
-@import "list-group";
-@import "responsive-embed";
-@import "close";
+//@import "animation_tm";
+//@import "dropdown_tm";
+//@import "button-group_tm";
+//@import "input-group_tm";
+//@import "custom-forms_tm";
+//@import "nav_tm";
+//@import "navbar_tm";
+//@import "card_tm";
+//@import "breadcrumb_tm";
+//@import "pagination_tm";
+//@import "pager_tm";
+//@import "labels_tm";
+//@import "jumbotron_tm";
+//@import "alert_tm";
+//@import "progress_tm";
+//@import "media_tm";
+//@import "list-group_tm";
+//@import "responsive-embed_tm";
+//@import "close_tm";
 
 // Components w/ JavaScript
-@import "modal";
-@import "tooltip";
-@import "popover";
-@import "carousel";
+//@import "modal_tm";
+//@import "tooltip_tm";
+//@import "popover_tm";
+//@import "carousel_tm";
 
 // Utility classes
-@import "utilities";
-@import "utilities-background";
-@import "utilities-spacing";
-@import "utilities-responsive";
+//@import "utilities_tm";
+//@import "utilities-background_tm";
+//@import "utilities-spacing_tm";
+//@import "utilities-responsive_tm";
 
 .test {
   float: left;
