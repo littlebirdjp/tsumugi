@@ -84,3 +84,15 @@ add_action( 'wp_enqueue_scripts', 'tsumugi_scripts' );
 #### normalize.cssの重複分を削除
 
 BootstrapとUnderscoresでは、デフォルトのCSSに同じ`normalize.css`が使われているので、後から読み込まれるUnderscoresのSassからインクルードを解除し、重複しているスタイル記述を削除した。
+
+### オリジナルSassの初期設定
+
+オリジナルSassの初期設定を行なった。  
+`bootstrap.scss`をコピーして`tsumugi.scss`を作成し、カスタマイズに必要なモジュールだけを読み込むようにする。  
+その際、Bootstrapからコピーした各モジュールは、`_*.scss`→`_*_tm.scss`のように接尾辞を付けてリネームすることとする。  
+もし、Bootstrapがアップデートされた場合は、基本的に`_*.scss`と`_*_tm.scss`の差分のみを見ながらマージしていく予定。
+
+### .conteinerタグの追加
+
+全体のコンテンツ幅を調整するため、Bootstrapの`.conteiner`タグを追加。  
+ヘッダとフッタ、コンテンツの各領域を100%幅でデザイン調整できるよう、それぞれ`.conteiner`タグで囲む形にした。
