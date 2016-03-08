@@ -43,7 +43,13 @@ Bootstrapがアップデートされた際は、再度`npm run bsupdate`を実�
 `gulpfile.js`にタスクを記述して、Sassのコンパイル設定を追加。  
 `/sass/`配下で編集したファイルが、`/`配下の各ディレクトリへCSSとして書き出される。  
 ただし、BootstrapとUnderscoresのオリジナルのCSSは、基本上書きを行わず、BootstrapのSassをコピーした`tsumugi.scss`のみ編集することとする。  
-※Underscoreの元CSSのフォーマットになるべく合わせるため、コンパイラはRuby Sassを使い、csscombとgulp-frepで整形を行なっている。
+
+Underscoreの元CSSのフォーマットになるべく合わせるため、コンパイラはRuby Sassを使い、csscombとgulp-frepで整形を行なっている。  
+Sassを編集する際は、プロジェクトフォルダで下記コマンドを実行し、指定したバージョンのSassとCompassをインストールすること。
+
+```
+bundle install --path=vendor/bundle --binstubs=vendor/bin
+```
 
 今回のテーマで読み込まれるCSSファイルおよびその読み込み順は、以下の通りとなる予定。
 
