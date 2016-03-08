@@ -178,8 +178,47 @@ mark,
 	content: "\00A0 \2014";
 }
 
+ul,
+ol {
+	margin: 0 0 1.5em 0;
+}
+
+li > ul,
+li > ol {
+	margin-left: 0;
+}
+
+.menu {
+	font-size: 0.875rem;
+}
+
 .site-title {
 	margin-top: 0;
 	margin-bottom: 0;
 	line-height: 1.5;
+}
+
+.entry-meta {
+	font-size: 0.875rem;
+}
+
+.entry-footer {
+	font-size: 0.875rem;
+}
+
+.widget-title {
+	font-size: 1.3rem;
+}
+
+.widget ul {
+	font-size: 0.875rem;
+}
+
+.site-footer {
+	padding-bottom: 1rem;
+}
+
+.site-info {
+	font-size: 0.875rem;
+	text-align: center;
 }
