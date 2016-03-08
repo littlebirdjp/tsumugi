@@ -6,7 +6,7 @@
 
 // Core variables and mixins
 @import "variables_tm";
-//@import "mixins_tm";
+@import "mixins";
 
 // Reset and dependencies
 //@import "normalize_tm";
@@ -14,7 +14,7 @@
 
 // Core CSS
 //@import "reboot_tm";
-//@import "type_tm";
+@import "type_tm";
 //@import "images_tm";
 //@import "code_tm";
 //@import "grid_tm";
