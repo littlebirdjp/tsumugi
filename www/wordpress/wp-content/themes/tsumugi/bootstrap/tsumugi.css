@@ -3,7 +3,8 @@
  * Copyright 2016 littlebird
  * Licensed under GNU General Public License v2 or later
  */
-.test {
-	float: left;
-	color: #000;
+.site-title {
+	margin-top: 0;
+	margin-bottom: 0;
+	line-height: 1.5;
 }
