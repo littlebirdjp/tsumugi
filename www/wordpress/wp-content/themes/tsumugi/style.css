@@ -34,7 +34,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Clearings
 # Widgets
 # Content
-    ## Posts and pages
+	## Posts and pages
 	## Asides
 	## Comments
 # Infinite scroll
@@ -493,8 +493,8 @@ a:active {
 	margin: 0 0 1.5em;
 	font-size: 0.875rem;
 }
-.widget select { /* Make sure select elements fit in widgets. */
-	max-width: 100%;
+.widget select {
+	max-width: 100%; /* Make sure select elements fit in widgets. */
 }
 
 .widget-title {
