@@ -16,10 +16,18 @@
 	display: inline;
 }
 
+.entry-meta {
+	font-size: $font-size-sm;
+}
+
 .page-content,
 .entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
+}
+
+.entry-footer {
+	font-size: $font-size-sm;
 }
 
 .page-links {

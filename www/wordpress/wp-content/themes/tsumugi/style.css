@@ -48,18 +48,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-body,
-button,
-input,
-select,
-textarea {
-	color: #404040;
-	font-family: sans-serif;
-	font-size: 16px;
-	font-size: 1rem;
-	line-height: 1.5;
-}
-
 h1,
 h2,
 h3,
@@ -162,7 +150,8 @@ hr {
 
 ul,
 ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 1.5rem 0;
+	padding-left: 1.5rem;
 }
 
 ul {
@@ -176,7 +165,6 @@ ol {
 li > ul,
 li > ol {
 	margin-bottom: 0;
-	margin-left: 1.5em;
 }
 
 dt {
@@ -184,7 +172,7 @@ dt {
 }
 
 dd {
-	margin: 0 1.5em 1.5em;
+	margin: 0 1.5em 1.5rem;
 }
 
 img {
@@ -334,6 +322,7 @@ a:active {
 	display: block;
 	float: left;
 	width: 100%;
+	font-size: 0.875rem;
 }
 .main-navigation ul {
 	display: none;
@@ -501,15 +490,29 @@ a:active {
 # Widgets
 --------------------------------------------------------------*/
 .widget {
-	margin: 0 0 1.5em; /* Make sure select elements fit in widgets. */
+	margin: 0 0 1.5em;
+	font-size: 0.875rem;
 }
-.widget select {
+.widget select { /* Make sure select elements fit in widgets. */
 	max-width: 100%;
+}
+
+.widget-title {
+	font-size: 1.3rem;
 }
 
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+.site-title {
+	margin-top: 0;
+	margin-bottom: 0;
+	line-height: 1.5;
+}
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
@@ -531,10 +534,18 @@ a:active {
 	display: inline;
 }
 
+.entry-meta {
+	font-size: 0.875rem;
+}
+
 .page-content,
 .entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
+}
+
+.entry-footer {
+	font-size: 0.875rem;
 }
 
 .page-links {
@@ -559,6 +570,18 @@ a:active {
 
 .bypostauthor {
 	display: block;
+}
+
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+.site-footer {
+	padding-bottom: 1rem;
+}
+
+.site-info {
+	font-size: 0.75rem;
+	text-align: center;
 }
 
 /*--------------------------------------------------------------

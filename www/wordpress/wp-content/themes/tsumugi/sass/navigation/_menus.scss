@@ -3,6 +3,7 @@
 	display: block;
 	float: left;
 	width: 100%;
+	font-size: $font-size-sm;
 
 	ul {
 		display: none;
@@ -48,7 +49,7 @@
 			left: auto;
 		}
 	}
-	
+
 	li {
 		float: left;
 		position: relative;
@@ -57,7 +58,7 @@
 		&.focus > a {
 		}
 	}
-	
+
 	a {
 		display: block;
 		text-decoration: none;

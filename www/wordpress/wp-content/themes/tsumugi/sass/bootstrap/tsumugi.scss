@@ -13,7 +13,7 @@
 //@import "print_tm";
 
 // Core CSS
-//@import "reboot_tm";
+@import "reboot_tm";
 @import "type_tm";
 //@import "images_tm";
 //@import "code_tm";
@@ -54,49 +54,3 @@
 //@import "utilities-background_tm";
 //@import "utilities-spacing_tm";
 //@import "utilities-responsive_tm";
-
-ul, ol {
-	margin: 0 0 1.5em 0;
-}
-
-li > ul,
-li > ol {
-	margin-left: 0;
-}
-
-.menu {
-  font-size: $font-size-sm;
-}
-
-.site-title {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 1.5;
-}
-
-.entry-meta {
-  font-size: $font-size-sm;
-}
-
-.entry-footer {
-  font-size: $font-size-sm;
-}
-
-.widget-title {
-  font-size: $font-size-h4;
-}
-
-.widget {
-  ul {
-    font-size: $font-size-sm;
-  }
-}
-
-.site-footer {
-  padding-bottom: 1rem;
-}
-
-.site-info {
-  font-size: $font-size-sm;
-  text-align: center;
-}
