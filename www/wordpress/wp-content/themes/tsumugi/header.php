@@ -28,9 +28,11 @@
 
 	<div class="container">
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'tsumugi' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+		<nav id="site-navigation" class="main-navigation navbar navbar-light bg-faded" role="navigation">
+			<button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+				&#9776;
+			</button>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class' => 'menu collapse navbar-toggleable-xs', 'menu_id' => 'exCollapsingNavbar' ) ); ?>
 		</nav><!-- #site-navigation -->
 
 		<div class="site-branding">
