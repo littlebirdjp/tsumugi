@@ -496,9 +496,30 @@ a:active {
 .widget select {
 	max-width: 100%; /* Make sure select elements fit in widgets. */
 }
+.widget ul {
+	display: inline;
+	padding-left: 0;
+}
+.widget ul li {
+	display: inline;
+}
+.widget ul li::before {
+	content: ' | ';
+}
+.widget ul li:first-child::before {
+	content: '';
+}
+.widget ul li li:first-child::before {
+	content: ' | ';
+}
 
 .widget-title {
 	font-size: 1.3rem;
+	text-align: center;
+}
+
+.widget_meta {
+	text-align: center;
 }
 
 /*--------------------------------------------------------------
@@ -507,6 +528,10 @@ a:active {
 /*--------------------------------------------------------------
 ## Header
 --------------------------------------------------------------*/
+.site-branding {
+	text-align: center;
+}
+
 .site-title {
 	margin-top: 0;
 	margin-bottom: 0;

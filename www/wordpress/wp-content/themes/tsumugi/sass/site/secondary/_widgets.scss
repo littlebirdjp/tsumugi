@@ -6,8 +6,35 @@
 		max-width: 100%;
 	/* Make sure select elements fit in widgets. */
 	}
+	ul {
+		display: inline;
+		padding-left: 0;
+		li {
+			display: inline;
+			&::before {
+				content: ' | ';
+			}
+			&:first-child {
+				&::before {
+					content: '';
+				}
+			}
+			li {
+				&:first-child {
+					&::before {
+						content: ' | ';
+					}
+				}
+			}
+		}
+	}
 }
 
 .widget-title {
 	font-size: $font-size-h4;
+	text-align: center;
+}
+
+.widget_meta {
+	text-align: center;
 }
