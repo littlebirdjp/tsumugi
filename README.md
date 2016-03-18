@@ -4,10 +4,12 @@ A simple WordPress theme for everyone, build with Underscores and Bootstrap 4.
 
 [Underscores](http://underscores.me/)と[Bootstrap 4](http://v4-alpha.getbootstrap.com/)を使ってシンプルなWordPressテーマを制作するプロジェクトです。WordPress公式ディレクトリへの掲載を目標としています。
 
+※UnderscoresとBootstrapでブログサイトを構築した、[littlebird-theme](https://github.com/littlebirdjp/littlebird-theme)の続編プロジェクトでもあります。
+
 ## テーマのコンセプト
 
-- あまねく世界中の人に使ってもらえるテーマ
-- 誰にでも使いやすく、文章を書きやすいテーマ
+- あまねく世界中の人に広く使ってもらえるテーマ
+- 誰にでも文章を書きやすく想いを伝えやすいテーマ
 
 ## テーマの特徴
 
@@ -23,56 +25,92 @@ A simple WordPress theme for everyone, build with Underscores and Bootstrap 4.
 
 時代に対応した最新のフレームワークを使用し、いつでもアップデートできる仕組みを導入。
 
-## Requrements
+## Requrements（制作ツール）
 
-- [VCCW](http://vccw.cc/)
 - [Underscores](http://underscores.me/)
 - [Bootstrap 4](http://v4-alpha.getbootstrap.com/)
+- [VCCW](http://vccw.cc/)
 
 ## 制作過程
 
+## 制作過程
+
+1. [テーマ制作環境の構築](#user-content-テーマ制作環境の構築)
+	- [ローカル仮想環境の構築](#user-content-ローカル仮想環境の構築)
+	- [テーマデバッグ環境の構築](#user-content-テーマデバッグ環境の構築)
+	- [スターターテーマの導入](#user-content-スターターテーマの導入)
+	- [CSSフレームワークの導入](#user-content-cssフレームワークの導入)
+		- [Bootstrapのインストールとアップデート対応](#user-content-bootstrapのインストールとアップデート対応)
+		- [Bootstrap Sassファイルの抽出](#user-content-bootstrap-sassファイルの抽出)
+	- [コンパイル環境の構築](#user-content-コンパイル環境の構築)
+2. [テーマの制作](#user-content-テーマの制作)
+	- [ストラクチャーの構築](#user-content-ストラクチャーの構築)
+		- [CSSとJSの読み込みを追加](#user-content-cssとjsの読み込みを追加)
+		- [normalize.cssの重複分を削除](#user-content-normalize.cssの重複分を削除)
+		- [オリジナルSassの初期設定](#user-content-オリジナルsassの初期設定)
+		- [.conteinerタグの追加](#user-content-.conteinerタグの追加)
+	- スキンの装飾
+3. 公式ディレクトリへの申請準備
+	- 翻訳ファイルの作成
+	- パブリッシュの設定
+	- 公開申請
+4. 公式サイトの作成
+5. デモサイトの作成
+
 ### テーマ制作環境の構築
 
-#### VCCWによるローカル環境の構築
+#### ローカル仮想環境の構築
 
-今回はvccw本体を外部ディレクトリである`/vccw/`配下へ配置。  
-プロジェクトフォルダ内には、`Vagrantfile`と`site.yml`だけ設置する形でローカル環境を構築した。
+WordPressの仮想環境を簡単に構築できる[VCCW](http://vccw.cc/)で、ローカルに開発環境を準備しました。  
+今回はVCCW本体を外部ディレクトリである`/vccw/`配下へ配置し、プロジェクトフォルダ内には、`Vagrantfile`と`site.yml`だけ設置する形でローカル環境を構築しました。  
+※この手法について、詳しくは[simple-vccw-env](https://github.com/littlebirdjp/simple-vccw-env)と[解説記事](http://littlebird.mobi/2016/02/vccw_git/)を参考にしてください。
 
-#### テーマユニットテストデータのインポート
+また、今回は公式ディレクトリ向けのテーマを作るために、WordPressのあらゆる投稿パターン等を検証できる[テーマユニットテストデータ](https://wpdocs.osdn.jp/%E3%83%86%E3%83%BC%E3%83%9E%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88%E3%83%86%E3%82%B9%E3%83%88)を予めインポートすることにしました。
 
-[テーマユニットテストデータ](https://wpdocs.osdn.jp/%E3%83%86%E3%83%BC%E3%83%9E%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88%E3%83%86%E3%82%B9%E3%83%88)をインポート。  
-その状態で、WordPress内のデータを`import.sql`にエクスポートした。
+さらに、公式ディレクトリ向けのテーマは、日本語の他に英語版も合わせて検証する必要があるため、ローカルのWordPressをマルチサイト化して、日英2言語のデバッグ環境を同時に構築することにしました。
 
-#### Underscoresのインストール
+#### テーマデバッグ環境の構築
 
-[Underscores](http://underscores.me/)のファイル一式をダウンロードし、`www/wordpress/wp-content/themes/tsumugi`配下に設置。
+マルチサイト化したローカルのWordPress内に、英語デバッグ用の複サイトを作成します。  
+マルチサイト機能を使うことで、一つのテーマファイルを編集しながら、リアルタイムで日英2サイトの表示確認が行えるデバッグ環境を作ることができました。
 
-#### Bootstrapのインストール
+#### スターターテーマの導入
 
-bowerを使ってテーマフォルダ内にBootstrap 4アルファ版をインストール。  
-また、インストールと同時に不要ファイルを削除し、CSSとJS、Sass、jQueryのファイルだけを残すように設定。  
-上記の一連の処理は、`package.json`に記述してあるので、`npm run bsupdate`を実行するだけでBootstrapのインストール（アップデート）が可能になるようにした。
+[Underscores](http://underscores.me/)のサイトでテーマ名などを入力して、スターターテーマ一式を生成し、ダウンロードしました。  
+テーマ（ディレクトリ）名は`tsumugi`とし、Sassでのカスタマイズが行えるように、Sass版のチェックを入れて生成を行いました。  
+落としたディレクトリ一式を`www/wordpress/wp-content/themes/tsumugi`配下に設置し、管理画面から有効化することで、オリジナルのテーマを適用することができます。
 
-#### BootstrapのSassファイルを抽出
+#### CSSフレームワークの導入
 
-`npm run bsupdate`を実行すると、`/bower_components/bootstrap/`内のSassファイルをコピーして、`/sass/bootstrap/`配下へ配置するように設定。  
-これによって、作業用のSassファイルを`/sass/`配下に集約することとした。  
-Bootstrapがアップデートされた際は、再度`npm run bsupdate`を実行することで、マスターのファイルだけが更新されるようになる。
+##### Bootstrapのインストールとアップデート対応
 
-#### Sassのコンパイル設定を追加
+bowerを使ってテーマフォルダ内にBootstrap 4アルファ版をインストールしました。  
+また、インストールと同時に不要ファイルを削除し、CSSとJS、Sass、および依存ファイル（jQueryとtether.js）だけを残すように設定しました。  
+上記の一連の処理は、`package.json`に記述してあるので、`npm run bwupdate`を実行するだけでBootstrapのインストールまたはアップデートが可能になります。
 
-`gulpfile.js`にタスクを記述して、Sassのコンパイル設定を追加。  
-`/sass/`配下で編集したファイルが、`/`配下の各ディレクトリへCSSとして書き出される。  
-ただし、BootstrapとUnderscoresのオリジナルのCSSは、基本上書きを行わず、BootstrapのSassをコピーした`tsumugi.scss`のみ編集することとする。  
+#### Bootstrap Sassファイルの抽出
 
-Underscoreの元CSSのフォーマットになるべく合わせるため、コンパイラはRuby Sassを使い、csscombとgulp-frepで整形を行なっている。  
-Sassを編集する際は、プロジェクトフォルダで下記コマンドを実行し、指定したバージョンのSassとCompassをインストールすること。
+`npm run bwupdate`を実行すると、`/bower_components/bootstrap/`内のSassファイルをコピーして、`/sass/bootstrap/`配下へ配置するように設定しました。  
+`/sass/`フォルダには、Underscore用のSassファイルが格納されているので、これによって作業用のSassファイルが`/sass/`配下に集約される形になります。  
+Bootstrapがアップデートされた際は、再度`npm run bwupdate`を実行することで、Bootstrap用のSassファイル一式も更新されるようにしました。
+
+#### コンパイル環境の構築
+
+`gulpfile.js`にタスクを記述して、Sassのコンパイル設定を追加しました。  
+コンパイルに必要なパッケージは、`package.json`に記述してあるので、`npm i`コマンドを実行することでインストールできます。
+
+`gulp`または`npm start`を実行すると、`/sass/`配下で編集したSassファイルが、`/`配下の各ディレクトリへCSSとして書き出されます。  
+ただし、BootstrapオリジナルのCSSは、基本上書きを行わず、BootstrapのSassをコピーした`tsumugi.scss`のみを編集することにしました。  
+
+Underscoreの元CSSのフォーマットになるべく合わせるため、コンパイラはRuby Sassを使い、csscombとgulp-frepで整形を行なっています。  
+そのため、Sassを編集する際は、プロジェクトフォルダで下記コマンドを実行し、指定したバージョンのSassとCompassをインストールしてください。  
+（SassとCompassのバージョンをプロジェクトで統一するため）
 
 ```
 bundle install --path=vendor/bundle --binstubs=vendor/bin
 ```
 
-今回のテーマで読み込まれるCSSファイルおよびその読み込み順は、以下の通りとなる予定。
+今回のテーマで読み込まれるCSSファイルおよびその読み込み順は、以下の通りとなる予定です。
 
 ```
 /wp-content/themes/tsumugi/bower_components/bootstrap/dist/css/bootstrap.min.css
@@ -80,13 +118,18 @@ bundle install --path=vendor/bundle --binstubs=vendor/bin
 /wp-content/themes/tsumugi/bootstrap/tsumugi.css
 ```
 
-### テーマの編集
+### テーマの制作
 
-#### CSSとJSの読み込みを追加
+#### ストラクチャーの構築
 
-`functions.php`に以下の記述を追加して、CSSとJavaScriptの読み込みを指定した。  
-jQueryはWordPressデフォルトのjQueryを使用し、BootstrapのJSはフッタに読み込ませている。  
-各CSS, JSには、それぞれ適切な依存関係とバージョンを指定した。
+まずは色彩や装飾などのビジュアル要素ではなく、骨組み部分のスタイリングのみを行うフェーズ。  
+レイアウトやタイポグラフィ、各要素の大きさや余白、デバイス切替時の表示・動作の調整などを行います。
+
+##### CSSとJSの読み込みを追加
+
+`functions.php`に以下の記述を追加して、CSSとJavaScriptの読み込みを指定しました。  
+jQueryはWordPressデフォルトのjQueryを使用し、BootstrapのJSはフッタに読み込ませる形にしました。  
+各CSS, JSには、それぞれ適切な依存関係とバージョンを指定しています。
 
 ```
 function tsumugi_scripts() {
@@ -108,18 +151,61 @@ function tsumugi_scripts() {
 add_action( 'wp_enqueue_scripts', 'tsumugi_scripts' );
 ```
 
-#### normalize.cssの重複分を削除
+##### normalize.cssの重複分を削除
 
-BootstrapとUnderscoresでは、デフォルトのCSSに同じ`normalize.css`が使われているので、後から読み込まれるUnderscoresのSassからインクルードを解除し、重複しているスタイル記述を削除した。
+BootstrapとUnderscoresでは、デフォルトのCSSに同じ`normalize.css`が使われているので、後から読み込まれるUnderscoresのSassからインクルードを解除し、重複しているスタイル記述を削除しました。
 
-#### オリジナルSassの初期設定
+##### オリジナルSassの初期設定
 
-オリジナルSassの初期設定を行なった。  
-`bootstrap.scss`をコピーして`tsumugi.scss`を作成し、カスタマイズに必要なモジュールだけを読み込むようにする。  
-その際、オリジナルSassに読み込む各モジュールは、`_*.scss`→`_*_tm.scss`のように接尾辞を付けてリネームすることとする。  
-もし、Bootstrapがアップデートされた場合は、基本的に`_*.scss`と`_*_tm.scss`の差分のみを見ながらマージしていく予定。
+オリジナルSassの初期設定を行ないました。  
+`bootstrap.scss`をコピーして`tsumugi.scss`を作成し、カスタマイズに必要なモジュールだけをインクルードするようにしました。  
+その際、オリジナルSassに読み込む各モジュールは、`_*.scss`→`_*_tm.scss`のように接尾辞を付けてリネームすることとしました。  
+もし、Bootstrapがアップデートされた場合は、基本的に`_*.scss`と`_*_tm.scss`を比較しながら、差分のみを見ながらマージしていく予定です。
 
-#### .conteinerタグの追加
+##### .conteinerタグの追加
 
-全体のコンテンツ幅を調整するため、Bootstrapの`.conteiner`タグを追加。  
-ヘッダとフッタ、コンテンツの各領域を100%幅でもデザイン調整できるよう、それぞれ`.conteiner`タグで囲む形にした。
+全体のコンテンツ幅を調整するため、HTMLテンプレート側にBootstrapの`.conteiner`タグを追加しました。  
+ヘッダとフッタ、コンテンツの各領域を100%幅でもデザイン調整できるよう、それぞれ`.conteiner`タグで囲む形にしました。
+
+#### スキンの装飾
+
+スケルトンで構造が組み終わり、色味やアイコン、パーツなど装飾部分のスタイリングを行うフェーズ。  
+構造とスキンを明確に分けて構築することで、今後スキンを追加できるような設計も考慮に入れる予定です。
+
+### 公式ディレクトリへの申請準備
+
+テーマの制作をいったん終えて、公式ディレクトリへの申請準備をする段階のタスク。
+
+#### 翻訳ファイルの作成
+
+Underscoresは英語向けに作られたスターターテーマなので、国内ユーザー向けにテーマ内の英語部分を日本語化するための翻訳ファイルを作成します。
+
+#### パブリッシュの設定
+
+制作段階では、テーマフォルダ内に様々な開発用のファイルが存在するため、公式ディレクトリへの申請に備えて必要なファイルだけを抽出してパッケージ化する仕組みを構築します。  
+この設定は、今後の運用フローにて、テーマを更新する際にも使用する予定です。
+
+#### 公開申請
+
+必要なファイルをzipにまとめてアップロードし、公式ディレクトリへの申請を行います。  
+その後、レビューの結果が来たら、修正対応を行います。
+
+### 公式サイトの作成
+
+テーマの説明や使い方等を掲載する公式サイトを制作します。
+
+#### URL（予定）
+
+http://tsumugi.littlebird.mobi/
+
+### デモサイトの作成
+
+ユーザーが実際のテーマの表示・動作を確認しやすくするために、デモサイトを制作します。  
+デモサイトは、海外／国内の両方のユーザー向けに、日英2言語分を制作します。  
+デモサイトには、各言語のテーマユニットテストデータをインポートした状態で、WordPressの本番環境を構築する予定です。  
+（サイトの内容自体は、ローカルに構築した制作・デバッグ環境とほぼ同じものを想定しています）
+
+#### URL（予定）
+
+http://tsumugi.littlebird.mobi/demo/
+http://tsumugi.littlebird.mobi/demo/en/

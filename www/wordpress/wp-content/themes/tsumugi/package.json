@@ -15,7 +15,7 @@
   },
   "scripts": {
     "postinstall": "",
-    "bsupdate": "bower install; preen; bash bootstrap.sh",
+    "bwupdate": "bower install; preen; bash bootstrap.sh",
     "start": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
