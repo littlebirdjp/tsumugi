@@ -33,8 +33,6 @@ A simple WordPress theme for everyone, build with Underscores and Bootstrap 4.
 
 ## 制作過程
 
-## 制作過程
-
 1. [テーマ制作環境の構築](#user-content-テーマ制作環境の構築)
 	- [ローカル仮想環境の構築](#user-content-ローカル仮想環境の構築)
 	- [テーマデバッグ環境の構築](#user-content-テーマデバッグ環境の構築)
