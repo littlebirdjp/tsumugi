@@ -80,6 +80,11 @@ WordPressの仮想環境を簡単に構築できる[VCCW](http://vccw.cc/)で、
 テーマ（ディレクトリ）名は`tsumugi`とし、Sassでのカスタマイズが行えるように、Sass版のチェックを入れて生成を行いました。  
 落としたディレクトリ一式を`www/wordpress/wp-content/themes/tsumugi`配下に設置し、管理画面から有効化することで、オリジナルのテーマを適用することができます。
 
+![](screenshots/screenshot01.png?raw=true)
+
+この状態では、まだ何もデザインが適用されていない、シンプルな状態となります。
+
+
 #### CSSフレームワークの導入
 
 ##### Bootstrapのインストールとアップデート対応
@@ -151,6 +156,14 @@ function tsumugi_scripts() {
 add_action( 'wp_enqueue_scripts', 'tsumugi_scripts' );
 ```
 
+![](screenshots/screenshot02.png?raw=true)
+
+BootstrapのCSSが適用されたことで、見た目が少し変わりましたが、まだデザインはシンプルなままです。
+
+![](screenshots/screenshot03.png?raw=true)
+
+ウィジェット部分も、フッターにただ項目のリストが羅列されているだけの状態です。
+
 ##### normalize.cssの重複分を削除
 
 BootstrapとUnderscoresでは、デフォルトのCSSに同じ`normalize.css`が使われているので、後から読み込まれるUnderscoresのSassからインクルードを解除し、重複しているスタイル記述を削除しました。
@@ -207,5 +220,5 @@ http://tsumugi.littlebird.mobi/
 
 #### URL（予定）
 
-http://tsumugi.littlebird.mobi/demo/
+http://tsumugi.littlebird.mobi/demo/  
 http://tsumugi.littlebird.mobi/demo/en/
