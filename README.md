@@ -31,6 +31,13 @@ A simple WordPress theme for everyone, build with Underscores and Bootstrap 4.
 - [Bootstrap 4](http://v4-alpha.getbootstrap.com/)
 - [VCCW](http://vccw.cc/)
 
+## 制作方針
+
+- スターターテーマとCSSフレームワークのメリットを活かし、必要最低限の工数でテーマの完成を目指す。
+- 最新のBootstrap 4（アルファ版）を用いつつ、将来Bootstrapがアップデートされても対応できる設計にする。  
+（`bower install`すれば、いつでも更新できるようにする）
+- テーマの制作過程にテーマレビューの手法を取り入れ、公式ディレクトリの審査に通りやすい作り方を追求する。
+
 ## 制作過程
 
 1. [テーマ制作環境の構築](#user-content-テーマ制作環境の構築)
