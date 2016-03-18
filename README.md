@@ -2,6 +2,27 @@
 
 A simple WordPress theme for everyone, build with Underscores and Bootstrap 4.
 
+[Underscores](http://underscores.me/)と[Bootstrap 4](http://v4-alpha.getbootstrap.com/)を使ってシンプルなWordPressテーマを制作するプロジェクトです。WordPress公式ディレクトリへの掲載を目標としています。
+
+## テーマのコンセプト
+
+- あまねく世界中の人に使ってもらえるテーマ
+- 誰にでも使いやすく、文章を書きやすいテーマ
+
+## テーマの特徴
+
+### ユーザーフレンドリー
+
+初心者でも使いやすいシンプルな設計。複雑な機能は搭載しない。
+
+### モバイルファースト
+
+モバイルデバイスでの読みやすさ、操作しやすさを重視したデザイン。
+
+### サステイナビリティー
+
+時代に対応した最新のフレームワークを使用し、いつでもアップデートできる仕組みを導入。
+
 ## Requrements
 
 - [VCCW](http://vccw.cc/)
