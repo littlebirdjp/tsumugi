@@ -55,6 +55,7 @@ Vagrant.configure(2) do |config|
 
   config.vm.hostname = _conf['hostname']
   config.vm.network :private_network, ip: _conf['ip']
+  #config.vm.network :public_network
 
   config.vm.synced_folder ".", "/vagrant", :mount_options => ['dmode=755', 'fmode=644']
   config.vm.synced_folder _conf['sync_folder'], _conf['document_root'], :create => "true", :mount_options => ['dmode=755', 'fmode=644']
