@@ -46,9 +46,9 @@ A simple WordPress theme for everyone, build with Underscores and Bootstrap 4.
 2. [テーマの制作](#user-content-テーマの制作)
 	- [ストラクチャーの構築](#user-content-ストラクチャーの構築)
 		- [CSSとJSの読み込みを追加](#user-content-cssとjsの読み込みを追加)
-		- [normalize.cssの重複分を削除](#user-content-normalize.cssの重複分を削除)
+		- [normalize.cssの重複分を削除](#user-content-normalizecssの重複分を削除)
 		- [オリジナルSassの初期設定](#user-content-オリジナルsassの初期設定)
-		- [.conteinerタグの追加](#user-content-.conteinerタグの追加)
+		- [.conteinerタグの追加](#user-content-conteinerタグの追加)
 	- スキンの装飾
 3. 公式ディレクトリへの申請準備
 	- 翻訳ファイルの作成
