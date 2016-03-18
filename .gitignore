@@ -3,6 +3,7 @@ node_modules/
 vendor/
 .vagrant
 .bundle
+.sass-cache
 /www/wordpress/.editorconfig
 /www/wordpress/.htaccess
 /www/wordpress/index.php
