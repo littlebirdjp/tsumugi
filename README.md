@@ -105,7 +105,16 @@ plugins:
 #### テーマデバッグ環境の構築
 
 マルチサイト化したローカルのWordPress内に、英語デバッグ用の子サイトを作成します。  
+子サイトの作成は、管理バーのメニュー「参加サイト」→「サイトネットワーク管理者」→「サイト」の「新規追加」から行います。「サイトの言語」は`English`にしておきましょう。
+
+![](screenshots/screenshot05.png?raw=true)
+
 マルチサイト機能を使うことで、一つのテーマファイルを編集しながら、リアルタイムで日英2サイトの表示確認が行えるデバッグ環境を作ることができました。
+
+ローカルでの各言語での検証サイトは下記URLとなります。
+
+日本語 http://tsumugi.local/  
+英語 http://tsumugi.local/en/
 
 #### スターターテーマの導入
 
@@ -122,6 +131,16 @@ wp scaffold _s tsumugi --theme_name="tsumugi" --author="youthkee" --author_uri="
 ![](screenshots/screenshot01.png?raw=true)
 
 この状態では、まだ何もデザインが適用されていない、シンプルな状態となります。
+
+![](screenshots/screenshot04.png?raw=true)
+
+英語版にも同じテーマを適用することで、こちらもテーマユニットテストデータで見た目を確認する環境が整いました。  
+WP-CLIで子サイトに同じテーマを適用するには、以下のコマンドを実行すればOKです。
+
+```
+wp theme enable tsumugi --network
+wp theme activate tsumugi --url=tsumugi.local/en
+```
 
 #### CSSフレームワークの導入
 
