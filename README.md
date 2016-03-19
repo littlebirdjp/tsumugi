@@ -27,7 +27,7 @@ A simple WordPress theme for everyone, build with Underscores and Bootstrap 4.
 
 ## 完成イメージ
 
-![](screenshots/sketch.jpg?raw=true)
+![](screenshots/sketch.jpg)
 
 ## Requrements（制作ツール）
 
@@ -81,7 +81,7 @@ WordPressの仮想環境を簡単に構築できる[VCCW](http://vccw.cc/)で、
 
 #### テーマデバッグ環境の構築
 
-マルチサイト化したローカルのWordPress内に、英語デバッグ用の複サイトを作成します。  
+マルチサイト化したローカルのWordPress内に、英語デバッグ用の子サイトを作成します。  
 マルチサイト機能を使うことで、一つのテーマファイルを編集しながら、リアルタイムで日英2サイトの表示確認が行えるデバッグ環境を作ることができました。
 
 #### スターターテーマの導入
@@ -90,7 +90,13 @@ WordPressの仮想環境を簡単に構築できる[VCCW](http://vccw.cc/)で、
 テーマ（ディレクトリ）名は`tsumugi`とし、Sassでのカスタマイズが行えるように、Sass版のチェックを入れて生成を行いました。  
 落としたディレクトリ一式を`www/wordpress/wp-content/themes/tsumugi`配下に設置し、管理画面から有効化することで、オリジナルのテーマを適用することができます。
 
-![](screenshots/screenshot01.png?raw=true)
+また、Underscoresの導入は、`vagrant ssh`後に以下のコマンドを実行する形でもOKです。
+
+```
+wp scaffold _s tsumugi --theme_name="tsumugi" --author="youthkee" --author_uri="http://littlebird.mobi/" --sassify --activate
+```
+
+![](screenshots/screenshot01.png)
 
 この状態では、まだ何もデザインが適用されていない、シンプルな状態となります。
 
@@ -165,11 +171,11 @@ function tsumugi_scripts() {
 add_action( 'wp_enqueue_scripts', 'tsumugi_scripts' );
 ```
 
-![](screenshots/screenshot02.png?raw=true)
+![](screenshots/screenshot02.png)
 
 BootstrapのCSSが適用されたことで、見た目が少し変わりましたが、まだデザインはシンプルなままです。
 
-![](screenshots/screenshot03.png?raw=true)
+![](screenshots/screenshot03.png)
 
 ウィジェット部分も、フッターにただ項目のリストが羅列されているだけの状態です。
 
@@ -182,7 +188,7 @@ BootstrapとUnderscoresでは、デフォルトのCSSに同じ`normalize.css`が
 オリジナルSassの初期設定を行ないました。  
 `bootstrap.scss`をコピーして`tsumugi.scss`を作成し、カスタマイズに必要なモジュールだけをインクルードするようにしました。  
 その際、オリジナルSassに読み込む各モジュールは、`_*.scss`→`_*_tm.scss`のように接尾辞を付けてリネームすることとしました。  
-もし、Bootstrapがアップデートされた場合は、基本的に`_*.scss`と`_*_tm.scss`を比較しながら、差分のみを見ながらマージしていく予定です。
+もし、Bootstrapがアップデートされた場合は、基本的に`_*.scss`と`_*_tm.scss`を比較しながら、差分のみをマージしていく予定です。
 
 ##### .conteinerタグの追加
 
@@ -205,7 +211,7 @@ Underscoresは英語向けに作られたスターターテーマなので、国
 #### パブリッシュの設定
 
 制作段階では、テーマフォルダ内に様々な開発用のファイルが存在するため、公式ディレクトリへの申請に備えて必要なファイルだけを抽出してパッケージ化する仕組みを構築します。  
-この設定は、今後の運用フローにて、テーマを更新する際にも使用する予定です。
+この仕組みは、今後の運用フローにて、テーマを更新する際にも使用する予定です。
 
 #### 公開申請
 
