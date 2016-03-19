@@ -75,9 +75,32 @@ WordPressの仮想環境を簡単に構築できる[VCCW](http://vccw.cc/)で、
 今回はVCCW本体を外部ディレクトリである`/vccw/`配下へ配置し、プロジェクトフォルダ内には、`Vagrantfile`と`site.yml`だけ設置する形でローカル環境を構築しました。  
 ※この手法について、詳しくは[simple-vccw-env](https://github.com/littlebirdjp/simple-vccw-env)と[解説記事](http://littlebird.mobi/2016/02/vccw_git/)を参考にしてください。
 
-また、今回は公式ディレクトリ向けのテーマを作るために、WordPressのあらゆる投稿パターン等を検証できる[テーマユニットテストデータ](https://wpdocs.osdn.jp/%E3%83%86%E3%83%BC%E3%83%9E%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88%E3%83%86%E3%82%B9%E3%83%88)を予めインポートすることにしました。
+また、今回は公式ディレクトリ向けのテーマを作るために、WordPressのあらゆる投稿パターン等を検証できる[テーマユニットテストデータ](https://wpdocs.osdn.jp/%E3%83%86%E3%83%BC%E3%83%9E%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88%E3%83%86%E3%82%B9%E3%83%88)（`site.yml`に以下の記述を追加）
 
-さらに、公式ディレクトリ向けのテーマは、日本語の他に英語版も合わせて検証する必要があるため、ローカルのWordPressをマルチサイト化して、日英2言語のデバッグ環境を同時に構築することにしました。
+```
+theme_unit_test: ture
+theme_unit_test_uri: https://raw.githubusercontent.com/jawordpressorg/theme-test-data-ja/master/wordpress-theme-test-date-ja.xml
+```
+
+さらに、公式ディレクトリ向けのテーマは、日本語の他に英語版も合わせて検証する必要があるため、ローカルのWordPressをマルチサイト化して、日英2言語のデバッグ環境を同時に構築することにしました。マルチサイト機能を有効にするには、`site.yml`に以下のオプションを追加すればOKです。
+
+```
+multisite: true
+```
+
+今回はテーマのチェックに利用できる[Theme Checkv](https://ja.wordpress.org/plugins/theme-check/)等のプラグインもインストールしたかったので、下記のオプションも`site.yml`に追加しました。
+
+```
+plugins:
+  - dynamic-hostname
+  - wp-total-hacks
+  - tinymce-templates
+  - theme-check
+  - wordpress-importer
+```
+
+以上の設定をした上で`vagrant up`を実行すると、最初からマルチサイト化＆テーマユニットテストデータがインポートされた状態で、ローカル環境のWordPressを利用することができます。
+
 
 #### テーマデバッグ環境の構築
 
@@ -90,7 +113,7 @@ WordPressの仮想環境を簡単に構築できる[VCCW](http://vccw.cc/)で、
 テーマ（ディレクトリ）名は`tsumugi`とし、Sassでのカスタマイズが行えるように、Sass版のチェックを入れて生成を行いました。  
 落としたディレクトリ一式を`www/wordpress/wp-content/themes/tsumugi`配下に設置し、管理画面から有効化することで、オリジナルのテーマを適用することができます。
 
-また、Underscoresの導入は、`vagrant ssh`後に以下のコマンドを実行する形でもOKです。
+また、Underscoresの導入は、`vagrant ssh`後に以下のコマンドを実行する形でも、簡単に行うことができます。
 
 ```
 wp scaffold _s tsumugi --theme_name="tsumugi" --author="youthkee" --author_uri="http://littlebird.mobi/" --sassify --activate
