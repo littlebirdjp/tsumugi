@@ -25,6 +25,10 @@ A simple WordPress theme for everyone, build with Underscores and Bootstrap 4.
 
 時代に対応した最新のフレームワークを使用し、いつでもアップデートできる仕組みを導入。
 
+## 完成イメージ
+
+![](screenshots/sketch.jpg?raw=true)
+
 ## Requrements（制作ツール）
 
 - [Underscores](http://underscores.me/)
@@ -34,8 +38,9 @@ A simple WordPress theme for everyone, build with Underscores and Bootstrap 4.
 ## 制作方針
 
 - スターターテーマとCSSフレームワークのメリットを活かし、必要最低限の工数でテーマの完成を目指す。
-- 最新のBootstrap 4（アルファ版）を用いつつ、将来Bootstrapがアップデートされても対応できる設計にする。  
-（`bower install`すれば、いつでも更新できるようにする）
+- 最新のBootstrap 4（アルファ版）を使いつつ、将来Bootstrapがアップデートされても対応できる設計にする。  
+（`bower install`すれば、いつでも更新できるように）
+- 事前にデザインカンプは作成せず、実際にブラウザでの表示を確認しながら調整を進める、インブラウザデザインの手法を取り入れる。
 - テーマの制作過程にテーマレビューの手法を取り入れ、公式ディレクトリの審査に通りやすい制作フローを追求する。
 
 ## 制作過程
@@ -88,7 +93,6 @@ WordPressの仮想環境を簡単に構築できる[VCCW](http://vccw.cc/)で、
 ![](screenshots/screenshot01.png?raw=true)
 
 この状態では、まだ何もデザインが適用されていない、シンプルな状態となります。
-
 
 #### CSSフレームワークの導入
 
