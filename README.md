@@ -27,7 +27,7 @@ A simple WordPress theme for everyone, build with Underscores and Bootstrap 4.
 
 ## 完成イメージ
 
-![](screenshots/sketch.jpg)
+![](screenshots/sketch.jpg?raw=true)
 
 ## Requrements（制作ツール）
 
@@ -96,7 +96,7 @@ WordPressの仮想環境を簡単に構築できる[VCCW](http://vccw.cc/)で、
 wp scaffold _s tsumugi --theme_name="tsumugi" --author="youthkee" --author_uri="http://littlebird.mobi/" --sassify --activate
 ```
 
-![](screenshots/screenshot01.png)
+![](screenshots/screenshot01.png?raw=true)
 
 この状態では、まだ何もデザインが適用されていない、シンプルな状態となります。
 
@@ -171,11 +171,11 @@ function tsumugi_scripts() {
 add_action( 'wp_enqueue_scripts', 'tsumugi_scripts' );
 ```
 
-![](screenshots/screenshot02.png)
+![](screenshots/screenshot02.png?raw=true)
 
 BootstrapのCSSが適用されたことで、見た目が少し変わりましたが、まだデザインはシンプルなままです。
 
-![](screenshots/screenshot03.png)
+![](screenshots/screenshot03.png?raw=true)
 
 ウィジェット部分も、フッターにただ項目のリストが羅列されているだけの状態です。
 
