@@ -88,7 +88,7 @@ theme_unit_test_uri: https://raw.githubusercontent.com/jawordpressorg/theme-test
 multisite: true
 ```
 
-今回はテーマのチェックに利用できる[Theme Checkv](https://ja.wordpress.org/plugins/theme-check/)等のプラグインもインストールしたかったので、下記のオプションも`site.yml`に追加しました。
+今回はテーマのチェックに利用できる[Theme Check](https://ja.wordpress.org/plugins/theme-check/)等のプラグインもインストールしたかったので、下記のオプションも`site.yml`に追加しました。
 
 ```
 plugins:
