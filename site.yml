@@ -17,6 +17,6 @@ plugins:
 theme: 'tsumugi'
 options:
   blogdescription: A simple WordPress theme for everyone.
-theme_unit_test: ture
+theme_unit_test: true
 theme_unit_test_uri: https://raw.githubusercontent.com/jawordpressorg/theme-test-data-ja/master/wordpress-theme-test-date-ja.xml
 linked_clone: true
