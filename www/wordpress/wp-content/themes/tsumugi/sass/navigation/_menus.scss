@@ -4,18 +4,19 @@
 	float: left;
 	width: 100%;
 	font-size: $font-size-sm;
+	line-height: 2;
 
 	ul {
-		display: none;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
 
 		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+			background: #fff;
 			float: left;
 			position: absolute;
-			top: 1.5em;
+			top: 1.5rem;
 			left: -999em;
 			z-index: 99999;
 
@@ -32,7 +33,7 @@
 			}
 
 			a {
-				width: 200px;
+				width: 10rem;
 			}
 
 			:hover > a,
@@ -53,6 +54,7 @@
 	li {
 		float: left;
 		position: relative;
+		padding: 0 .25rem;
 
 		&:hover > a,
 		&.focus > a {
@@ -71,20 +73,20 @@
 	}
 }
 
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
-
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: block;
-	}
-}
+///* Small menu. */
+// .menu-toggle,
+// .main-navigation.toggled ul {
+// 	display: block;
+// }
+//
+// @media screen and (min-width: 37.5em) {
+// 	.menu-toggle {
+// 		display: none;
+// 	}
+// 	.main-navigation ul {
+// 		display: block;
+// 	}
+// }
 
 .comment-navigation,
 .posts-navigation,

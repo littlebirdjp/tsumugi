@@ -31,3 +31,18 @@ h5 {
 h6 {
 	font-size: 1rem;
 }
+
+.navbar {
+	padding: 0 0;
+}
+
+.navbar-toggler {
+	box-shadow: none;
+	text-shadow: none;
+}
+.navbar-toggler:focus,
+.navbar-toggler:hover {
+	box-shadow: none;
+	border: 1px solid transparent;
+	outline: none;
+}
