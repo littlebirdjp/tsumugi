@@ -59,6 +59,9 @@ A simple WordPress theme for everyone, build with Underscores and Bootstrap 4.
 		- [normalize.cssの重複分を削除](#user-content-normalizecssの重複分を削除)
 		- [オリジナルSassの初期設定](#user-content-オリジナルsassの初期設定)
 		- [.conteinerタグの追加](#user-content-conteinerタグの追加)
+		- [フォントサイズの調整](#user-content-フォントサイズの調整)
+		- [Navbarの組み込み](#user-content-Navbarの組み込み)
+		- [ウィジェットのレイアウト調整](#user-content-ウィジェットのレイアウト調整)
 	- スキンの装飾
 3. 公式ディレクトリへの申請準備
 	- 翻訳ファイルの作成
@@ -240,7 +243,7 @@ BootstrapとUnderscoresでは、デフォルトのCSSに同じ`normalize.css`が
 
 全体のコンテンツ幅を調整するため、HTMLテンプレート側にBootstrapの`.conteiner`タグを追加しました。  
 ヘッダとフッタ、コンテンツの各領域を100%幅でもデザイン調整できるよう、それぞれ`.conteiner`タグで囲む形にしました。
-ｓ
+
 ##### フォントサイズの調整
 
 見出し回りのフォントサイズが、初期設定だと少し大き過ぎるので、以下のように`_variables_tm.scss`内の変数の値を修正しました。
@@ -276,6 +279,40 @@ UnderscoresのSassでBootstrapの変数を利用する形になるので、`styl
 ```
 @import "bootstrap/variables_tm";
 ```
+
+##### Navbarの組み込み
+
+ヘッダーのナビゲーション部分に、Bootstrapの[Navbar](http://v4-alpha.getbootstrap.com/components/navbar/)を組み込みたかったので、`header.php`を以下のように改修しました。  
+
+`nav`タグに`navbar navbar-light bg-faded`のclassを追加し、
+メニュー部分は`<?php wp_nav_menu(); ?>`タグで自動で生成されているので、
+`'menu_class' => 'menu collapse navbar-toggleable-xs'`のようにパラメーターを追加する形でclassを追加しています。
+
+###### 修正前
+
+```
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'tsumugi2' ); ?></button>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+		</nav><!-- #site-navigation -->
+```
+
+###### 修正後
+
+```
+		<nav id="site-navigation" class="main-navigation navbar navbar-light bg-faded" role="navigation">
+			<button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#primary-menu">
+				&#9776;
+			</button>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class' => 'menu collapse navbar-toggleable-xs' ) ); ?>
+		</nav><!-- #site-navigation -->
+```
+
+以上で、メインナビゲーションにBootstrapのNavbarを組み込むことができました。
+
+##### ウィジェットのレイアウト調整
+
+
 
 #### スキンの装飾
 
