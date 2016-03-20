@@ -109,7 +109,7 @@ plugins:
 
 ![](screenshots/screenshot05.png?raw=true)
 
-次に、英語サイトの方にもテーマユニットテストデータをインポートしたいので、[こちら](https://wpcom-themes.svn.automattic.com/demo/theme-unit-test-data.xml)からファイルをダウンロードし、管理画面のTools→Import→WordPressから「Upload file and import」を実行します。
+次に、英語サイトの方にもテーマユニットテストデータをインポートしたかったので、[こちら](https://wpcom-themes.svn.automattic.com/demo/theme-unit-test-data.xml)からファイルをダウンロードし、管理画面のTools→Import→WordPressから「Upload file and import」を実行しました。
 
 ![](screenshots/screenshot06.png?raw=true)
 
@@ -124,9 +124,9 @@ plugins:
 
 [Underscores](http://underscores.me/)のサイトでテーマ名などを入力して、スターターテーマ一式を生成し、ダウンロードしました。  
 テーマ（ディレクトリ）名は`tsumugi`とし、Sassでのカスタマイズが行えるように、Sass版のチェックを入れて生成を行いました。  
-落としたディレクトリ一式を`www/wordpress/wp-content/themes/tsumugi`配下に設置し、管理画面から有効化することで、オリジナルのテーマを適用することができます。
+ダウンロードしたディレクトリ一式を`www/wordpress/wp-content/themes/tsumugi`配下に設置し、管理画面から有効化することで、オリジナルのテーマを適用することができます。
 
-また、Underscoresの導入は、`vagrant ssh`後に以下のコマンドを実行する形でも、簡単に行うことができます。
+※Underscoresの導入は、`vagrant ssh`後に以下のコマンドを実行する形でも、簡単に行うことができます。
 
 ```
 wp scaffold _s tsumugi --theme_name="tsumugi" --author="youthkee" --author_uri="http://littlebird.mobi/" --sassify --activate
@@ -150,9 +150,9 @@ wp theme activate tsumugi --url=tsumugi.local/en
 
 ##### Bootstrapのインストールとアップデート対応
 
-bowerを使ってテーマフォルダ内にBootstrap 4アルファ版をインストールしました。  
+bowerを使ってテーマフォルダ内に[Bootstrap 4アルファ版](http://v4-alpha.getbootstrap.com/)をインストールしました。  
 また、インストールと同時に不要ファイルを削除し、CSSとJS、Sass、および依存ファイル（jQueryとtether.js）だけを残すように設定しました。  
-上記の一連の処理は、`package.json`に記述してあるので、`npm run bwupdate`を実行するだけでBootstrapのインストールまたはアップデートが可能になります。
+上記の一連の処理は、`package.json`にコマンドどして登録してあるので、今後は`npm run bwupdate`を実行するだけでBootstrapのインストールまたはアップデートが可能になります。
 
 #### Bootstrap Sassファイルの抽出
 
@@ -166,7 +166,7 @@ Bootstrapがアップデートされた際は、再度`npm run bwupdate`を実�
 コンパイルに必要なパッケージは、`package.json`に記述してあるので、`npm i`コマンドを実行することでインストールできます。
 
 `gulp`または`npm start`を実行すると、`/sass/`配下で編集したSassファイルが、`/`配下の各ディレクトリへCSSとして書き出されます。  
-ただし、BootstrapオリジナルのCSSは、基本上書きを行わず、BootstrapのSassをコピーした`tsumugi.scss`のみを編集することにしました。  
+※今回はBootstrapオリジナルのCSSは基本上書きを行わず、BootstrapのSassをコピーした`tsumugi.scss`のみを編集することにしました。  
 
 Underscoreの元CSSのフォーマットになるべく合わせるため、コンパイラはRuby Sassを使い、csscombとgulp-frepで整形を行なっています。  
 そのため、Sassを編集する際は、プロジェクトフォルダで下記コマンドを実行し、指定したバージョンのSassとCompassをインストールしてください。  
