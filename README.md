@@ -75,7 +75,7 @@ WordPressの仮想環境を簡単に構築できる[VCCW](http://vccw.cc/)で、
 今回はVCCW本体を外部ディレクトリである`/vccw/`配下へ配置し、プロジェクトフォルダ内には、`Vagrantfile`と`site.yml`だけ設置する形でローカル環境を構築しました。  
 ※この手法について、詳しくは[simple-vccw-env](https://github.com/littlebirdjp/simple-vccw-env)と[解説記事](http://littlebird.mobi/2016/02/vccw_git/)を参考にしてください。
 
-また、今回は公式ディレクトリ向けのテーマを作るために、WordPressのあらゆる投稿パターン等を検証できる[テーマユニットテストデータ](https://wpdocs.osdn.jp/%E3%83%86%E3%83%BC%E3%83%9E%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88%E3%83%86%E3%82%B9%E3%83%88)を予めインポートすることにしました。（`site.yml`に以下の記述を追加）
+今回は公式ディレクトリ向けのテーマを作るために、WordPressのあらゆる投稿パターン等を検証できる[テーマユニットテストデータ](https://wpdocs.osdn.jp/%E3%83%86%E3%83%BC%E3%83%9E%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88%E3%83%86%E3%82%B9%E3%83%88)を予めインポートすることにしました。（`site.yml`に以下の記述を追加）
 
 ```
 theme_unit_test: ture
@@ -88,7 +88,7 @@ theme_unit_test_uri: https://raw.githubusercontent.com/jawordpressorg/theme-test
 multisite: true
 ```
 
-今回はテーマのチェックに利用できる[Theme Check](https://ja.wordpress.org/plugins/theme-check/)等のプラグインもインストールしたかったので、下記のオプションも`site.yml`に追加しました。
+また、今回はテーマのチェックに利用できる[Theme Check](https://ja.wordpress.org/plugins/theme-check/)等のプラグインもインストールしたかったので、下記のオプションも`site.yml`に追加しました。
 
 ```
 plugins:
@@ -109,7 +109,11 @@ plugins:
 
 ![](screenshots/screenshot05.png?raw=true)
 
-マルチサイト機能を使うことで、一つのテーマファイルを編集しながら、リアルタイムで日英2サイトの表示確認が行えるデバッグ環境を作ることができました。
+次に、英語サイトの方にもテーマユニットテストデータをインポートしたいので、[こちら](https://wpcom-themes.svn.automattic.com/demo/theme-unit-test-data.xml)からファイルをダウンロードし、管理画面のTools→Import→WordPressから「Upload file and import」を実行します。
+
+![](screenshots/screenshot06.png?raw=true)
+
+以上で、一つのテーマファイルを編集しながら、リアルタイムで日英2サイトの表示確認が行えるデバッグ環境を作ることができました。
 
 ローカルでの各言語での検証サイトは下記URLとなります。
 
