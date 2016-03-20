@@ -492,6 +492,7 @@ a:active {
 .widget {
 	margin: 0 0 1.5em;
 	font-size: 0.875rem;
+	text-align: center;
 }
 .widget select {
 	max-width: 100%; /* Make sure select elements fit in widgets. */
@@ -515,11 +516,6 @@ a:active {
 
 .widget-title {
 	font-size: 1.3rem;
-	text-align: center;
-}
-
-.widget_meta {
-	text-align: center;
 }
 
 /*--------------------------------------------------------------

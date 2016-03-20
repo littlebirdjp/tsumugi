@@ -284,35 +284,71 @@ UnderscoresのSassでBootstrapの変数を利用する形になるので、`styl
 
 ヘッダーのナビゲーション部分に、Bootstrapの[Navbar](http://v4-alpha.getbootstrap.com/components/navbar/)を組み込みたかったので、`header.php`を以下のように改修しました。  
 
-`nav`タグに`navbar navbar-light bg-faded`のclassを追加し、
+`nav`タグに`navbar navbar-light`のclassを追加し、
 メニュー部分は`<?php wp_nav_menu(); ?>`タグで自動で生成されているので、
 `'menu_class' => 'menu collapse navbar-toggleable-xs'`のようにパラメーターを追加する形でclassを追加しています。
 
 ###### 修正前
 
 ```
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'tsumugi2' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
+<nav id="site-navigation" class="main-navigation" role="navigation">
+	<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'tsumugi2' ); ?></button>
+	<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+</nav><!-- #site-navigation -->
 ```
 
 ###### 修正後
 
 ```
-		<nav id="site-navigation" class="main-navigation navbar navbar-light bg-faded" role="navigation">
-			<button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#primary-menu">
-				&#9776;
-			</button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class' => 'menu collapse navbar-toggleable-xs' ) ); ?>
-		</nav><!-- #site-navigation -->
+<nav id="site-navigation" class="main-navigation navbar navbar-light" role="navigation">
+	<button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#primary-menu">
+		&#9776;
+	</button>
+	<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class' => 'menu collapse navbar-toggleable-xs' ) ); ?>
+</nav><!-- #site-navigation -->
 ```
 
 以上で、メインナビゲーションにBootstrapのNavbarを組み込むことができました。
 
 ##### ウィジェットのレイアウト調整
 
+ウィジェット部分ですが、1カラムだとリスト部分の余白が空いてしまい、冗長な感じになってしまうので、コンパクトにプレーンテキストとして並べる形にしたいと思います。  
+そこで、`_widgets.scss`を以下のように修正し、リスト部分のスタイルをインライン要素に修正しました。
 
+```
+.widget {
+	margin: 0 0 1.5em;
+	font-size: $font-size-sm;
+	text-align: center;
+
+	select {
+		max-width: 100%;
+	/* Make sure select elements fit in widgets. */
+	}
+	ul {
+		display: inline;
+		padding-left: 0;
+		li {
+			display: inline;
+			&::before {
+				content: ' | ';
+			}
+			&:first-child {
+				&::before {
+					content: '';
+				}
+			}
+			li {
+				&:first-child {
+					&::before {
+						content: ' | ';
+					}
+				}
+			}
+		}
+	}
+}
+```
 
 #### スキンの装飾
 
