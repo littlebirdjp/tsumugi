@@ -240,6 +240,42 @@ BootstrapとUnderscoresでは、デフォルトのCSSに同じ`normalize.css`が
 
 全体のコンテンツ幅を調整するため、HTMLテンプレート側にBootstrapの`.conteiner`タグを追加しました。  
 ヘッダとフッタ、コンテンツの各領域を100%幅でもデザイン調整できるよう、それぞれ`.conteiner`タグで囲む形にしました。
+ｓ
+##### フォントサイズの調整
+
+見出し回りのフォントサイズが、初期設定だと少し大き過ぎるので、以下のように`_variables_tm.scss`内の変数の値を修正しました。
+
+###### 修正前
+
+```
+$font-size-h1:               2.5rem !default;
+$font-size-h2:               2rem !default;
+$font-size-h3:               1.75rem !default;
+$font-size-h4:               1.5rem !default;
+$font-size-h5:               1.25rem !default;
+$font-size-h6:               1rem !default;
+```
+
+###### 修正後
+
+```
+$font-size-h1:               1.75rem !default;
+$font-size-h2:               1.6rem !default;
+$font-size-h3:               1.45rem !default;
+$font-size-h4:               1.3rem !default;
+$font-size-h5:               1.15rem !default;
+$font-size-h6:               1rem !default;
+```
+
+また、ナビゲーションメニューやフッター、エントリーの日時やカテゴリー表記、ウィジェット部分などは小さいフォントサイズにしたかったので、それぞれのSassのモジュールでサイズ指定しました。  
+その際、Bootstrapには`$font-size-sm`や`$font-size-xs`などの変数が定義されているので、こちらを利用しました。
+これによって、実際には`0.875rem`や`0.75rem`などの相対サイズが適用されます。
+
+UnderscoresのSassでBootstrapの変数を利用する形になるので、`style.scss`に以下の一行を追加しておきます。
+
+```
+@import "bootstrap/variables_tm";
+```
 
 #### スキンの装飾
 
