@@ -606,6 +606,7 @@ object {
 .wp-caption {
 	margin-bottom: 1.5em;
 	max-width: 100%;
+	color: #818a91;
 }
 .wp-caption img[class*="wp-image-"] {
 	display: block;

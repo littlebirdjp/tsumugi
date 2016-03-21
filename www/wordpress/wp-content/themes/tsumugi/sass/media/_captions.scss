@@ -1,6 +1,7 @@
 .wp-caption {
 	margin-bottom: 1.5em;
 	max-width: 100%;
+	color: $gray-light;
 
 	img[class*="wp-image-"] {
 		@include center-block;
