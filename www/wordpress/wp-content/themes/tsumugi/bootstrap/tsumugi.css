@@ -32,6 +32,40 @@ h6 {
 	font-size: 1rem;
 }
 
+code {
+	color: #373a3c;
+}
+
+pre {
+	line-height: 1;
+	background-color: #f7f7f9;
+	border-radius: 0.25rem;
+	padding: 1.5rem;
+}
+
+table {
+	width: 100%;
+	max-width: 100%;
+	margin-bottom: 1rem;
+}
+table th,
+table td {
+	padding: 0.75rem;
+	line-height: 1.8;
+	vertical-align: top;
+	border-top: 1px solid #eceeef;
+}
+table thead th {
+	vertical-align: bottom;
+	border-bottom: 2px solid #eceeef;
+}
+table tbody + tbody {
+	border-top: 2px solid #eceeef;
+}
+table .table {
+	background-color: #fff;
+}
+
 .navbar {
 	padding: 0 0;
 }
