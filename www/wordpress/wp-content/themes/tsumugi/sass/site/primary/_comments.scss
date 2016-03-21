@@ -1,6 +1,27 @@
+.comment-list {
+	list-style: none;
+	padding-left: 0;
+	ol,
+	ul {
+		list-style: none;
+	}
+}
+
+.comment-metadata {
+	font-size: $font-size-sm;
+}
+
 .comment-content a {
 	word-wrap: break-word;
 }
 .bypostauthor {
 	display: block;
+}
+
+.logged-in-as {
+	font-size: $font-size-sm;
+}
+
+.comment-notes {
+	font-size: $font-size-sm;
 }

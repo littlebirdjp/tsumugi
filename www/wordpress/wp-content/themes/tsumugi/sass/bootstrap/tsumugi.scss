@@ -20,7 +20,7 @@
 //@import "grid_tm";
 @import "tables_tm";
 //@import "forms_tm";
-//@import "buttons_tm";
+@import "buttons_tm";
 
 // Components
 //@import "animation_tm";
@@ -53,4 +53,8 @@
 //@import "utilities_tm";
 //@import "utilities-background_tm";
 //@import "utilities-spacing_tm";
-//@import "utilities-responsive_tm";
+//@import "utilities-responsive_tm
+
+input[type="submit"] {
+  @extend .btn, .btn-primary;
+}
