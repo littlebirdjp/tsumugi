@@ -4,7 +4,7 @@
 	//float: left;
 	//width: 100%;
 	font-size: $font-size-sm;
-	line-height: 2;
+	line-height: 2.8;
 
 	ul {
 		list-style: none;
@@ -12,21 +12,33 @@
 		padding-left: 0;
 
 		ul {
-			box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
-			background: #fff;
-			float: left;
-			position: absolute;
-			top: 1.5rem;
-			left: -999em;
-			z-index: 99999;
-			text-align: left;
+			@include media-breakpoint-up(sm) {
+				background: #fff;
+				float: left;
+				text-align: left;
+				position: absolute;
+				top: 2.4rem;
+				left: -999em;
+				z-index: 99999;
+			}
 
 			ul {
-				left: -999em;
-				top: 0;
+				@include media-breakpoint-up(sm) {
+					left: -999em;
+					top: 0;
+				}
 			}
 
 			li {
+				@include media-breakpoint-up(sm) {
+					background: $gray-lightest;
+				}
+				&:hover,
+				&.focus {
+					@include media-breakpoint-up(sm) {
+						background: $gray-lighter;
+					}
+				}
 				&:hover > ul,
 				&.focus > ul {
 					left: 100%;
@@ -34,7 +46,9 @@
 			}
 
 			a {
-				width: 10rem;
+				@include media-breakpoint-up(sm) {
+					width: 10rem;
+				}
 			}
 
 			:hover > a,
@@ -48,14 +62,17 @@
 
 		li:hover > ul,
 		li.focus > ul {
-			left: auto;
+			left: 0;
 		}
 	}
 
 	li {
 		float: left;
 		position: relative;
-		padding: 0 .25rem;
+		padding: 0 .8rem;
+	  @include media-breakpoint-down(xs) {
+	    width: 100%;
+	  }
 
 		&:hover > a,
 		&.focus > a {
@@ -65,6 +82,9 @@
 	a {
 		display: block;
 		text-decoration: none;
+		@include media-breakpoint-down(xs) {
+			border-bottom: 1px solid $gray-lighter;
+		}
 	}
 
 	.current_page_item > a,
