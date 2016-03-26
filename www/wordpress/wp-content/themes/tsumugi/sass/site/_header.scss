@@ -1,3 +1,9 @@
+.site-header {
+  @include media-breakpoint-up(sm) {
+    text-align: center;
+  }
+}
+
 .site-branding {
   text-align: center;
 }

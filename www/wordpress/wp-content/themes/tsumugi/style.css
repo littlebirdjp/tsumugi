@@ -256,9 +256,7 @@ a:active {
 --------------------------------------------------------------*/
 .main-navigation {
 	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
+	display: inline-block;
 	font-size: 0.875rem;
 	line-height: 2;
 }
@@ -275,6 +273,7 @@ a:active {
 	top: 1.5rem;
 	left: -999em;
 	z-index: 99999;
+	text-align: left;
 }
 .main-navigation ul ul ul {
 	left: -999em;
@@ -384,21 +383,21 @@ a:active {
 /*--------------------------------------------------------------
 # Clearings
 --------------------------------------------------------------*/
-.clear:before,
-.clear:after,
-.entry-content:before,
-.entry-content:after,
-.comment-content:before,
-.comment-content:after,
-.site-header:before,
-.site-header:after,
-.site-content:before,
-.site-content:after,
-.site-footer:before,
-.site-footer:after {
+.clear:before::after,
+.clear:after::after,
+.entry-content:before::after,
+.entry-content:after::after,
+.comment-content:before::after,
+.comment-content:after::after,
+.site-header:before::after,
+.site-header:after::after,
+.site-content:before::after,
+.site-content:after::after,
+.site-footer:before::after,
+.site-footer:after::after {
 	content: "";
 	display: table;
-	table-layout: fixed;
+	clear: both;
 }
 
 .clear:after,
@@ -456,6 +455,12 @@ input[type="search"].search-field {
 /*--------------------------------------------------------------
 ## Header
 --------------------------------------------------------------*/
+@media (min-width: 544px) {
+	.site-header {
+		text-align: center;
+	}
+}
+
 .site-branding {
 	text-align: center;
 }

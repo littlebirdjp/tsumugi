@@ -1,8 +1,8 @@
 .main-navigation {
 	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
+	display: inline-block;
+	//float: left;
+	//width: 100%;
 	font-size: $font-size-sm;
 	line-height: 2;
 
@@ -19,6 +19,7 @@
 			top: 1.5rem;
 			left: -999em;
 			z-index: 99999;
+			text-align: left;
 
 			ul {
 				left: -999em;
