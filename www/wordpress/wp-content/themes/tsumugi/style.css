@@ -552,8 +552,7 @@ input[type="search"].search-field {
 	list-style: none;
 	padding-left: 0;
 }
-.comment-list ol,
-.comment-list ul {
+.comment-list .children {
 	list-style: none;
 }
 
