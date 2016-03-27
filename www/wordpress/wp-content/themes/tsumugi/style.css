@@ -528,6 +528,10 @@ input[type="search"].search-field {
 	margin: 1.5em 0 0;
 }
 
+.entry-content pre {
+	line-height: 1;
+}
+
 .entry-footer {
 	font-size: 0.875rem;
 }
