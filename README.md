@@ -62,6 +62,8 @@ A simple WordPress theme for everyone, build with Underscores and Bootstrap 4.
 		- [フォントサイズの調整](#user-content-フォントサイズの調整)
 		- [Navbarの組み込み](#user-content-Navbarの組み込み)
 		- [ウィジェットのレイアウト調整](#user-content-ウィジェットのレイアウト調整)
+		- [HTML タグとフォーマットの調整](#user-content-html-タグとフォーマットの調整)
+		- [コメント欄の調整](#user-content-コメント欄の調整)
 	- スキンの装飾
 3. 公式ディレクトリへの申請準備
 	- 翻訳ファイルの作成
@@ -362,7 +364,7 @@ Bootstrapのスタイルを適用したい箇所は`tsumugi.scss`を編集し、
 コメントの一覧部分は、初期状態では番号付きリストになっているので、`list-style: none;`にして、フォントサイズなどを調整しました。
 
 また、合わせてコメント入力欄の調整を行い、送信ボタンにはBootstrapの標準ボタンスタイルを当てることにしました。  
-これにはSassの`@extend`機能を使って、送信ボタンの要素そのものに`.btn`classのスタイルを適用しています。
+これにはSassの`@extend`機能を使って、送信ボタンの要素そのものに`.btn`classのスタイルを適用する形を取っています。
 
 ```
 input[type="submit"] {
