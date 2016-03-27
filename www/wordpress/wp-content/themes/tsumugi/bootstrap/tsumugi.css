@@ -39,7 +39,7 @@ code {
 pre {
 	line-height: 1;
 	background-color: #f7f7f9;
-	border-radius: 0.25rem;
+	border-radius: 0;
 	padding: 1.5rem;
 }
 
@@ -79,7 +79,7 @@ input[type="submit"] {
 	padding: 0.375rem 1rem;
 	font-size: 1rem;
 	line-height: 1.8;
-	border-radius: 0.25rem;
+	border-radius: 0;
 }
 .btn:focus,
 input[type="submit"]:focus,
