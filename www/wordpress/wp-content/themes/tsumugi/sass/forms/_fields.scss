@@ -30,8 +30,6 @@ select {
 input[type="text"],
 input[type="email"],
 input[type="url"],
-input[type="password"],
-input[type="search"],
 input[type="number"],
 input[type="tel"],
 input[type="range"],
@@ -43,6 +41,12 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"] {
 	padding: 3px;
+}
+
+input[type="password"],
+input[type="search"] {
+	padding: .5rem;
+	margin-right: .5rem;
 }
 
 textarea {
