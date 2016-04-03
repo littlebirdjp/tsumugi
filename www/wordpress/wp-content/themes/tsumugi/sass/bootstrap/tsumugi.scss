@@ -55,6 +55,7 @@
 //@import "utilities-spacing_tm";
 //@import "utilities-responsive_tm
 
-input[type="submit"] {
+input[type="submit"],
+.more-link {
   @extend .btn, .btn-primary;
 }

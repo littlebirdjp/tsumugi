@@ -66,7 +66,8 @@ table .table {
 }
 
 .btn,
-input[type="submit"] {
+input[type="submit"],
+.more-link {
 	display: inline-block;
 	font-weight: normal;
 	text-align: center;
@@ -82,71 +83,91 @@ input[type="submit"] {
 }
 .btn:focus,
 input[type="submit"]:focus,
+.more-link:focus,
 .btn.focus,
 input.focus[type="submit"],
+.focus.more-link,
 .btn:active:focus,
 input[type="submit"]:active:focus,
+.more-link:active:focus,
 .btn:active.focus,
 input[type="submit"]:active.focus,
+.more-link:active.focus,
 .btn.active:focus,
 input.active[type="submit"]:focus,
+.active.more-link:focus,
 .btn.active.focus,
-input.active.focus[type="submit"] {
+input.active.focus[type="submit"],
+.active.focus.more-link {
 	outline: thin dotted;
 	outline: 5px auto -webkit-focus-ring-color;
 	outline-offset: -2px;
 }
 .btn:focus,
 input[type="submit"]:focus,
+.more-link:focus,
 .btn:hover,
-input[type="submit"]:hover {
+input[type="submit"]:hover,
+.more-link:hover {
 	text-decoration: none;
 }
 .btn.focus,
-input.focus[type="submit"] {
+input.focus[type="submit"],
+.focus.more-link {
 	text-decoration: none;
 }
 .btn:active,
 input[type="submit"]:active,
+.more-link:active,
 .btn.active,
-input.active[type="submit"] {
+input.active[type="submit"],
+.active.more-link {
 	background-image: none;
 	outline: 0;
 }
 .btn.disabled,
 input.disabled[type="submit"],
+.disabled.more-link,
 .btn:disabled,
-input[type="submit"]:disabled {
+input[type="submit"]:disabled,
+.more-link:disabled {
 	cursor: not-allowed;
 	opacity: .65;
 }
 
 .btn-primary,
-input[type="submit"] {
+input[type="submit"],
+.more-link {
 	color: #fff;
 	background-color: #0275d8;
 	border-color: #0275d8;
 }
 .btn-primary:hover,
-input[type="submit"]:hover {
+input[type="submit"]:hover,
+.more-link:hover {
 	color: #fff;
 	background-color: #025aa5;
 	border-color: #01549b;
 }
 .btn-primary:focus,
 input[type="submit"]:focus,
+.more-link:focus,
 .btn-primary.focus,
-input.focus[type="submit"] {
+input.focus[type="submit"],
+.focus.more-link {
 	color: #fff;
 	background-color: #025aa5;
 	border-color: #01549b;
 }
 .btn-primary:active,
 input[type="submit"]:active,
+.more-link:active,
 .btn-primary.active,
 input.active[type="submit"],
+.active.more-link,
 .open > .btn-primary.dropdown-toggle,
-.open > input.dropdown-toggle[type="submit"] {
+.open > input.dropdown-toggle[type="submit"],
+.open > .dropdown-toggle.more-link {
 	color: #fff;
 	background-color: #025aa5;
 	border-color: #01549b;
@@ -154,41 +175,56 @@ input.active[type="submit"],
 }
 .btn-primary:active:hover,
 input[type="submit"]:active:hover,
+.more-link:active:hover,
 .btn-primary:active:focus,
 input[type="submit"]:active:focus,
+.more-link:active:focus,
 .btn-primary:active.focus,
 input[type="submit"]:active.focus,
+.more-link:active.focus,
 .btn-primary.active:hover,
 input.active[type="submit"]:hover,
+.active.more-link:hover,
 .btn-primary.active:focus,
 input.active[type="submit"]:focus,
+.active.more-link:focus,
 .btn-primary.active.focus,
 input.active.focus[type="submit"],
+.active.focus.more-link,
 .open > .btn-primary.dropdown-toggle:hover,
 .open > input.dropdown-toggle[type="submit"]:hover,
+.open > .dropdown-toggle.more-link:hover,
 .open > .btn-primary.dropdown-toggle:focus,
 .open > input.dropdown-toggle[type="submit"]:focus,
+.open > .dropdown-toggle.more-link:focus,
 .open > .btn-primary.dropdown-toggle.focus,
-.open > input.dropdown-toggle.focus[type="submit"] {
+.open > input.dropdown-toggle.focus[type="submit"],
+.open > .dropdown-toggle.focus.more-link {
 	color: #fff;
 	background-color: #014682;
 	border-color: #01315a;
 }
 .btn-primary.disabled:focus,
 input.disabled[type="submit"]:focus,
+.disabled.more-link:focus,
 .btn-primary.disabled.focus,
 input.disabled.focus[type="submit"],
+.disabled.focus.more-link,
 .btn-primary:disabled:focus,
 input[type="submit"]:disabled:focus,
+.more-link:disabled:focus,
 .btn-primary:disabled.focus,
-input[type="submit"]:disabled.focus {
+input[type="submit"]:disabled.focus,
+.more-link:disabled.focus {
 	background-color: #0275d8;
 	border-color: #0275d8;
 }
 .btn-primary.disabled:hover,
 input.disabled[type="submit"]:hover,
+.disabled.more-link:hover,
 .btn-primary:disabled:hover,
-input[type="submit"]:disabled:hover {
+input[type="submit"]:disabled:hover,
+.more-link:disabled:hover {
 	background-color: #0275d8;
 	border-color: #0275d8;
 }
