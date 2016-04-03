@@ -341,12 +341,24 @@ a:active {
 	float: left;
 	width: 50%;
 }
+.comment-navigation .nav-previous a::before,
+.posts-navigation .nav-previous a::before,
+.post-navigation .nav-previous a::before {
+	content: "\003C";
+	margin-right: .25rem;
+}
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
 	float: right;
 	text-align: right;
 	width: 50%;
+}
+.comment-navigation .nav-next a::after,
+.posts-navigation .nav-next a::after,
+.post-navigation .nav-next a::after {
+	content: "\003E";
+	margin-left: .25rem;
 }
 
 /*--------------------------------------------------------------

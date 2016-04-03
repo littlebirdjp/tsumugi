@@ -123,11 +123,19 @@
 	.nav-previous {
 		float: left;
 		width: 50%;
+		a::before {
+			content: "\003C";
+			margin-right: .25rem;
+		}
 	}
 
 	.nav-next {
 		float: right;
 		text-align: right;
 		width: 50%;
+		a::after {
+			content: "\003E";
+			margin-left: .25rem;
+		}
 	}
 }
