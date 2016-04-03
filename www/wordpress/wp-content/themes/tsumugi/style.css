@@ -1,4 +1,4 @@
-/*!
+/*
 Theme Name: tsumugi
 Theme URI: http://littlebird.mobi/
 Author: youthkee
@@ -233,22 +233,17 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: #21759b;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
 }
 a:visited {
-	color: purple;
+	color: #4ca6cf;
 }
 a:hover,
 a:focus,
 a:active {
-	color: midnightblue;
-}
-a:focus {
-	outline: thin dotted;
-}
-a:hover,
-a:active {
-	outline: 0;
+	color: #d54e21;
+	text-decoration: none;
 }
 
 /*--------------------------------------------------------------
@@ -494,7 +489,13 @@ input[type="search"].search-field {
 .site-title {
 	margin-top: 0;
 	margin-bottom: 0;
-	line-height: 1.5;
+	line-height: 1.2;
+}
+.site-title a {
+	color: #373a3c;
+}
+.site-title a:hover {
+	color: #818a91;
 }
 
 /*--------------------------------------------------------------
@@ -516,6 +517,13 @@ input[type="search"].search-field {
 .single .byline,
 .group-blog .byline {
 	display: inline;
+}
+
+.entry-title a {
+	color: #373a3c;
+}
+.entry-title a:hover {
+	color: #818a91;
 }
 
 .entry-meta {

@@ -16,6 +16,16 @@
 	display: inline;
 }
 
+.entry-title {
+  a {
+  	color: $body-color;
+
+  	&:hover {
+  		color: $gray-light;
+  	}
+  }
+}
+
 .entry-meta {
 	font-size: $font-size-sm;
 }

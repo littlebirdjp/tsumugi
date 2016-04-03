@@ -11,5 +11,13 @@
 .site-title {
   margin-top: 0;
   margin-bottom: 0;
-  line-height: 1.5;
+  line-height: 1.2;
+  a {
+  	color: $body-color;
+
+  	&:hover {
+  		color: $gray-light;
+  	}
+  }
+
 }
