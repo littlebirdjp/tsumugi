@@ -257,7 +257,7 @@ a:active {
 	clear: both;
 	display: inline-block;
 	font-size: 0.875rem;
-	line-height: 2.8;
+	line-height: 1.5;
 }
 .main-navigation ul {
 	list-style: none;
@@ -286,19 +286,19 @@ a:active {
 		background: #f7f7f9;
 	}
 }
-@media (min-width: 544px) {
-	.main-navigation ul ul li:hover,
-	.main-navigation ul ul li.focus {
-		background: #eceeef;
-	}
-}
 .main-navigation ul ul li:hover > ul,
 .main-navigation ul ul li.focus > ul {
 	left: 100%;
 }
 @media (min-width: 544px) {
 	.main-navigation ul ul a {
-		width: 10rem;
+		width: 12rem;
+	}
+}
+@media (min-width: 544px) {
+	.main-navigation ul ul a:hover,
+	.main-navigation ul ul a.focus {
+		background: #eceeef;
 	}
 }
 .main-navigation ul li:hover > ul,
@@ -308,19 +308,21 @@ a:active {
 .main-navigation li {
 	float: left;
 	position: relative;
-	padding: 0 .8rem;
 }
 @media (max-width: 543px) {
 	.main-navigation li {
+		padding: 0 .8rem;
 		width: 100%;
 	}
 }
 .main-navigation a {
 	display: block;
 	text-decoration: none;
+	padding: .5rem .8rem;
 }
 @media (max-width: 543px) {
 	.main-navigation a {
+		padding: .5rem 0;
 		border-bottom: 1px solid #eceeef;
 	}
 }
