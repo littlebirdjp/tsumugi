@@ -310,6 +310,8 @@ UnderscoresのSassでBootstrapの変数を利用する形になるので、`styl
 </nav><!-- #site-navigation -->
 ```
 
+![](screenshots/screenshot09.png?raw=true)
+
 また、Underscores標準のメニューは、完全にレスポンシブ対応されておらず、モバイル端末で表示した際にも、通常のドロップダウンメニューが表示されてしまいます。
 
 そこで、Media Queriesを利用して、狭いデバイス幅の場合はスマホ風のリストメニューに変わるよう、CSSを調整しました。その際のブレークポイントは、Bootstrapのmixinsを使って以下のように分岐させています。
@@ -332,6 +334,8 @@ UnderscoresのSassでBootstrapの変数を利用する形になるので、`styl
 
 以上で、メインナビゲーションにBootstrapのNavbarを組み込み、さらにレスポンシブ対応させることができました。  
 尚、スマートフォンで表示した際は、ドロップダウンではなく、サブメニューも含めて通常のリストで展開される形になります。
+
+![](screenshots/screenshot10.png?raw=true)
 
 ##### ウィジェットのレイアウト調整
 
