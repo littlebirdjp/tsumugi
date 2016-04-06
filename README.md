@@ -63,7 +63,7 @@ A simple WordPress theme for everyone, build with Underscores and Bootstrap 4.
 		- [Navbarの組み込み](#user-content-Navbarの組み込み)
 		- [ウィジェットのレイアウト調整](#user-content-ウィジェットのレイアウト調整)
 		- [HTML タグとフォーマットの調整](#user-content-html-タグとフォーマットの調整)
-		- [コメント欄の調整](#user-content-コメント欄の調整)
+		- [コメント欄とフォーム回りの調整](#user-content-コメント欄とフォーム回りの調整)
 	- スキンの装飾
 3. 公式ディレクトリへの申請準備
 	- 翻訳ファイルの作成
@@ -310,7 +310,28 @@ UnderscoresのSassでBootstrapの変数を利用する形になるので、`styl
 </nav><!-- #site-navigation -->
 ```
 
-以上で、メインナビゲーションにBootstrapのNavbarを組み込むことができました。
+また、Underscores標準のメニューは、完全にレスポンシブ対応されておらず、モバイル端末で表示した際にも、通常のドロップダウンメニューが表示されてしまいます。
+
+そこで、Media Queriesを利用して、狭いデバイス幅の場合はスマホ風のリストメニューに変わるよう、CSSを調整しました。その際のブレークポイントは、Bootstrapのmixinsを使って以下のように分岐させています。
+
+```
+@include media-breakpoint-up(sm) {
+	544px以上で適用されるスタイル
+}
+
+@include media-breakpoint-down(xs) {
+	543px以下で適用されるスタイル
+}
+```
+
+また、UnderscoresのCSS上でBootstrapのmixinsを使用するため、`style.scss`に以下の読み込みも追加してあります。
+
+```
+@import "bootstrap/mixins";
+```
+
+以上で、メインナビゲーションにBootstrapのNavbarを組み込み、さらにレスポンシブ対応させることができました。  
+尚、スマートフォンで表示した際は、ドロップダウンではなく、サブメニューも含めて通常のリストで展開される形になります。
 
 ##### ウィジェットのレイアウト調整
 
@@ -358,7 +379,7 @@ UnderscoresのSassでBootstrapの変数を利用する形になるので、`styl
 Bootstrapのスタイルを適用したい箇所は`tsumugi.scss`を編集し、Underscoresのスタイルを適用したい箇所は`style.scss`を編集する形で、それぞれがバッティングしないよう調整しています。  
 これによって、WordPressの投稿画面でユーザーがHTMLタグを使用した際にも、それぞれ適切なスタイルが適用されることになります。
 
-##### コメント欄の調整
+##### コメント欄とフォーム回りの調整
 
 コメント部分の表示の調整を行いました。  
 コメントの一覧部分は、初期状態では番号付きリストになっているので、`list-style: none;`にして、フォントサイズなどを調整しました。
@@ -367,10 +388,14 @@ Bootstrapのスタイルを適用したい箇所は`tsumugi.scss`を編集し、
 これにはSassの`@extend`機能を使って、送信ボタンの要素そのものに`.btn`classのスタイルを適用する形を取っています。
 
 ```
-input[type="submit"] {
+input[type="submit"],
+.more-link {
   @extend .btn, .btn-primary;
 }
 ```
+
+また、合わせて検索ボックスやパスワード入力欄など、フォーム回りの調整を行い、「続きを読む」リンクのスタイリングも行いました。  
+「続きを読む」のスタイルは、先ほどの送信ボタンと同じく、Bootstrap標準ボタンを適用しています。
 
 ![](screenshots/screenshot07.png?raw=true)
 
