@@ -480,7 +480,8 @@ a:active {
 }
 
 .widget-title {
-	font-size: 1.3rem;
+	font-size: 1.6rem;
+	font-family: 'Source Sans Pro',sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -505,7 +506,8 @@ a:active {
 .site-title {
 	margin-top: 0;
 	margin-bottom: 0;
-	line-height: 1.2;
+	line-height: 1;
+	font-family: 'Shadows Into Light', cursive;
 }
 .site-title a {
 	color: #373a3c;
