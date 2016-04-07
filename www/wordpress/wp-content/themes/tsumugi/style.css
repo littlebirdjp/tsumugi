@@ -504,16 +504,17 @@ a:active {
 }
 
 .site-title {
-	margin-top: 0;
+	margin-top: -.5rem;
 	margin-bottom: 1rem;
 	line-height: 1;
 	font-family: 'Shadows Into Light', cursive;
-	font-size: 2rem;
+	font-size: 2.5rem;
 }
 @media (min-width: 768px) {
 	.site-title {
 		text-indent: -3rem;
 		font-size: 3.5rem;
+		margin-bottom: .5rem;
 	}
 }
 .site-title a {
@@ -526,7 +527,7 @@ a:active {
 	font-size: 10rem;
 	color: #818a91;
 	vertical-align: middle;
-	margin: 0 .5rem -1rem;
+	margin: 0 .8rem -.8rem;
 }
 
 /*--------------------------------------------------------------
