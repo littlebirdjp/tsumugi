@@ -264,7 +264,7 @@ a:active {
 	margin: 0;
 	padding-left: 0;
 }
-@media (min-width: 544px) {
+@media (min-width: 768px) {
 	.main-navigation ul ul {
 		background: #fff;
 		float: left;
@@ -275,13 +275,13 @@ a:active {
 		z-index: 99999;
 	}
 }
-@media (min-width: 544px) {
+@media (min-width: 768px) {
 	.main-navigation ul ul ul {
 		left: -999em;
 		top: 0;
 	}
 }
-@media (min-width: 544px) {
+@media (min-width: 768px) {
 	.main-navigation ul ul li {
 		background: #f7f7f9;
 	}
@@ -290,12 +290,12 @@ a:active {
 .main-navigation ul ul li.focus > ul {
 	left: 100%;
 }
-@media (min-width: 544px) {
+@media (min-width: 768px) {
 	.main-navigation ul ul a {
 		width: 12rem;
 	}
 }
-@media (min-width: 544px) {
+@media (min-width: 768px) {
 	.main-navigation ul ul a:hover,
 	.main-navigation ul ul a.focus {
 		background: #eceeef;
@@ -309,7 +309,7 @@ a:active {
 	float: left;
 	position: relative;
 }
-@media (max-width: 543px) {
+@media (max-width: 767px) {
 	.main-navigation li {
 		padding: 0 .8rem;
 		width: 100%;
@@ -320,7 +320,7 @@ a:active {
 	text-decoration: none;
 	padding: .5rem .8rem;
 }
-@media (max-width: 543px) {
+@media (max-width: 767px) {
 	.main-navigation a {
 		padding: .5rem 0;
 		border-bottom: 1px solid #eceeef;
@@ -492,7 +492,7 @@ a:active {
 .site-header {
 	word-wrap: break-word;
 }
-@media (min-width: 544px) {
+@media (min-width: 768px) {
 	.site-header {
 		text-align: center;
 	}

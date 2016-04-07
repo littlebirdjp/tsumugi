@@ -27,10 +27,10 @@
 	<header id="masthead" class="site-header" role="banner">
 
 		<nav id="site-navigation" class="main-navigation navbar navbar-light" role="navigation">
-			<button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#primary-menu">
+			<button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#primary-menu">
 				&#9776;
 			</button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class' => 'menu collapse navbar-toggleable-xs' ) ); ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class' => 'menu collapse navbar-toggleable-sm' ) ); ?>
 		</nav><!-- #site-navigation -->
 
 	<div class="container">

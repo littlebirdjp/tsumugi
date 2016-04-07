@@ -1,6 +1,6 @@
 .site-header {
   word-wrap: break-word;
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-up(md) {
     text-align: center;
   }
 }
