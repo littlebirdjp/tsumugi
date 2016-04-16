@@ -1,16 +1,16 @@
-# Copyright (C) 2016 Automattic
+# Copyright (C) 2016 littlebird
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: _s 1.0.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
+"Project-Id-Version: tsumugi 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-16 19:02:07+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: Yusuke Takahashi <youthkee@gmail.com>\n"
+"Language-Team: littlebird <littlebird.mobi@gmail.com>\n"
 
 #: 404.php:17
 #@ _s
@@ -200,26 +200,27 @@ msgstr ""
 #@ _s
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
+
 #. Theme Name of the plugin/theme
-msgid "_s"
+msgid "tsumugi"
 msgstr ""
 
 #. Theme URI of the plugin/theme
 #@ _s
-msgid "http://underscores.me/"
+msgid "http://littlebird.mobi/"
 msgstr ""
 
 #. Description of the plugin/theme
 #@ _s
-msgid "Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for."
+msgid "tsumugi is a simple blog theme based on _s and Bootstrap 4. It consists of a single column layout which is suitable for mobile devices and tablets along with PCs. For it's readability and simplicity, this theme is user-friendly for everyone. (The name of "tsumugi" is inspired by the song of "Hatsune".)"
 msgstr ""
 
 #. Author of the plugin/theme
 #@ _s
-msgid "Automattic"
+msgid "youthkee"
 msgstr ""
 
 #. Author URI of the plugin/theme
 #@ _s
-msgid "http://automattic.com/"
+msgid "https://github.com/littlebirdjp/tsumugi/"
 msgstr ""
