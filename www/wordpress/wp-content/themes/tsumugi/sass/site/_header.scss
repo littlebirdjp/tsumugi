@@ -10,27 +10,34 @@
 }
 
 .site-title {
-  margin-top: -.5rem;
-  margin-bottom: 1rem;
-  line-height: 1;
-  font-family: 'Shadows Into Light', cursive;
+  //margin-top: -.5rem;
+  margin-bottom: 1.5rem;
+  line-height: .5;
+  font-family: 'Annie Use Your Telescope', cursive;
+  //font-family: 'Shadows Into Light', cursive;
   font-size: 2.5rem;
   @include media-breakpoint-up(md) {
-    text-indent: -3rem;
+    text-indent: -2rem;
     font-size: 3.5rem;
-    margin-bottom: .5rem;
+    margin-bottom: 0;
   }
   a {
-  	color: $body-color;
+  	color: #17566E;
 
   	&:hover {
   		color: $gray-light;
   	}
   }
-  .fa {
+  .s {
     font-size: 10rem;
-    color: $gray-light;
+    color: #57A0BC;
     vertical-align: middle;
-    margin: 0 .8rem -.8rem;
+    display: inline-block;
+    //vertical-align: -webkit-baseline-middle;
+    //margin: 0 .8rem -.8rem;
   }
+}
+
+.site-description {
+  //font-family: 'Source Sans Pro',sans-serif;
 }

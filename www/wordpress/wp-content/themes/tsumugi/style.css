@@ -505,30 +505,29 @@ a:active {
 }
 
 .site-title {
-	margin-top: -.5rem;
-	margin-bottom: 1rem;
-	line-height: 1;
-	font-family: 'Shadows Into Light', cursive;
+	margin-bottom: 1.5rem;
+	line-height: .5;
+	font-family: 'Annie Use Your Telescope', cursive;
 	font-size: 2.5rem;
 }
 @media (min-width: 768px) {
 	.site-title {
-		text-indent: -3rem;
+		text-indent: -2rem;
 		font-size: 3.5rem;
-		margin-bottom: .5rem;
+		margin-bottom: 0;
 	}
 }
 .site-title a {
-	color: #373a3c;
+	color: #17566E;
 }
 .site-title a:hover {
 	color: #818a91;
 }
-.site-title .fa {
+.site-title .s {
 	font-size: 10rem;
-	color: #818a91;
+	color: #57A0BC;
 	vertical-align: middle;
-	margin: 0 .8rem -.8rem;
+	display: inline-block;
 }
 
 /*--------------------------------------------------------------
