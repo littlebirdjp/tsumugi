@@ -62,9 +62,10 @@ gulp.task('compass', function() {
 });
 
 gulp.task("buildFiles", function() {
-  return gulp.src([paths.dist + '**/*.+(php|css|js|json|txt|pot|jpg|jpeg|png|gif|svg)'])
+  return gulp.src([paths.dist + '**/*.+(php|css|js|json|txt|pot|po|mo|jpg|jpeg|png|gif|svg|eot|ttf|woff|woff2)'])
     .pipe(ignore('node_modules/**'))
     .pipe(ignore('vendor/**'))
+    .pipe(ignore('symbols-for-sketch-master/**'))
     .pipe(ignore('package.json'))
     .pipe(ignore('gulpfile.js'))
     .pipe(gulp.dest(paths.build))
