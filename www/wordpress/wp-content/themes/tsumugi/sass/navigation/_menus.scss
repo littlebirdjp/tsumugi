@@ -80,12 +80,16 @@
 	}
 
 	a {
+		color: #0050AB;
 		display: block;
 		text-decoration: none;
 		padding: .5rem .8rem;
 		@include media-breakpoint-down(sm) {
 			padding: .5rem 0;
 			border-bottom: 1px solid $gray-lighter;
+		}
+		&:hover {
+			color: #128DEC;
 		}
 	}
 

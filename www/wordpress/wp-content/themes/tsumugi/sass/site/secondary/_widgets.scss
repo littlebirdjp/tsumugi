@@ -32,11 +32,19 @@
 	th {
 		text-align: center;
 	}
+  a {
+  	color: $gray;
+
+  	&:hover {
+  		color: $gray-light;
+  	}
+  }
 }
 
 .widget-title {
 	font-size: $font-size-h2;
 	font-family: 'Source Sans Pro',sans-serif;
+	color: #0962A8;
 }
 
 .widget_meta {

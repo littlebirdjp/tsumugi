@@ -32,6 +32,13 @@
 
 .entry-meta {
 	font-size: $font-size-sm;
+  a {
+  	color: $gray;
+
+  	&:hover {
+  		color: $gray-light;
+  	}
+  }
 }
 
 .page-content,
@@ -48,6 +55,13 @@
 
 .entry-footer {
 	font-size: $font-size-sm;
+  a {
+  	color: $gray;
+
+  	&:hover {
+  		color: $gray-light;
+  	}
+  }
 }
 
 .page-links {

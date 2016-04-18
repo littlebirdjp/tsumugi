@@ -1,14 +1,14 @@
 a {
-	color: $color__link;
+	color: #FA3600;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
 
 	&:visited {
-		color: $color__link-visited;
+		color: #FA3600;
 	}
 	&:hover,
 	&:focus,
 	&:active {
-		color: $color__link-hover;
+		color: #FF8A00;
 		text-decoration: none;
 	}
 	&:focus {

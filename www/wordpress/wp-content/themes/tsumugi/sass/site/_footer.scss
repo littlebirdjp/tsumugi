@@ -1,5 +1,12 @@
 .site-footer {
   padding-bottom: 1rem;
+  a {
+  	color: $gray;
+
+  	&:hover {
+  		color: $gray-light;
+  	}
+  }
 }
 
 .site-info {

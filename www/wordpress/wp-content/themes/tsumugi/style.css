@@ -238,16 +238,16 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: #21759b;
+	color: #FA3600;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
 }
 a:visited {
-	color: #4ca6cf;
+	color: #FA3600;
 }
 a:hover,
 a:focus,
 a:active {
-	color: #d54e21;
+	color: #FF8A00;
 	text-decoration: none;
 }
 
@@ -317,6 +317,7 @@ a:active {
 	}
 }
 .main-navigation a {
+	color: #0050AB;
 	display: block;
 	text-decoration: none;
 	padding: .5rem .8rem;
@@ -326,6 +327,9 @@ a:active {
 		padding: .5rem 0;
 		border-bottom: 1px solid #eceeef;
 	}
+}
+.main-navigation a:hover {
+	color: #128DEC;
 }
 
 .site-main .comment-navigation,
@@ -479,10 +483,17 @@ a:active {
 .widget th {
 	text-align: center;
 }
+.widget a {
+	color: #55595c;
+}
+.widget a:hover {
+	color: #818a91;
+}
 
 .widget-title {
 	font-size: 1.6rem;
 	font-family: 'Source Sans Pro',sans-serif;
+	color: #0962A8;
 }
 
 /*--------------------------------------------------------------
@@ -518,14 +529,14 @@ a:active {
 	}
 }
 .site-title a {
-	color: #17566E;
+	color: #0E55A1;
 }
 .site-title a:hover {
-	color: #818a91;
+	color: #0E55A1;
 }
 .site-title .s {
 	font-size: 10rem;
-	color: #57A0BC;
+	color: #60B4E3;
 	vertical-align: middle;
 	display: inline-block;
 }
@@ -565,6 +576,12 @@ a:active {
 .entry-meta {
 	font-size: 0.875rem;
 }
+.entry-meta a {
+	color: #55595c;
+}
+.entry-meta a:hover {
+	color: #818a91;
+}
 
 .page-content,
 .entry-content,
@@ -578,6 +595,12 @@ a:active {
 
 .entry-footer {
 	font-size: 0.875rem;
+}
+.entry-footer a {
+	color: #55595c;
+}
+.entry-footer a:hover {
+	color: #818a91;
 }
 
 .page-links {
@@ -629,6 +652,12 @@ a:active {
 --------------------------------------------------------------*/
 .site-footer {
 	padding-bottom: 1rem;
+}
+.site-footer a {
+	color: #55595c;
+}
+.site-footer a:hover {
+	color: #818a91;
 }
 
 .site-info {
