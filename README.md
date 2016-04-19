@@ -561,7 +561,7 @@ Poeditで翻訳するには、「ファイル」→「POTファイルを元に�
 
 そこで、今回はこれらのファイルを参考に、まずUnderscoresの日本語ファイルを作成し、次に今回制作するテーマ用に、必要な箇所を書き換える流れで翻訳を行いました。
 
-※2016年4月時点での最新の日本語ファイルを、こちらの[リポジトリ](https://github.com/littlebirdjp/_s/blob/add-japanese-language-file/languages/_s.pot)にアップしているので、よろしければお使いください。
+※2016年4月時点での最新の日本語ファイルを、こちらの[リポジトリ](https://github.com/littlebirdjp/_s/blob/add-japanese-language-file/languages)にアップしているので、よろしければお使いください。
 
 ##### テーマ用に日本語ファイルを編集
 
