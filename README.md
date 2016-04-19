@@ -64,10 +64,17 @@ A simple WordPress theme for everyone, build with Underscores and Bootstrap 4.
 		- [ウィジェットのレイアウト調整](#user-content-ウィジェットのレイアウト調整)
 		- [HTML タグとフォーマットの調整](#user-content-html-タグとフォーマットの調整)
 		- [コメント欄とフォーム回りの調整](#user-content-コメント欄とフォーム回りの調整)
-	- スキンの装飾
-3. 公式ディレクトリへの申請準備
-	- 翻訳ファイルの作成
-	- パブリッシュの設定
+	- [スキンの装飾](#user-content-スキンの装飾)
+		- [Webフォントとアイコンフォントの読み込み](#user-content-webフォントとアイコンフォントの読み込み)
+		- [テーマロゴの作成](#user-content-テーマロゴの作成)
+		- [テーマロゴの組み込み](#user-content-テーマロゴの組み込み)
+		- リンクカラーの設定
+		- 見出しスタイルの作成
+3. [公式ディレクトリへの申請準備](#user-content-公式ディレクトリへの申請準備)
+	- [翻訳ファイルの作成](#user-content-翻訳ファイルの作成)
+	- [パブリッシュの設定](#user-content-パブリッシュの設定)
+		- [Underscoresの日本語ファイルを作成](#user-content-underscoresの日本語ファイルを作成)
+		- [テーマ用に日本語ファイルを編集](#user-content-テーマ用に日本語ファイルを編集)
 	- 公開申請
 4. 公式サイトの作成
 5. デモサイトの作成
@@ -416,18 +423,198 @@ input[type="submit"],
 スケルトンで構造が組み終わり、色味やアイコン、パーツなど装飾部分のスタイリングを行うフェーズ。  
 構造とスキンを明確に分けて構築することで、今後スキンを追加できるような設計も考慮に入れる予定です。
 
+##### Webフォントとアイコンフォントの読み込み
+
+サイトタイトルと、ウィジェットのタイトル部分にWebフォントを適用したかったので、Google Fotnsを読み込ませることにしました。
+
+また、テーマの装飾にアイコンフォントを利用したかったので、合わせてFotn Awesomeの読み込みも行いました。
+
+`function.php`に以下の記述を追加することで、外部フォントを読み込ませることができます。
+
+```
+function tsumugi_scripts() {
+
+…
+
+	wp_enqueue_style( 'google-font', 'http://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope|Source+Sans+Pro:300' );
+	wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' );
+
+…
+
+}
+add_action( 'wp_enqueue_scripts', 'tsumugi_scripts' );
+```
+
+CSS側は、下記のようにフォントファミリーを指定することで、Webフォントを適用することができます。
+
+```
+.site-title {
+  font-family: 'Annie Use Your Telescope', cursive;
+}
+
+.widget-title {
+	font-family: 'Source Sans Pro',sans-serif;
+}
+```
+
+##### テーマロゴの作成
+
+サイトタイトルの部分に、ロゴを組み込みたかったので、テーマロゴを作成しました。
+
+また、ロゴは軽量で汎用性の高いアイコンフォントとして組み込みたかったので、cognitomさんの[symbols-for-sketch](https://github.com/cognitom/symbols-for-sketch)を使い、Sketchファイルからアイコンフォントの生成を行いました。
+
+symbols-for-sketchのファイル一式をテーマフォルダ内に設置してSketchファイルを編集し、gulpのコマンドを実行するだけで、アイコン用のフォントファイルと、組み込み用のCSSファイルを生成してくれます。
+
+まずは、Sketchのアートボード内に、こんな感じでアイコン用の画像を作成してみました。  
+（マスク部分の色味は、最終的にCSSで設定するので、何色でもOKです）
+
+##### テーマロゴの組み込み
+
+`symbols-for-sketch-master/gulpfile.js`で、フォント名や出力先のパスなどを設定し、`gulp symbols`を実行すると、アイコンフォント一式が生成されます。
+
+以下の記述をCSSファイルに組み込むと、オリジナルのアイコンフォントを表示させることができます。
+
+```
+@font-face {
+  font-family: "tsumugi";
+  src: url('../fonts/tsumugi.eot');
+  src: url('../fonts/tsumugi.eot?#iefix') format('eot'),
+    url('../fonts/tsumugi.woff2') format('woff2'),
+    url('../fonts/tsumugi.woff') format('woff'),
+    url('../fonts/tsumugi.ttf') format('truetype'),
+    url('../fonts/tsumugi.svg#tsumugi') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.s:before {
+  display: inline-block;
+  font-family: "tsumugi";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.s-feather:before { content: "\EA01" }
+```
+
+今回作成した『羽根』のアイコンは、HTML内に`<span class="s s-feather"></span>`と記述すればいいので、ヘッダー部分を下記のように修正しました。
+
+
+```
+		<div class="site-branding">
+			<?php
+			if ( is_front_page() && is_home() ) : ?>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="s s-feather"></span><br class="hidden-md-up"><?php bloginfo( 'name' ); ?></a></h1>
+			<?php else : ?>
+				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="s s-feather"></span><br class="hidden-md-up"><?php bloginfo( 'name' ); ?></a></p>
+			<?php
+			endif;
+
+			$description = get_bloginfo( 'description', 'display' );
+			if ( $description || is_customize_preview() ) : ?>
+				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+			<?php
+			endif; ?>
+		</div><!-- .site-branding -->
+```
+
+あとは、CSS側でサイズや色などを調整すれば、ヘッダーのデザイン処理は完了です。ヘッダー部分も、レスポンシブ対応させ、スマートフォン／タブレットで表示した際は、スタイルを切り替えるようにしています。
+
+ロゴの直後に、以下の`<br>`タグを入れていますが、Bootstrapの汎用classでスマートフォン／タブレットの時だけ表示するようにしているので、これによってタイトル部分もモバイルデバイスで閲覧した時だけ1カラム表示になります。
+
+```
+<br class="hidden-md-up">
+```
+
+##### リンクカラーの設定
+
+##### 見出しスタイルの作成
+
 ### 公式ディレクトリへの申請準備
 
 テーマの制作をいったん終えて、公式ディレクトリへの申請準備をする段階のタスク。
 
 #### 翻訳ファイルの作成
 
-Underscoresは英語向けに作られたスターターテーマなので、国内ユーザー向けにテーマ内の英語部分を日本語化するための翻訳ファイルを作成します。
+Underscoresは英語向けに作られたスターターテーマなので、国内ユーザー向けにテーマ内の英語部分を日本語化するための翻訳ファイルを作成しました。
+
+テーマを翻訳するには、まず翻訳部分のテキストを抽出する必要がありますが、Underscoresにはすでに翻訳用のテンプレートファイルが含まれているので（Translation Readyの状態）、このファイルを元に翻訳を行えばOKです。
+
+翻訳ファイルの作成は、コマンドラインツール等でもできるそうですが、今回は[Poedit](https://osdn.jp/projects/sfnet_poedit/)というソフトを使って翻訳を行いました。
+
+Poeditで翻訳するには、「ファイル」→「POTファイルを元に新しいカタログファイルを作成します」から、すでにテーマフォルダに入っている`languages/tsumugi.pot`というファイルを開き、`ja.po`のファイル名で保存。後は、ウィンドウの『翻訳』という欄に対応する日本語を入力していくだけで実行できます。
+
+##### Underscoresの日本語ファイルを作成
+
+ところで、Underscoresは国内でも多数のユーザーに使用されていると思われますが、すでに日本語の翻訳ファイルなどは存在しないのでしょうか？
+
+そう思って探してみると、[naokomc](https://github.com/naokomc/_s/tree/language-pack-branch-patch/languages)さんや、[gatespace](https://github.com/gatespace/_s/tree/ja/languages)さんが作成された日本語ファイルがGitHubに公開されていました。
+
+そこで、今回はこれらのファイルを参考に、まずUnderscoresの日本語ファイルを作成し、次に今回制作するテーマ用に、必要な箇所を書き換える流れで翻訳を行いました。
+
+※2016年4月時点での最新の日本語ファイルを、こちらの[リポジトリ](https://github.com/littlebirdjp/_s/blob/add-japanese-language-file/languages/_s.pot)にアップしているので、よろしければお使いください。
+
+##### テーマ用に日本語ファイルを編集
+
+先ほど作成した翻訳ファイル`ja.po`と、自動的に生成される`ja.mo`の2つが入っていれば、WordPressは翻訳ファイルを認識し、翻訳部分が日本語で表示されます。ただし、このままだとテーマ名や作者名、URLなどがUnderscoresの初期状態のままの表記になってしまうので、これらは書き換えておいた方がいいでしょう。
+
+そこで、`tsumugi.pot`と`ja.po`をそれぞれテキストエディタで編集し、必要な箇所の書き換えを行いました。「Last-Translator」等の欄も、Poeditで変換した場合はソフトに設定した翻訳者名とメールアドレスが挿入されますが、必要があれば適切な表記に修正しておきます。
+
+エディタ等で直接編集した場合は、そのままでは自動的に反映されないので、`ja.po`をPoeditで開き直してから、再度保存しましょう。
 
 #### パブリッシュの設定
 
-制作段階では、テーマフォルダ内に様々な開発用のファイルが存在するため、公式ディレクトリへの申請に備えて必要なファイルだけを抽出してパッケージ化する仕組みを構築します。  
+制作段階では、テーマフォルダ内に様々な開発用のファイルが存在するため、公式ディレクトリへの申請に備えて必要なファイルだけを抽出してパッケージ化する仕組みを構築しました。  
 この仕組みは、今後の運用フローにて、テーマを更新する際にも使用する予定です。
+
+公開用のファイル一式をパブリッシュするため、`gulpfile.js`に以下のタスクを追加しました。  
+zip形式への圧縮と、不要ファイルの削除には、`gulp-zip`と`gulp-rimraf`というパッケージを使用しています。
+
+```
+var project = 'tsumugi';
+var version = '1.0.0';
+
+var paths = {
+  'src': 'sass/',
+  'dist': './',
+  'build': 'build/'
+}
+
+gulp.task("buildFiles", function() {
+  return gulp.src([paths.dist + '**/*.+(php|css|js|json|txt|pot|po|mo|jpg|jpeg|png|gif|svg|eot|ttf|woff|woff2)'])
+    .pipe(ignore('node_modules/**'))
+    .pipe(ignore('vendor/**'))
+    .pipe(ignore('symbols-for-sketch-master/**'))
+    .pipe(ignore('package.json'))
+    .pipe(ignore('gulpfile.js'))
+    .pipe(gulp.dest(paths.build))
+});
+
+gulp.task("buildZip", ['buildFiles'], function() {
+  return gulp.src([paths.build + '/**/'])
+    .pipe(zip(project+'.zip'))
+    .pipe(gulp.dest(paths.dist))
+});
+
+gulp.task("cleanup", ['buildZip'], function() {
+  return gulp.src([paths.build], { read: false })
+    .pipe(rimraf({ force: true }));
+});
+
+gulp.task('build', ['cleanup']);
+```
+
+`gulp build`というコマンドを実行すると、下記の一連の処理が実行されます。
+
+- テーマフォルダ内から必要な拡張子のファイルだけ抽出し、`/build/`フォルダへコピー（不要なファイル、フォルダは除く）
+- `/build/`フォルダ内のファイル一式を、`tsumugi.zip`という名前でzipファイルに圧縮
+- `/build/`フォルダ内に残った不要ファイルを削除
+
+以上で、いつでも公開用のテーマファイル一式を作成することができるようになりました。  
+実際には、リリースしたバージョン毎に、`tsumugi.zip`を`tsumugi.1.0.0.zip`のようにリネームして、公開・アップデートする形になります。
 
 #### 公開申請
 
