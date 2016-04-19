@@ -72,9 +72,9 @@ A simple WordPress theme for everyone, build with Underscores and Bootstrap 4.
 		- 見出しスタイルの作成
 3. [公式ディレクトリへの申請準備](#user-content-公式ディレクトリへの申請準備)
 	- [翻訳ファイルの作成](#user-content-翻訳ファイルの作成)
-	- [パブリッシュの設定](#user-content-パブリッシュの設定)
 		- [Underscoresの日本語ファイルを作成](#user-content-underscoresの日本語ファイルを作成)
 		- [テーマ用に日本語ファイルを編集](#user-content-テーマ用に日本語ファイルを編集)
+	- [パブリッシュの設定](#user-content-パブリッシュの設定)
 	- 公開申請
 4. 公式サイトの作成
 5. デモサイトの作成
@@ -425,11 +425,11 @@ input[type="submit"],
 
 ##### Webフォントとアイコンフォントの読み込み
 
-サイトタイトルと、ウィジェットのタイトル部分にWebフォントを適用したかったので、Google Fotnsを読み込ませることにしました。
+サイトタイトルと、ウィジェットのタイトル部分にWebフォントを適用したかったので、[Google Fonts](https://www.google.com/fonts)を読み込ませることにしました。
 
-また、テーマの装飾にアイコンフォントを利用したかったので、合わせてFotn Awesomeの読み込みも行いました。
+また、テーマの装飾にアイコンフォントを利用したかったので、合わせて[Font Awesome](https://fortawesome.github.io/Font-Awesome/)の読み込みも行いました。
 
-`function.php`に以下の記述を追加することで、外部フォントを読み込ませることができます。
+`function.php`に以下の記述を追加することで、Google FontsやFont Awesomeなどの外部フォントを読み込ませることができます。
 
 ```
 function tsumugi_scripts() {
@@ -445,7 +445,7 @@ function tsumugi_scripts() {
 add_action( 'wp_enqueue_scripts', 'tsumugi_scripts' );
 ```
 
-CSS側は、下記のようにフォントファミリーを指定することで、Webフォントを適用することができます。
+CSS側では、下記のようにフォントファミリーを指定することで、Webフォントを適用させることができます。
 
 ```
 .site-title {
@@ -461,16 +461,18 @@ CSS側は、下記のようにフォントファミリーを指定すること�
 
 サイトタイトルの部分に、ロゴを組み込みたかったので、テーマロゴを作成しました。
 
-また、ロゴは軽量で汎用性の高いアイコンフォントとして組み込みたかったので、cognitomさんの[symbols-for-sketch](https://github.com/cognitom/symbols-for-sketch)を使い、Sketchファイルからアイコンフォントの生成を行いました。
+ロゴは軽量で汎用性の高いアイコンフォントとして組み込みたかったので、cognitomさんの[symbols-for-sketch](https://github.com/cognitom/symbols-for-sketch)を使い、[Sketch](https://www.sketchapp.com/)ファイルからアイコンフォントの生成を行いました。
 
 symbols-for-sketchのファイル一式をテーマフォルダ内に設置してSketchファイルを編集し、gulpのコマンドを実行するだけで、アイコン用のフォントファイルと、組み込み用のCSSファイルを生成してくれます。
 
 まずは、Sketchのアートボード内に、こんな感じでアイコン用の画像を作成してみました。  
 （マスク部分の色味は、最終的にCSSで設定するので、何色でもOKです）
 
+![](screenshots/screenshot11.png?raw=true)
+
 ##### テーマロゴの組み込み
 
-`symbols-for-sketch-master/gulpfile.js`で、フォント名や出力先のパスなどを設定し、`gulp symbols`を実行すると、アイコンフォント一式が生成されます。
+`symbols-for-sketch-master/gulpfile.js`で、フォント名や出力先のパスなどを設定し、`gulp symbols`コマンドを実行すると、アイコンフォント一式が生成されます。
 
 以下の記述をCSSファイルに組み込むと、オリジナルのアイコンフォントを表示させることができます。
 
@@ -523,6 +525,8 @@ symbols-for-sketchのファイル一式をテーマフォルダ内に設置し�
 
 あとは、CSS側でサイズや色などを調整すれば、ヘッダーのデザイン処理は完了です。ヘッダー部分も、レスポンシブ対応させ、スマートフォン／タブレットで表示した際は、スタイルを切り替えるようにしています。
 
+![](screenshots/screenshot12.png?raw=true)
+
 ロゴの直後に、以下の`<br>`タグを入れていますが、Bootstrapの汎用classでスマートフォン／タブレットの時だけ表示するようにしているので、これによってタイトル部分もモバイルデバイスで閲覧した時だけ1カラム表示になります。
 
 ```
@@ -547,6 +551,8 @@ Underscoresは英語向けに作られたスターターテーマなので、国
 
 Poeditで翻訳するには、「ファイル」→「POTファイルを元に新しいカタログファイルを作成します」から、すでにテーマフォルダに入っている`languages/tsumugi.pot`というファイルを開き、`ja.po`のファイル名で保存。後は、ウィンドウの『翻訳』という欄に対応する日本語を入力していくだけで実行できます。
 
+![](screenshots/screenshot13.png?raw=true)
+
 ##### Underscoresの日本語ファイルを作成
 
 ところで、Underscoresは国内でも多数のユーザーに使用されていると思われますが、すでに日本語の翻訳ファイルなどは存在しないのでしょうか？
@@ -564,6 +570,10 @@ Poeditで翻訳するには、「ファイル」→「POTファイルを元に�
 そこで、`tsumugi.pot`と`ja.po`をそれぞれテキストエディタで編集し、必要な箇所の書き換えを行いました。「Last-Translator」等の欄も、Poeditで変換した場合はソフトに設定した翻訳者名とメールアドレスが挿入されますが、必要があれば適切な表記に修正しておきます。
 
 エディタ等で直接編集した場合は、そのままでは自動的に反映されないので、`ja.po`をPoeditで開き直してから、再度保存しましょう。
+
+![](screenshots/screenshot14.png?raw=true)
+
+以上で、テーマの翻訳・日本語化の作業が完了しました。
 
 #### パブリッシュの設定
 
@@ -609,7 +619,7 @@ gulp.task('build', ['cleanup']);
 
 `gulp build`というコマンドを実行すると、下記の一連の処理が実行されます。
 
-- テーマフォルダ内から必要な拡張子のファイルだけ抽出し、`/build/`フォルダへコピー（不要なファイル、フォルダは除く）
+- テーマフォルダ内から必要な拡張子のファイルだけ抽出し、`/build/`フォルダ配下へコピー（不要なファイル、フォルダは除く）
 - `/build/`フォルダ内のファイル一式を、`tsumugi.zip`という名前でzipファイルに圧縮
 - `/build/`フォルダ内に残った不要ファイルを削除
 
