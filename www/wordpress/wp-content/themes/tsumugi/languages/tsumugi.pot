@@ -212,7 +212,7 @@ msgstr ""
 
 #. Description of the plugin/theme
 #@ _s
-msgid "tsumugi is a simple blog theme based on _s and Bootstrap. It consists of a single column layout which is suitable for mobile devices and tablets along with PCs. For it's readability and simplicity, this theme is user-friendly for everyone. (The name of "tsumugi" is inspired by the song of "Hatsune", a Japanese singer.)"
+msgid "tsumugi is a simple blog theme based on _s and Bootstrap. It consists of a single column layout which is suitable for mobile devices and tablets along with PCs. For it's readability and simplicity, this theme is user-friendly for everyone. (The name of \"tsumugi\" is inspired by the song of \"Hatsune\", a Japanese singer.)"
 msgstr ""
 
 #. Author of the plugin/theme
