@@ -21,6 +21,9 @@
     font-size: 3.5rem;
     margin-bottom: -.5rem;
   }
+  @include media-breakpoint-up(lg) {
+    font-size: 4.5rem;
+  }
   @include media-breakpoint-up(xl) {
     font-size: 5.5rem;
   }
@@ -36,6 +39,9 @@
     color: #429BBF;
     vertical-align: middle;
     display: inline-block;
+    @include media-breakpoint-up(lg) {
+      font-size: 12rem;
+    }
     @include media-breakpoint-up(xl) {
       font-size: 14rem;
     }
