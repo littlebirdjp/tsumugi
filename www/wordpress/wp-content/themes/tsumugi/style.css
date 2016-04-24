@@ -517,6 +517,8 @@ a:active {
 
 .site-branding {
 	text-align: center;
+	border-bottom: 1px dashed #165E83;
+	margin-bottom: 1.5rem;
 }
 
 .site-title {
@@ -529,7 +531,12 @@ a:active {
 	.site-title {
 		text-indent: -2rem;
 		font-size: 3.5rem;
-		margin-bottom: 0;
+		margin-bottom: -.5rem;
+	}
+}
+@media (min-width: 1200px) {
+	.site-title {
+		font-size: 5.5rem;
 	}
 }
 .site-title a {
@@ -543,6 +550,11 @@ a:active {
 	color: #429BBF;
 	vertical-align: middle;
 	display: inline-block;
+}
+@media (min-width: 1200px) {
+	.site-title .s {
+		font-size: 14rem;
+	}
 }
 
 /*--------------------------------------------------------------
