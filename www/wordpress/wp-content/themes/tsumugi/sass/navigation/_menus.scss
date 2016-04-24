@@ -80,7 +80,7 @@
 	}
 
 	a {
-		color: #0050AB;
+		color: $link-color;
 		display: block;
 		text-decoration: none;
 		padding: .5rem .8rem;
@@ -89,7 +89,7 @@
 			border-bottom: 1px solid $gray-lighter;
 		}
 		&:hover {
-			color: #128DEC;
+			color: $link-hover-color;
 		}
 	}
 

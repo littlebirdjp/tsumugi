@@ -238,16 +238,16 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: #FA3600;
+	color: #e83929;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
 }
 a:visited {
-	color: #FA3600;
+	color: #e83929;
 }
 a:hover,
 a:focus,
 a:active {
-	color: #FF8A00;
+	color: #ef796e;
 	text-decoration: none;
 }
 
@@ -317,7 +317,7 @@ a:active {
 	}
 }
 .main-navigation a {
-	color: #0050AB;
+	color: #007BBB;
 	display: block;
 	text-decoration: none;
 	padding: .5rem .8rem;
@@ -329,7 +329,7 @@ a:active {
 	}
 }
 .main-navigation a:hover {
-	color: #128DEC;
+	color: #009dee;
 }
 
 .site-main .comment-navigation,
@@ -484,7 +484,7 @@ a:active {
 	text-align: center;
 }
 .widget a {
-	color: #55595c;
+	color: #373a3c;
 }
 .widget a:hover {
 	color: #818a91;
@@ -493,7 +493,7 @@ a:active {
 .widget-title {
 	font-size: 1.6rem;
 	font-family: 'Source Sans Pro',sans-serif;
-	color: #0962A8;
+	color: #007BBB;
 }
 
 /*--------------------------------------------------------------
@@ -529,14 +529,14 @@ a:active {
 	}
 }
 .site-title a {
-	color: #0E55A1;
+	color: #165E83;
 }
 .site-title a:hover {
-	color: #0E55A1;
+	color: #165E83;
 }
 .site-title .s {
 	font-size: 10rem;
-	color: #60B4E3;
+	color: #429BBF;
 	vertical-align: middle;
 	display: inline-block;
 }
@@ -654,7 +654,7 @@ a:active {
 	padding-bottom: 1rem;
 }
 .site-footer a {
-	color: #55595c;
+	color: #373a3c;
 }
 .site-footer a:hover {
 	color: #818a91;

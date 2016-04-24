@@ -33,7 +33,7 @@
 		text-align: center;
 	}
   a {
-  	color: $gray;
+  	color: $body-color;
 
   	&:hover {
   		color: $gray-light;
@@ -44,7 +44,7 @@
 .widget-title {
 	font-size: $font-size-h2;
 	font-family: 'Source Sans Pro',sans-serif;
-	color: #0962A8;
+	color: $brand-primary;
 }
 
 .widget_meta {
