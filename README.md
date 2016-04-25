@@ -6,7 +6,7 @@ tsumugi is a simple WordPress theme based on Underscores and Bootstrap. It consi
 
 ## Usage
 
-Extract a zip file and put an uncompressed folder in the theme directory.
+Extract a zip file and put an uncompressed folder in the theme directory.  
 Then, activate it from the admin panel.
 
 ## Customization
@@ -22,7 +22,7 @@ Then, activate it from the admin panel.
 
 ### Set up the WordPress environment
 
-This theme is build with the local WordPress environment using VCCW.
+This theme is build with the local WordPress environment using [VCCW](http://vccw.cc/).  
 If you set up this environment, refer the blow steps.
 
 #### 1. Clone VCCW to your root directory.
@@ -65,4 +65,4 @@ If you want to update Bootstrap and other bower components, run `npm bwupdate` i
 (If you want to get whole dependencies, it's OK to run just `bower install`.)
 
 After above command, Sass master files of Bootstrap in `bootstrap/scss/` will be updated too.  
-(Original Sass files for this theme are remain in same directories as `*_rm.scss`)
+(Original Sass files for this theme are remain in same directories as `*_tm.scss`)
