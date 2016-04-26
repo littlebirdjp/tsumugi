@@ -612,6 +612,9 @@ a:active {
 .entry-meta a:hover {
 	color: #818a91;
 }
+.entry-meta span {
+	margin-right: .25rem;
+}
 
 .page-content,
 .entry-content,
@@ -632,6 +635,9 @@ a:active {
 }
 .entry-footer a:hover {
 	color: #818a91;
+}
+.entry-footer span {
+	margin-right: .25rem;
 }
 
 .page-links {
@@ -658,12 +664,30 @@ a:active {
 	list-style: none;
 }
 
+.comment-meta a {
+	color: #55595c;
+}
+.comment-meta a:hover {
+	color: #818a91;
+}
+
+.says {
+	display: none;
+}
+
 .comment-metadata {
 	font-size: 0.875rem;
 }
 
 .comment-content a {
 	word-wrap: break-word;
+}
+.comment-content p {
+	margin-bottom: 0;
+}
+
+.reply {
+	margin-bottom: .75rem;
 }
 
 .bypostauthor {

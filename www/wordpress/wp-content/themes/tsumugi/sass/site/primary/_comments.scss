@@ -6,13 +6,37 @@
 	}
 }
 
+.comment-meta {
+  a {
+  	color: $gray;
+
+  	&:hover {
+  		color: $gray-light;
+  	}
+  }
+}
+
+.says {
+	display: none;
+}
+
 .comment-metadata {
 	font-size: $font-size-sm;
 }
 
-.comment-content a {
-	word-wrap: break-word;
+.comment-content {
+	a {
+		word-wrap: break-word;
+	}
+	p {
+		margin-bottom: 0;
+	}
 }
+
+.reply {
+	margin-bottom: .75rem;
+}
+
 .bypostauthor {
 	display: block;
 }
