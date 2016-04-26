@@ -25,13 +25,13 @@ function tsumugi_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		esc_html_x( 'Posted on %s', 'post date', 'tsumugi' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		esc_html_x( '%s', 'post date', 'tsumugi' ),
+		'<i class="fa fa-calendar" aria-hidden="true"></i> <a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
 	$byline = sprintf(
-		esc_html_x( 'by %s', 'post author', 'tsumugi' ),
-		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+		esc_html_x( '%s', 'post author', 'tsumugi' ),
+		'<i class="fa fa-user" aria-hidden="true"></i> <span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
 	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
@@ -49,18 +49,18 @@ function tsumugi_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( esc_html__( ', ', 'tsumugi' ) );
 		if ( $categories_list && tsumugi_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'tsumugi' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+			printf( '<i class="fa fa-folder-open-o" aria-hidden="true"></i> <span class="cat-links">' . esc_html__( '%1$s', 'tsumugi' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 		}
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'tsumugi' ) );
 		if ( $tags_list ) {
-			printf( ' <span class="tags-links">' . esc_html__( 'Tagged %1$s', 'tsumugi' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+			printf( ' <i class="fa fa-tags" aria-hidden="true"></i> <span class="tags-links">' . esc_html__( '%1$s', 'tsumugi' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 		}
 	}
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-		echo ' <span class="comments-link">';
+		echo ' <i class="fa fa-comment-o" aria-hidden="true"></i> <span class="comments-link">';
 		comments_popup_link( esc_html__( 'Leave a comment', 'tsumugi' ), esc_html__( '1 Comment', 'tsumugi' ), esc_html__( '% Comments', 'tsumugi' ) );
 		echo '</span>';
 	}
@@ -71,7 +71,7 @@ function tsumugi_entry_footer() {
 			esc_html__( 'Edit %s', 'tsumugi' ),
 			the_title( '<span class="screen-reader-text">"', '"</span>', false )
 		),
-		' <span class="edit-link">',
+		' <i class="fa fa-pencil" aria-hidden="true"></i> <span class="edit-link">',
 		'</span>'
 	);
 }
