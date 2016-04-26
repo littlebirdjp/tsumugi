@@ -61,27 +61,9 @@ gulp.task('compass', function() {
     .pipe(gulp.dest(paths.dist))
 });
 
-gulp.task("buildFiles", function() {
-  return gulp.src([paths.dist + '**/*.+(php|css|js|json|txt|pot|po|mo|jpg|jpeg|png|gif|svg|eot|ttf|woff|woff2)'])
-    .pipe(ignore('node_modules/**'))
-    .pipe(ignore('vendor/**'))
-    .pipe(ignore('layouts/**'))
-    .pipe(ignore('symbols-for-sketch-master/**'))
-    .pipe(ignore('package.json'))
-    .pipe(ignore('gulpfile.js'))
-    .pipe(gulp.dest(paths.build))
-});
-
-gulp.task("buildZip", ['buildFiles'], function() {
-  return gulp.src([paths.build + '/**/'])
-    //.pipe(zip(project+'.'+version+'.zip'))
-    .pipe(zip(project+'.zip'))
-    .pipe(gulp.dest(paths.dist))
-});
-
-gulp.task("cleanup", ['buildZip'], function() {
-  return gulp.src([paths.build], { read: false })
-    .pipe(rimraf({ force: true }));
+gulp.task('build', function() {
+  return gulp.src(paths.dist, {read: false})
+    .pipe(shell(['bash zip.sh']));
 });
 
 gulp.task('watch', function() {
@@ -90,4 +72,3 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['watch']);
-gulp.task('build', ['cleanup']);
