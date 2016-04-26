@@ -550,19 +550,22 @@ a:active {
 .site-title a:hover {
 	color: #165E83;
 }
-.site-title .s {
+.site-title .s,
+.site-title .fa {
 	font-size: 10rem;
 	color: #429BBF;
 	vertical-align: middle;
 	display: inline-block;
 }
 @media (min-width: 992px) {
-	.site-title .s {
+	.site-title .s,
+	.site-title .fa {
 		font-size: 12rem;
 	}
 }
 @media (min-width: 1200px) {
-	.site-title .s {
+	.site-title .s,
+	.site-title .fa {
 		font-size: 14rem;
 	}
 }
