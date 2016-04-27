@@ -520,6 +520,11 @@ a:active {
 	border-bottom: 1px dashed #165E83;
 	margin-bottom: 1.5rem;
 }
+@media (min-width: 768px) {
+	.site-branding {
+		margin-top: -1rem;
+	}
+}
 
 .site-title {
 	margin-bottom: 1.5rem;
@@ -568,6 +573,16 @@ a:active {
 	.site-title .fa {
 		font-size: 14rem;
 	}
+}
+
+@media (min-width: 768px) {
+	.site-description {
+		margin-top: -.75rem;
+	}
+}
+
+.custom-header {
+	margin-bottom: 1rem;
 }
 
 /*--------------------------------------------------------------

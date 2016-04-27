@@ -49,6 +49,13 @@
 				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
 			<?php
 			endif; ?>
+
+			<?php if ( get_header_image() ) : ?>
+				<div class="custom-header">
+					<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
+				</div>
+			<?php endif; // End header image check. ?>
+
 		</div><!-- .site-branding -->
 
 	</div><!-- .container -->

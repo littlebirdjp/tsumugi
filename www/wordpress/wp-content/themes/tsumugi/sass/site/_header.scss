@@ -9,6 +9,9 @@
   text-align: center;
   border-bottom: 1px dashed #165E83;
   margin-bottom: 1.5rem;
+  @include media-breakpoint-up(md) {
+    margin-top: -1rem;
+  }
 }
 
 .site-title {
@@ -49,5 +52,11 @@
 }
 
 .site-description {
-  //font-family: 'Source Sans Pro',sans-serif;
+  @include media-breakpoint-up(md) {
+    margin-top: -.75rem;
+  }
+}
+
+.custom-header {
+  margin-bottom: 1rem;
 }
