@@ -13,7 +13,6 @@ Then, activate it from the admin panel.
 
 ### Requrements
 
-- WordPress
 - [Underscores](http://underscores.me/)
 - [Bootstrap 4](http://v4-alpha.getbootstrap.com/)
 - [VCCW](http://vccw.cc/)
@@ -23,7 +22,7 @@ Then, activate it from the admin panel.
 ### Set up the WordPress environment
 
 This theme is build with the local WordPress environment using [VCCW](http://vccw.cc/).  
-If you set up this environment, refer the blow steps.
+If you want to set up this environment, refer the blow steps.
 
 #### 1. Clone VCCW to your root directory.
 
