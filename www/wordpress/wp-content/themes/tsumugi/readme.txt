@@ -1,7 +1,7 @@
 === tsumugi ===
 
-Contributors: automattic
-Tags: translation-ready, custom-background, theme-options, custom-menu, post-formats, threaded-comments
+Contributors: youthkee
+Tags: white, light, responsive-layout, one-column, single-column, custom-menu, custom-header,Ã£â‚¬â‚¬custom-colors, custom-background, sticky-post, translation-ready
 
 Requires at least: 4.0
 Tested up to: 4.4.2
@@ -9,30 +9,43 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A starter theme called tsumugi, or underscores.
-
 == Description ==
 
-Hi. I'm a starter theme called tsumugi, or underscores, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+tsumugi is a simple blog theme based on _s and Bootstrap. It consists of a single column layout which is suitable for mobile devices and tablets along with PCs. For it's readability and simplicity, this theme is user-friendly for everyone. (The name of "tsumugi" is inspired by the song of "Hatsune", a Japanese singer.)
+
+=== Features ===
+
+* Responsive Layout
+* Global Navigation (in header)
+* Widget (in footer)
+* Theme Customizer
+* Custom Header
 
 == Installation ==
-	
+
 1. In your admin panel, go to Appearance > Themes and click the Add New button.
 2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
 3. Click Activate to use your new theme right away.
 
-== Frequently Asked Questions ==
-
-= Does this theme support any plugins? =
-
-tsumugi includes support for Infinite Scroll in Jetpack.
-
 == Changelog ==
 
-= 1.0 - May 12 2015 =
+= 1.0 - Apr 30 2016 =
 * Initial release
 
 == Credits ==
+
+Bootstrap 4
+License: MIT
+Source : http://v4-alpha.getbootstrap.com/
+
+Google Fonts:
+License: SIL Open Font License, 1.1
+Source:  http://www.google.com/fonts
+
+Font Awesome
+Font License: SIL OFL 1.1
+Code License: MIT License
+Source      : https://fortawesome.github.io/Font-Awesome/
 
 * Based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
