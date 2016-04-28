@@ -103,37 +103,11 @@ msgstr ""
 msgid "Primary Menu"
 msgstr ""
 
-#: inc/template-tags.php:28
-#, php-format
-#@ _s
-msgctxt "post date"
-msgid "Posted on %s"
-msgstr ""
-
-#: inc/template-tags.php:33
-#, php-format
-#@ _s
-msgctxt "post author"
-msgid "by %s"
-msgstr ""
-
 #. translators: used between list items, there is a space after the comma
 #: inc/template-tags.php:50
 #: inc/template-tags.php:56
 #@ _s
 msgid ", "
-msgstr ""
-
-#: inc/template-tags.php:52
-#, php-format
-#@ _s
-msgid "Posted in %1$s"
-msgstr ""
-
-#: inc/template-tags.php:58
-#, php-format
-#@ _s
-msgid "Tagged %1$s"
 msgstr ""
 
 #: inc/template-tags.php:64
