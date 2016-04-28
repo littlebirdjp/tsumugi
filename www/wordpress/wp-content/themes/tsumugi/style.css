@@ -679,6 +679,10 @@ a:active {
 	list-style: none;
 }
 
+.comment-body {
+	margin-bottom: .75rem;
+}
+
 .comment-meta a {
 	color: #55595c;
 }
@@ -699,10 +703,6 @@ a:active {
 }
 .comment-content p {
 	margin-bottom: 0;
-}
-
-.reply {
-	margin-bottom: .75rem;
 }
 
 .bypostauthor {

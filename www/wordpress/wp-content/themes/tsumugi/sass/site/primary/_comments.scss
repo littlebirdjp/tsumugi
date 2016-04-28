@@ -6,6 +6,10 @@
 	}
 }
 
+.comment-body {
+	margin-bottom: .75rem;
+}
+
 .comment-meta {
   a {
   	color: $gray;
@@ -31,10 +35,6 @@
 	p {
 		margin-bottom: 0;
 	}
-}
-
-.reply {
-	margin-bottom: .75rem;
 }
 
 .bypostauthor {
