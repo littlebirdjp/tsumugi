@@ -9,7 +9,7 @@ Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: tsumugi
-Tags: white, light, responsive-layout, one-column, single-column, custom-menu, custom-header,　custom-colors, custom-background, sticky-post, translation-ready
+Tags: white, blue, light, responsive-layout, one-column, single-column, custom-menu, custom-header,　custom-colors, custom-background, sticky-post, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -575,9 +575,17 @@ a:active {
 	}
 }
 
+.site-description {
+	margin-bottom: .5rem;
+}
 @media (min-width: 768px) {
 	.site-description {
 		margin-top: -.75rem;
+	}
+}
+@media (min-width: 992px) {
+	.site-description {
+		font-size: 1.125rem;
 	}
 }
 
@@ -634,7 +642,7 @@ a:active {
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: 1em 0 0;
 }
 
 .entry-content pre {
