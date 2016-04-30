@@ -4,6 +4,8 @@ tsumugi is a simple WordPress theme based on Underscores and Bootstrap. It consi
 
 [制作過程はこちら(Development Process)](PROCESS.md)
 
+![](/www/wordpress/wp-content/themes/tsumugi/screenshot.png?raw=true)
+
 ## Usage
 
 Extract a [zip file](/www/wordpress/wp-content/themes/tsumugi/release/) and put an uncompressed folder in the theme directory.  
