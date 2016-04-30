@@ -588,9 +588,9 @@ Underscoresは標準でカスタムヘッダーに対応しているので、導
 
 ちなみに、今回作成したスクリーンショットを公式テーマディレクトリの詳細ページ、検索ページで見た場合のサムネイルの見た目は、それぞれ以下のようなイメージになります。
 
-<img src="https://raw.githubusercontent.com/littlebirdjp/tsumugi/master/www/wordpress/wp-content/themes/tsumugi/screenshot.png" alt="" style="max-width:100%;width:572;">
+<img src="https://raw.githubusercontent.com/littlebirdjp/tsumugi/master/www/wordpress/wp-content/themes/tsumugi/screenshot.png" alt="" width="572px">
 
-<img src="https://raw.githubusercontent.com/littlebirdjp/tsumugi/master/www/wordpress/wp-content/themes/tsumugi/screenshot.png" alt="" style="max-width:100%;width:286;">
+<img src="https://raw.githubusercontent.com/littlebirdjp/tsumugi/master/www/wordpress/wp-content/themes/tsumugi/screenshot.png" alt="" width="286px">
 
 ### 公式ディレクトリへの申請準備
 
