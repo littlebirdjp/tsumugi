@@ -1,4 +1,4 @@
-# tsumugi
+# 制作過程(Development Process)
 
 A simple WordPress theme for everyone, build with Underscores and Bootstrap 4.
 
@@ -69,13 +69,13 @@ A simple WordPress theme for everyone, build with Underscores and Bootstrap 4.
 		- [テーマロゴの作成](#user-content-テーマロゴの作成)
 		- [テーマロゴの組み込み](#user-content-テーマロゴの組み込み)
 		- [リンクカラーとパーツカラーの設定](#user-content-リンクカラーとパーツカラーの設定)
-		- 見出しスタイルの作成
+		- [見出しスタイルの作成](#user-content-見出しスタイルの作成)
 3. [公式ディレクトリへの申請準備](#user-content-公式ディレクトリへの申請準備)
 	- [翻訳ファイルの作成](#user-content-翻訳ファイルの作成)
 		- [Underscoresの日本語ファイルを作成](#user-content-underscoresの日本語ファイルを作成)
 		- [テーマ用に日本語ファイルを編集](#user-content-テーマ用に日本語ファイルを編集)
 	- [パブリッシュの設定](#user-content-パブリッシュの設定)
-	- 公開申請
+	- [公開申請](#user-content-公開申請)
 4. 公式サイトの作成
 5. デモサイトの作成
 
@@ -504,7 +504,6 @@ symbols-for-sketchのファイル一式をテーマフォルダ内に設置し�
 
 今回作成した『羽根』のアイコンは、HTML内に`<span class="s s-feather"></span>`と記述すればいいので、ヘッダー部分を下記のように修正しました。
 
-
 ```
 		<div class="site-branding">
 			<?php
@@ -552,6 +551,38 @@ symbols-for-sketchのファイル一式をテーマフォルダ内に設置し�
 |テキストリンク|紅緋（べにひ）|#e83929|
 
 ##### 見出しスタイルの作成
+
+エントリー本文内で使用される`h1`〜`h6`の見出しタグのスタイルを作成しました。
+
+このテーマでは、エントリータイトルを`h1`にしているので、通常は`h2`からが使用される想定ですが、ユーザーの使い方によっては様々なケースが考えられるので、念のため`h1`からきちんとスタイルを定義しています。
+
+見出しの装飾についても、サイトタイトルやリンクカラーと同じく、青系のメインカラーを差し色として取り入れました。
+
+![](screenshots/screenshot15.png?raw=true)
+
+##### カスタムヘッダー対応
+
+最後に、ヘッダー部分にユーザーが好きな画像を挿入できる「カスタムヘッダー」機能の実装を行いました。
+
+この機能は、搭載しなくてもいいと思っていたのですが、公式ディレクトリ申請に必要となるテーマのスクリーンショットを作成していた際に、どうしても見栄えが物足りなく感じられたため、写真を掲載した場合のサンプルとして、ヘッダーに組み込んだイメージを見せたかったためです。
+
+Underscoresは標準でカスタムヘッダーに対応しているので、導入するのは非常に簡単です。`hrader.php`の任意の箇所に、以下のように記述するだけでOKです。
+
+この場合、`if`タグで条件分岐しているので、ユーザーがテーマカスタマイザーからヘッダー画像を登録した場合だけ、サイト上に表示される形になります。
+
+```
+			<?php if ( get_header_image() ) : ?>
+				<div class="custom-header">
+					<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
+				</div>
+			<?php endif; // End header image check. ?>
+```
+
+また、公式ディレクトリ申請用のスクリーンショットは、1200x900pxとなっており、かなり大きめなので、広いディスプレイサイズで見た場合の見栄えがかなり重要な要素になります。さらに、[公式テーマディレクトリ](https://wordpress.org/themes/)の検索画面で見ると、286x214pxのサムネイルで表示されるので、このサイズに縮小した場合の見え方も考慮する必要があります。
+
+以上のことを踏まえてヘッダー画像のサイズを検討し、合わせてPCで閲覧した場合はサイトタイトルも大きく表示されるように、ブレークポイント毎のサイズを微調整しました。
+
+![](screenshots/screenshot16.png?raw=true)
 
 ### 公式ディレクトリへの申請準備
 
