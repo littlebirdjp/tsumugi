@@ -5,12 +5,16 @@ VERSION='1.0.0'
 function build_tsumugi() {
   mkdir tsumugi
   cp -rpf bootstrap tsumugi/
-  cp -rpf bower_components tsumugi/
   cp -rpf fonts tsumugi/
   cp -rpf inc tsumugi/
   cp -rpf js tsumugi/
   cp -rpf languages tsumugi/
   cp -rpf template-parts tsumugi/
+  mkdir tsumugi/bower_components
+  mkdir tsumugi/bower_components/bootstrap
+  mkdir tsumugi/bower_components/tether
+  cp -rpf bower_components/bootstrap/dist tsumugi/bower_components/bootstrap/
+  cp -rpf bower_components/tether/dist tsumugi/bower_components/tether/
   cp *.php tsumugi/
   cp *.txt tsumugi/
   cp *.css tsumugi/
