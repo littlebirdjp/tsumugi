@@ -1,12 +1,12 @@
 {
   "name": "tsumugi",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A simple WordPress theme for everyone",
   "authors": [
     "Yusuke Takahashi <youthkee@gmail.com>"
   ],
   "homepage": "http://littlebird.mobi",
-  "license": "GPL-3.0",
+  "license": "GPL-2.0",
   "main": "index.php",
   "ignore": [
     "**/.*",

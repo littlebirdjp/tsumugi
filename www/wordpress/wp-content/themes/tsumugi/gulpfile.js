@@ -15,13 +15,9 @@ var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
 var zip = require('gulp-zip');
 
-var project = 'tsumugi';
-var version = '1.0.0';
-
 var paths = {
   'src': 'sass/',
-  'dist': './',
-  'build': 'build/'
+  'dist': './'
 }
 
 gulp.task("sass", function() {
