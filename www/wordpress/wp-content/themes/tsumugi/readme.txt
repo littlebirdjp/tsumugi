@@ -1,7 +1,7 @@
 === tsumugi ===
 
 Contributors: youthkee
-Tags: white, blue, light, responsive-layout, one-column, single-column, custom-menu, custom-header,Ã£â‚¬â‚¬custom-colors, custom-background, sticky-post, translation-ready
+Tags: white, blue, light, responsive-layout, one-column, custom-menu, custom-header
 
 Requires at least: 4.0
 Tested up to: 4.4.2
