@@ -636,51 +636,61 @@ Poeditで翻訳するには、「ファイル」→「POTファイルを元に�
 制作段階では、テーマフォルダ内に様々な開発用のファイルが存在するため、公式ディレクトリへの申請に備えて必要なファイルだけを抽出してパッケージ化する仕組みを構築しました。  
 この仕組みは、今後の運用フローにて、テーマを更新する際にも使用する予定です。
 
-公開用のファイル一式をパブリッシュするため、`gulpfile.js`に以下のタスクを追加しました。  
-zip形式への圧縮と、不要ファイルの削除には、`gulp-zip`と`gulp-rimraf`というパッケージを使用しています。
+公開用のファイル一式をパブリッシュするため、`gulpfile.js`に以下のタスクを追加しました。
 
 ```
-var project = 'tsumugi';
-var version = '1.0.0';
+gulp.task('build', function() {
+  return gulp.src(paths.dist, {read: false})
+    .pipe(shell(['bash zip.sh']));
+});
+```
 
-var paths = {
-  'src': 'sass/',
-  'dist': './',
-  'build': 'build/'
+このタスクは、`zip.sh`という外部シェルスクリプトを呼び出し、実行します。
+
+```
+#!/bin/bash
+
+VERSION='1.0.0'
+
+function build_tsumugi() {
+  mkdir tsumugi
+  cp -rpf bootstrap tsumugi/
+  cp -rpf fonts tsumugi/
+  cp -rpf inc tsumugi/
+  cp -rpf js tsumugi/
+  cp -rpf languages tsumugi/
+  cp -rpf template-parts tsumugi/
+  mkdir tsumugi/bower_components
+  mkdir tsumugi/bower_components/bootstrap
+  mkdir tsumugi/bower_components/tether
+  cp -rpf bower_components/bootstrap/dist tsumugi/bower_components/bootstrap/
+  cp -rpf bower_components/tether/dist tsumugi/bower_components/tether/
+  cp *.php tsumugi/
+  cp *.txt tsumugi/
+  cp *.css tsumugi/
+  cp bower.json tsumugi/
+  cp screenshot.png tsumugi/
+  cd release
+  zip tsumugi.$VERSION.zip -r ../tsumugi -x "*.DS_Store"
+  rm -rf ../tsumugi
+  return
 }
-
-gulp.task("buildFiles", function() {
-  return gulp.src([paths.dist + '**/*.+(php|css|js|json|txt|pot|po|mo|jpg|jpeg|png|gif|svg|eot|ttf|woff|woff2)'])
-    .pipe(ignore('node_modules/**'))
-    .pipe(ignore('vendor/**'))
-    .pipe(ignore('symbols-for-sketch-master/**'))
-    .pipe(ignore('package.json'))
-    .pipe(ignore('gulpfile.js'))
-    .pipe(gulp.dest(paths.build))
-});
-
-gulp.task("buildZip", ['buildFiles'], function() {
-  return gulp.src([paths.build + '/**/'])
-    .pipe(zip(project+'.zip'))
-    .pipe(gulp.dest(paths.dist))
-});
-
-gulp.task("cleanup", ['buildZip'], function() {
-  return gulp.src([paths.build], { read: false })
-    .pipe(rimraf({ force: true }));
-});
-
-gulp.task('build', ['cleanup']);
+if [[ -f tsumugi.$VERSION.zip ]]
+then
+  rm -rf tsumugi.$VERSION.zip
+fi
+build_tsumugi
 ```
 
-`gulp build`というコマンドを実行すると、下記の一連の処理が実行されます。
+これによって、`gulp build`というコマンドを実行すると、下記の一連の処理が実行されます。
 
-- テーマフォルダ内から必要な拡張子のファイルだけ抽出し、`/build/`フォルダ配下へコピー（不要なファイル、フォルダは除く）
-- `/build/`フォルダ内のファイル一式を、`tsumugi.zip`という名前でzipファイルに圧縮
-- `/build/`フォルダ内に残った不要ファイルを削除
+- テーマフォルダ内から必要なファイルやフォルダだけ取り出し、`/tsumugi/`フォルダへコピー
+- `/tsumugi/`フォルダ内のファイル一式を、バージョン番号を付けた`tsumugi.1.0.0.zip`等の名前でzipファイルに圧縮
+- `/tsumugi/`フォルダを削除
 
 以上で、いつでも公開用のテーマファイル一式を作成することができるようになりました。  
-実際には、リリースしたバージョン毎に、`tsumugi.zip`を`tsumugi.1.0.0.zip`のようにリネームして、公開・アップデートする形になります。
+バージョン番号は、`zip.sh`内に変数として記述しているので、こちらを書き換えれば、別ファイル名で`/release/`下に公開用ファイルが保存されていく形になります。  
+コマンド一発でパブリッシュできるので、公開用ファイルの更新やバージョン管理が簡単に行えそうですね。
 
 #### 公開申請
 
@@ -688,10 +698,13 @@ gulp.task('build', ['cleanup']);
 「パブリッシュの設定」で、すでにzipファイルの作成フローを確立しているので、そちらを選択してアップロードするだけでOKです。
 
 初回のアップロード時に、自動的にテーマファイルのスキャンが実行され、問題のある箇所が見つかると、注意や警告が表示されます。  
-「WARNING」の項目があると、申請が完了できないので、ファイルの該当箇所を修正して、再度アップロードしましょう。
+「WARNING」の項目があると、申請が完了できないので、ファイルの該当箇所を修正して、再度アップロードしましょう。  
+（初回アップロード時に実行される自動テストは、[Theme Check](https://ja.wordpress.org/plugins/theme-check/)プラグインの結果とほぼ同じようなので、テスト環境で事前にテーマチェックを実施しておくとよいでしょう）
 
 全ての必須項目がクリアされると、画面上に「Pass」と表示され、テーマファイルのアップロードが完了します。  
 申請完了後のテーマには、Make WordPressのサイトにチケットが発行され、以後そのページ上でレビューのやり取りを行う形になります。
+
+![](screenshots/screenshot17.png?raw=true)
 
 [このテーマのレビューチケットはこちら](https://themes.trac.wordpress.org/ticket/32704)
 
