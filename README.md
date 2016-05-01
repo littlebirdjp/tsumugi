@@ -5,6 +5,7 @@
 tsumugi is a simple WordPress theme based on Underscores and Bootstrap. It consists of a single column layout which is suitable for mobile devices and tablets along with PCs. For it's readability and simplicity, this theme is user-friendly for everyone. (The name of "tsumugi" is inspired by the song of "Hatsune", a Japanese singer.)
 
 - [Demo Site](http://tsumugi.halfmoon.jp/)
+- [デモサイト()日本語)](http://tsumugi.halfmoon.jp/ja/)
 - [制作過程はこちら(Development Process)](PROCESS.md)
 
 ## Usage
