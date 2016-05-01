@@ -70,6 +70,7 @@ A simple WordPress theme for everyone, build with Underscores and Bootstrap 4.
 		- [テーマロゴの組み込み](#user-content-テーマロゴの組み込み)
 		- [リンクカラーとパーツカラーの設定](#user-content-リンクカラーとパーツカラーの設定)
 		- [見出しスタイルの作成](#user-content-見出しスタイルの作成)
+		- [カスタムヘッダー対応](#user-content-カスタムヘッダー対応)
 3. [公式ディレクトリへの申請準備](#user-content-公式ディレクトリへの申請準備)
 	- [翻訳ファイルの作成](#user-content-翻訳ファイルの作成)
 		- [Underscoresの日本語ファイルを作成](#user-content-underscoresの日本語ファイルを作成)
@@ -588,9 +589,9 @@ Underscoresは標準でカスタムヘッダーに対応しているので、導
 
 ちなみに、今回作成したスクリーンショットを公式テーマディレクトリの詳細ページ、検索ページで見た場合のサムネイルの見た目は、それぞれ以下のようなイメージになります。
 
-<img src="https://raw.githubusercontent.com/littlebirdjp/tsumugi/master/www/wordpress/wp-content/themes/tsumugi/screenshot.png" alt="" width="572px">
+![](/www/wordpress/wp-content/themes/tsumugi/screenshot_572.png?raw=true)
 
-<img src="https://raw.githubusercontent.com/littlebirdjp/tsumugi/master/www/wordpress/wp-content/themes/tsumugi/screenshot.png" alt="" width="286px">
+![](/www/wordpress/wp-content/themes/tsumugi/screenshot_286.png?raw=true)
 
 ### 公式ディレクトリへの申請準備
 
