@@ -5,3 +5,8 @@ branches:
     - master
 
 script: bash ./bin/deploy.sh
+
+env:
+  global:
+  - GH_REF: github.com/littlebirdjp/tsumugi.git
+  - secure: "MOpgfBvYqbgh9vzkmdBR/XuuyNN9nIfMxe4Yf5J28xxNYnralDT4nP9NTgxh5l3ponadnmGjLwGKoVzojMLECX95/7TFaZ4BDAPs3fGXJoEpYfSAlexsIIpbMI4LbQBvgkvOGYUz2A+FoIci7/G0TAHCjq9nRIDu29bLAnrNOCGIe4FEti2sPX+wckHyK6/5wYwqvs55qHATHNL9fMGbJ50iuUfoe0xZ+o+s5DXgW9MJB/5UqzPbTJtyNu3lpzxqDuRXK+cjSL8KE0mmNQkRb68E/LwyNr9WkmB/FLG5W9UTADk0WV5t07MChdWrTV7GZhsYZDIargTD3oYLeLMtEWQBu2alYsZpzNLdCAsL3G9ObrOMzKQnFBnzbObsfnzAZIYNpNlNqqIT3qIqCxVZgSEoiVmt/Q7Ts0DnuLBbHb+SspLxt+LbjXWwVBzLgyn9XxWGOFHtIg2nwF50hNWWdySVDCj9JypLOaOAD64kX0T1dnzCVTPOJ2dl7Et8JuYN+ZAm6R8UeCbcL3kuMyilfyGUZcxQnfygyw4L0yXog05ppwcb2E8yMUaTusJMaZ/gRuxE1XYpGs7T0BwhqFZftAyjINd2CEOeFxNuja7Pl7IOaxQGs5iiKsrt77+7Gqo3xDK1F0YoNqEi7tv0caoopc52jrVuRAWCBf/iienQmoc="
