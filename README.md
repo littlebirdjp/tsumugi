@@ -28,17 +28,25 @@ Then, activate it from the admin panel.
 
 Move to the theme directory and run `npm install`.
 
-#### 2. Run gulp watch
+### 2. Install Ruby Sass and Compass
+
+Run the below command to install specific version of Ruby Sass and Campass with bundler.
+
+```
+bundle install --path=vendor/bundle --binstubs=vendor/bin
+```
+
+#### 3. Run gulp watch
 
 Run `gulp` or `npm start` when compiling Sass to CSS.
 
-#### 3. Build zip file
+#### 4. Build zip file
 
 Run `gulp build` to publish necessary files to a zip file.
 
 ### Update Dependencies
 
-If you want to update Bootstrap and other bower components, run `npm bwupdate` in the theme directory. It will be updated just necessary files in `/bower_components/`.  
+If you want to update Bootstrap and other bower components, run `npm run bwupdate` in the theme directory. It will be updated just necessary files in `/bower_components/`.  
 (If you want to get whole dependencies, it's OK to run just `bower install`.)
 
 After above command, Sass master files of Bootstrap in `bootstrap/scss/` will be updated too.  
