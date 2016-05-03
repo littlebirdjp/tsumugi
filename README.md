@@ -1,6 +1,6 @@
 # tsumugi
 
-![](/www/wordpress/wp-content/themes/tsumugi/screenshot.png?raw=true)
+![](screenshot.png?raw=true)
 
 tsumugi is a simple WordPress theme based on Underscores and Bootstrap. It consists of a single column layout which is suitable for mobile devices and tablets along with PCs. For it's readability and simplicity, this theme is user-friendly for everyone. (The name of "tsumugi" is inspired by the song of "Hatsune", a Japanese singer.)
 
@@ -10,7 +10,7 @@ tsumugi is a simple WordPress theme based on Underscores and Bootstrap. It consi
 
 ## Usage
 
-Extract a [zip file](/www/wordpress/wp-content/themes/tsumugi/release/) and put an uncompressed folder in the theme directory.  
+Extract a [zip file](/release/) and put an uncompressed folder in the theme directory.  
 Then, activate it from the admin panel.
 
 ## Customization
@@ -19,34 +19,8 @@ Then, activate it from the admin panel.
 
 - [Underscores](http://underscores.me/)
 - [Bootstrap 4](http://v4-alpha.getbootstrap.com/)
-- [VCCW](http://vccw.cc/)
 - gulp
 - bower
-
-### Set up the WordPress environment
-
-This theme is build with the local WordPress environment using [VCCW](http://vccw.cc/).  
-If you want to set up this environment, refer the blow steps.
-
-#### 1. Clone VCCW to your root directory.
-
-```
-sudo git clone https://github.com/vccw-team/vccw.git /vccw
-```
-
-#### 2. Clone this repository to your projects folder.
-
-```
-git clone https://github.com/littlebirdjp/tsumugi.git ~/prj/tsumugi
-cd ~/prj/tsumugi
-vagrant up
-```
-
-You can replace `/prj/` to any other name.
-
-#### 3. Visit WordPress on the Vagrant in your browser.
-
-Visit [http://tsumugi.local/](http://tsumugi.local/) or [http://192.168.33.13/](http://192.168.33.13/)
 
 ### Edit theme files
 
