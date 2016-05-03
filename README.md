@@ -17,8 +17,7 @@ Then, activate it from the admin panel.
 
 ### Requrements
 
-- [Underscores](http://underscores.me/)
-- [Bootstrap 4](http://v4-alpha.getbootstrap.com/)
+- node.js
 - gulp
 - bower
 
