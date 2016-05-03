@@ -1,0 +1,7 @@
+language: node_js
+
+branches:
+  only:
+    - master
+
+script: bash ./bin/deploy.sh
