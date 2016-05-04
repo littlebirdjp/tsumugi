@@ -20,26 +20,25 @@ echo ".csscomb.json
 .jscsrc
 .jshintignore
 .travis.yml
-*.sh
-*.md
-bin
-css
-layouts
-release
-sass
-screenshots
-sketch
-symbols-for-sketch-master
-bower.json
 Gemfile
 Gemfile.lock
 gulpfile.js
 LICENSE
-node_modules
 package.json
 sample.html
 screenshot_286.png
-screenshot_572.png" > .gitignore
+screenshot_572.png
+/bin/
+/css/
+/layouts/
+/node_modules/
+/release/
+/sass/
+/screenshots/
+/sketch/
+/symbols-for-sketch-master/
+*.sh
+*.md" > .gitignore
 
 git init
 git config user.name "Travis CI"
