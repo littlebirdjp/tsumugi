@@ -46,13 +46,13 @@ gulp.task('symbols', () =>
       gulp.src(`templates/${ template }.css`)
         .pipe(consolidate('lodash', options))
         .pipe(rename({ basename: fontName }))
-        .pipe(gulp.dest('../css/')) // set path to export your CSS
+        .pipe(gulp.dest('./css/')) // set path to export your CSS
 
       // if you don't need sample.html, remove next 4 lines
       gulp.src(`templates/${ template }.html`)
         .pipe(consolidate('lodash', options))
         .pipe(rename({ basename: 'sample' }))
-        .pipe(gulp.dest('../')) // set path to export your sample HTML
+        .pipe(gulp.dest('./')) // set path to export your sample HTML
     })
     .pipe(gulp.dest('../fonts/')) // set path to export your fonts
 )
