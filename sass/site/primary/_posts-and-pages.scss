@@ -20,6 +20,13 @@
 	display: inline;
 }
 
+.page-title {
+	font-size: 2rem;
+	border-bottom: 5px solid #429BBF;
+	padding-bottom: .45rem;
+	margin-bottom: 1.5rem;
+}
+
 .entry-title {
   a {
   	color: $body-color;

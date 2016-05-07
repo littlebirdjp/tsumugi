@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*
 Theme Name: tsumugi
 Theme URI: https://github.com/littlebirdjp/tsumugi/
@@ -616,6 +615,13 @@ a:active {
 .single .byline,
 .group-blog .byline {
 	display: inline;
+}
+
+.page-title {
+	font-size: 2rem;
+	border-bottom: 5px solid #429BBF;
+	padding-bottom: .45rem;
+	margin-bottom: 1.5rem;
 }
 
 .entry-title a {
