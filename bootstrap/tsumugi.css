@@ -255,6 +255,10 @@ input[type="submit"],
 .more-link {
 	font-family: 'Source Sans Pro',sans-serif;
 }
+input[type="submit"]:visited,
+.more-link:visited {
+	color: #fff;
+}
 
 @font-face {
 	font-family: "tsumugi";

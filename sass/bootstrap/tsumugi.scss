@@ -59,6 +59,9 @@ input[type="submit"],
 .more-link {
   @extend .btn, .btn-primary;
   font-family: 'Source Sans Pro',sans-serif;
+  &:visited {
+    color: #fff;
+  }
 }
 
 @font-face {
