@@ -25,19 +25,14 @@ Gemfile.lock
 gulpfile.js
 LICENSE
 package.json
-sample.html
-screenshot_286.png
-screenshot_572.png
 /bin/
-/css/
+/img/
 /layouts/
 /node_modules/
 /release/
 /sass/
 /screenshots/
-/sketch/
 /symbols-for-sketch-master/
-*.sh
 *.md" > .gitignore
 
 git init

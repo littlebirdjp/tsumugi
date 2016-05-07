@@ -4,7 +4,17 @@ branches:
   only:
     - master
 
-script: bash ./bin/deploy.sh
+script:
+    - ls -al style.css
+    - ls -al bootstrap/tsumugi.css
+    - ls -al bootstrap/tsumugi.css
+    - ls -al bower_components/bootstrap/dist/css/bootstrap.min.css
+    - ls -al bower_components/bootstrap/dist/js/bootstrap.min.js
+    - ls -al bower_components/tether/dist/js/tether.min.js
+    - ls -al js/navigation.js
+    - ls -al js/skip-link-focus-fix.js
+
+after_success: bash ./bin/deploy.sh
 
 env:
   global:
