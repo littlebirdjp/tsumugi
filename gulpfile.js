@@ -59,7 +59,7 @@ gulp.task('compass', function() {
 
 gulp.task('build', function() {
   return gulp.src(paths.dist, {read: false})
-    .pipe(shell(['bash zip.sh']));
+    .pipe(shell(['bash bin/zip.sh']));
 });
 
 gulp.task('watch', function() {
