@@ -10,7 +10,7 @@ tsumugi is a simple WordPress theme based on Underscores and Bootstrap. It consi
 
 ## Usage
 
-Extract a [zip file](/release/) and put an uncompressed folder in the theme directory.  
+Extract a [zip file](https://github.com/littlebirdjp/tsumugi/releases) and put an uncompressed folder in the theme directory.  
 Then, activate it from the admin panel.
 
 ## Customization
