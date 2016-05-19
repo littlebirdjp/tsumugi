@@ -19,7 +19,7 @@
 	<div class="container">
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'tsumugi' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'tsumugi' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
+			<span class="sep hidden-sm-down"> | </span><br class="hidden-md-up">
 			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'tsumugi' ), 'tsumugi', '<a href="http://littlebird.mobi" rel="designer">youthkee</a>' ); ?>
 		</div><!-- .site-info -->
 	</div><!-- .container -->
