@@ -1,11 +1,12 @@
 #!/bin/bash
 
-VERSION='1.0.0'
+VERSION='1.0.1'
 
 function build_tsumugi() {
   mkdir tsumugi
   cp -rpf bootstrap tsumugi/
   cp -rpf fonts tsumugi/
+  cp -rpf img tsumugi/
   cp -rpf inc tsumugi/
   cp -rpf js tsumugi/
   cp -rpf languages tsumugi/

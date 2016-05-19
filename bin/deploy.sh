@@ -26,7 +26,6 @@ gulpfile.js
 LICENSE
 package.json
 /bin/
-/img/
 /layouts/
 /node_modules/
 /release/

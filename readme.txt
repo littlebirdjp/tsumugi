@@ -5,7 +5,7 @@ Tags: white, blue, light, responsive-layout, one-column, custom-menu, custom-hea
 
 Requires at least: 4.0
 Tested up to: 4.4.2
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,7 +29,13 @@ tsumugi is a simple blog theme based on _s and Bootstrap. It consists of a singl
 
 == Changelog ==
 
-= 1.0 - Apr 30 2016 =
+= 1.0.1 - Mar 19 2016 =
+* Add a default custom header image.
+* Fix link colors.
+* Fix archive header styles.
+* Fix a footer style in mobile devices.
+
+= 1.0.0 - Apr 30 2016 =
 * Initial release
 
 == Credits ==
