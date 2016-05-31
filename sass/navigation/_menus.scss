@@ -5,6 +5,9 @@
 	//width: 100%;
 	font-size: $font-size-sm;
 	line-height: 1.5;
+	@include media-breakpoint-down(sm) {
+		width: 100%;
+	}
 
 	ul {
 		list-style: none;
