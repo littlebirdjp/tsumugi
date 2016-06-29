@@ -1,0 +1,35 @@
+{
+  "name": "tsumugi",
+  "version": "1.0.0",
+  "description": "A simple WordPress theme for everyone",
+  "authors": [
+    "Yusuke Takahashi <youthkee@gmail.com>"
+  ],
+  "homepage": "http://littlebird.mobi",
+  "license": "GPL-2.0",
+  "main": "index.php",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.2",
+    "tether": "~1.2.0"
+  },
+  "preen": {
+    "bootstrap": [
+      "scss/**",
+      "dist/css/*.min.css",
+      "dist/js/*.min.js"
+    ],
+    "jquery": [
+      "dist/jquery.min.js"
+    ],
+    "tether": [
+      "dist/js/tether.min.js"
+    ]
+  }
+}
