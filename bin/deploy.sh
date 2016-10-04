@@ -20,6 +20,7 @@ echo ".csscomb.json
 .jscsrc
 .jshintignore
 .travis.yml
+bower.json
 Gemfile
 Gemfile.lock
 gulpfile.js
