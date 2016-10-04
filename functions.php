@@ -40,7 +40,7 @@ function tsumugi_setup() {
 	 *
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
-	add_theme_support( 'post-thumbnails' );
+	// add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -63,13 +63,13 @@ function tsumugi_setup() {
 	 * Enable support for Post Formats.
 	 * See https://developer.wordpress.org/themes/functionality/post-formats/
 	 */
-	add_theme_support( 'post-formats', array(
-		'aside',
-		'image',
-		'video',
-		'quote',
-		'link',
-	) );
+	// add_theme_support( 'post-formats', array(
+	// 	'aside',
+	// 	'image',
+	// 	'video',
+	// 	'quote',
+	// 	'link',
+	// ) );
 
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'tsumugi_custom_background_args', array(
