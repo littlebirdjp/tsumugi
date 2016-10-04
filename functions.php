@@ -110,6 +110,34 @@ function tsumugi_widgets_init() {
 }
 add_action( 'widgets_init', 'tsumugi_widgets_init' );
 
+if ( ! function_exists( 'tsumugi_fonts_url' ) ) :
+/**
+ * Register Google fonts for tsumugi.
+ *
+ * Create your own tsumugi_fonts_url() function to override in a child theme.
+ */
+function tsumugi_fonts_url() {
+	$fonts_url = '';
+	$fonts     = array();
+	$subsets   = 'latin,latin-ext';
+	/* translators: If there are characters in your language that are not supported by Annie Use Your Telescope, translate this to 'off'. Do not translate into your own language. */
+	if ( 'off' !== _x( 'on', 'Annie Use Your Telescope font: on or off', 'tsumugi' ) ) {
+		$fonts[] = 'Annie Use Your Telescope';
+	}
+	/* translators: If there are characters in your language that are not supported by Source Sans Pro, translate this to 'off'. Do not translate into your own language. */
+	if ( 'off' !== _x( 'on', 'Source Sans Pro font: on or off', 'tsumugi' ) ) {
+		$fonts[] = 'Source Sans Pro:300';
+	}
+	if ( $fonts ) {
+		$fonts_url = add_query_arg( array(
+			'family' => urlencode( implode( '|', $fonts ) ),
+			'subset' => urlencode( $subsets ),
+		), 'https://fonts.googleapis.com/css' );
+	}
+	return $fonts_url;
+}
+endif;
+
 /**
  * Enqueue scripts and styles.
  */
@@ -118,7 +146,7 @@ function tsumugi_scripts() {
 	wp_enqueue_style( 'underscores-style', get_stylesheet_uri(), array('bootstrap-style'), '1.0.3', 'all' );
 	wp_enqueue_style( 'tsumugi-style', get_template_directory_uri() . '/bootstrap/tsumugi.css', array('underscores-style'), '1.0.3', 'all' );
 
-	wp_enqueue_style( 'google-font', 'http://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope|Source+Sans+Pro:300' );
+	wp_enqueue_style( 'tsumugi-fonts', tsumugi_fonts_url(), array(), null );
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/font-awesome/css/font-awesome.min.css', array(), '4.6.3', 'all' );
 
 	wp_enqueue_script( 'tether-js', get_template_directory_uri() . '/bower_components/tether/dist/js/tether.min.js', array('jquery'), '1.2.0', true );
