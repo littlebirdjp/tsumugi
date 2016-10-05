@@ -1,11 +1,11 @@
 #!/bin/bash
 
-VERSION='1.0.3'
+VERSION='1.1.0'
 
 function build_tsumugi() {
   mkdir tsumugi
   cp -rpf bootstrap tsumugi/
-  cp -rpf fonts tsumugi/
+  cp -rpf font-awesome tsumugi/
   cp -rpf img tsumugi/
   cp -rpf inc tsumugi/
   cp -rpf js tsumugi/
@@ -19,7 +19,6 @@ function build_tsumugi() {
   cp *.php tsumugi/
   cp *.txt tsumugi/
   cp *.css tsumugi/
-  cp bower.json tsumugi/
   cp screenshot.png tsumugi/
   cd release
   zip tsumugi.$VERSION.zip -r ../tsumugi -x "*.DS_Store"

@@ -20,6 +20,7 @@ tsumugi is a simple blog theme based on _s and Bootstrap. It consists of a singl
 * Widget (in footer)
 * Theme Customizer
 * Custom Header
+* Custom Logo
 
 == Installation ==
 
@@ -28,6 +29,15 @@ tsumugi is a simple blog theme based on _s and Bootstrap. It consists of a singl
 3. Click Activate to use your new theme right away.
 
 == Changelog ==
+
+= 1.1.0 - Aug 6 2016 =
+* Remove deprecated tags.
+* Remove unnecessary functions.
+* Add credits.
+* Add non-minified CSS and JS.
+* Correct the way of adding Web Fonts and Icon Fonts.
+* Remove unnecessary files.
+* Add Custom Logo functions.
 
 = 1.0.2 - Jul 22 2016 =
 * Fix for uploader error.
@@ -65,4 +75,4 @@ Source : http://tether.io/
 
 * Based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
-* Default Logo and Header Images(used in screenshot.png) are created by theme author, [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
+* Sample Logo and Default Header Images(used in screenshot.png) are created by theme author, [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
