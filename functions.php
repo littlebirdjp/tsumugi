@@ -82,7 +82,6 @@ function tsumugi_setup() {
 		'width'       => 190,
 		'flex-height' => true,
 		'flex-width'  => true,
-		'header-text' => array( 'site-title', 'site-description' ),
 	) );
 
 }
