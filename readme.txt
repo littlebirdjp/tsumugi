@@ -30,7 +30,7 @@ tsumugi is a simple blog theme based on _s and Bootstrap. It consists of a singl
 
 == Changelog ==
 
-= 1.1.0 - Aug 6 2016 =
+= 1.1.0 - Oct 6 2016 =
 * Remove deprecated tags.
 * Remove unnecessary functions.
 * Add credits.
