@@ -88,7 +88,7 @@ msgstr ""
 msgid "Primary"
 msgstr ""
 
-#: functions.php:102
+#: functions.php:110
 #@ _s
 msgid "Sidebar"
 msgstr ""
@@ -96,11 +96,6 @@ msgstr ""
 #: header.php:25
 #@ _s
 msgid "Skip to content"
-msgstr ""
-
-#: header.php:38
-#@ _s
-msgid "Primary Menu"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
