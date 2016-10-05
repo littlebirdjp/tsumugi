@@ -4,11 +4,11 @@ Theme URI: https://github.com/littlebirdjp/tsumugi/
 Author: youthkee
 Author URI: http://littlebird.mobi/
 Description: tsumugi is a simple blog theme based on _s and Bootstrap. It consists of a single column layout which is suitable for mobile devices and tablets along with PCs. For it's readability and simplicity, this theme is user-friendly for everyone. (The name of "tsumugi" is inspired by the song of "Hatsune", a Japanese singer.)
-Version: 1.0.3
+Version: 1.1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: tsumugi
-Tags: one-column, custom-menu, custom-header
+Tags: blog, one-column, custom-background, custom-colors, custom-menu, custom-header, custom-logo, footer-widgets, flexible-header, full-width-template, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -531,16 +531,15 @@ a:active {
 }
 
 .site-title {
-	margin-bottom: 1.5rem;
+	margin: .5rem auto 1.5rem auto;
 	line-height: .5;
 	font-family: 'Annie Use Your Telescope', cursive;
 	font-size: 2.5rem;
 }
 @media (min-width: 768px) {
 	.site-title {
-		text-indent: -2rem;
 		font-size: 3.5rem;
-		margin-bottom: -.5rem;
+		margin: 2rem auto 3rem;
 	}
 }
 @media (min-width: 992px) {
@@ -559,23 +558,25 @@ a:active {
 .site-title a:hover {
 	color: #165E83;
 }
-.site-title .s,
-.site-title .fa {
-	font-size: 10rem;
-	color: #40A9CB;
-	vertical-align: middle;
-	display: inline-block;
+.site-title img {
+	width: 136px;
+	height: auto;
+	margin: 0 0 .5rem 0;
+	vertical-align: text-bottom;
+}
+@media (min-width: 768px) {
+	.site-title img {
+		margin: -1rem 1rem -2rem -5rem;
+	}
 }
 @media (min-width: 992px) {
-	.site-title .s,
-	.site-title .fa {
-		font-size: 12rem;
+	.site-title img {
+		width: 164px;
 	}
 }
 @media (min-width: 1200px) {
-	.site-title .s,
-	.site-title .fa {
-		font-size: 14rem;
+	.site-title img {
+		width: 190px;
 	}
 }
 
