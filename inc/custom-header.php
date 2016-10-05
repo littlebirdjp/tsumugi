@@ -22,7 +22,7 @@
  */
 function tsumugi_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'tsumugi_custom_header_args', array(
-		'default-image'          => get_template_directory_uri() . '/img/custom-header-default.jpg',
+		'default-image'          => get_template_directory_uri() . '/img/tsumugi-header.jpg',
 		'default-text-color'     => '000000',
 		'width'                  => 1200,
 		'height'                 => 400,
