@@ -494,7 +494,8 @@ a:active {
 	color: #818a91;
 }
 
-.widget-title {
+.widget-title,
+.widgettitle {
 	font-size: 1.6rem;
 	font-family: 'Source Sans Pro',sans-serif;
 	color: #007BBB;
