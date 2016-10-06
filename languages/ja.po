@@ -2,13 +2,13 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: tsumugi 1.0.0\n"
+"Project-Id-Version: tsumugi 1.1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-14 21:43:07+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-10-06 01:35+0900\n"
+"PO-Revision-Date: 2016-10-06 14:03+0900\n"
 "Last-Translator: Yusuke Takahashi <youthkee@gmail.com>\n"
 "Language-Team: \n"
 "X-Generator: Poedit 1.5.7\n"
@@ -70,18 +70,18 @@ msgid "Comments are closed."
 msgstr "コメントは受け付けていません。"
 
 # @ _s
-#: footer.php:18
+#: footer.php:21
 msgid "https://wordpress.org/"
 msgstr ""
 
 # @ _s
-#: footer.php:18
+#: footer.php:21
 #, php-format
 msgid "Proudly powered by %s"
 msgstr ""
 
 # @ _s
-#: footer.php:20
+#: footer.php:23
 #, php-format
 msgid "Theme: %1$s by %2$s."
 msgstr ""
@@ -141,9 +141,23 @@ msgid "Nothing Found"
 msgstr "何も見つかりませんでした"
 
 # @ _s
+#: template-parts/content-none.php:21
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"最初の記事を投稿する準備はできましたか？ <a href=\"%1$s\">ここから始めましょ"
+"う</a>。"
+
 # @ _s
+#: template-parts/content-none.php:25
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"あなたが検索した単語に一致するものが見つかりませんでした。キーワードを変えて"
+"再度検索してください。"
+
 # @ _s
-#: template-parts/content-none.php:21 template-parts/content-none.php:25
 #: template-parts/content-none.php:31
 #, php-format
 msgid ""
