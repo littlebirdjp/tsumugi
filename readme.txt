@@ -38,6 +38,7 @@ tsumugi is a simple blog theme based on _s and Bootstrap. It consists of a singl
 * Correct the way of adding Web Fonts and Icon Fonts.
 * Remove unnecessary files.
 * Add Custom Logo functions.
+* Update language files.
 
 = 1.0.3 - Jul 22 2016 =
 * Fix for uploader error.
