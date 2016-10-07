@@ -1,0 +1,194 @@
+# Copyright (C) 2016 littlebird
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: tsumugi 1.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-16 19:02:07+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Yusuke Takahashi <youthkee@gmail.com>\n"
+"Language-Team: littlebird <littlebird.mobi@gmail.com>\n"
+
+#: 404.php:17
+#@ _s
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:21
+#@ _s
+msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgstr ""
+
+#: 404.php:33
+#@ _s
+msgid "Most Used Categories"
+msgstr ""
+
+#. translators: %1$s: smiley
+#: 404.php:51
+#, php-format
+#@ _s
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#: comments.php:31
+#, php-format
+#@ _s
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:40
+#: comments.php:61
+#@ _s
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:43
+#: comments.php:64
+#@ _s
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:44
+#: comments.php:65
+#@ _s
+msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:78
+#@ _s
+msgid "Comments are closed."
+msgstr ""
+
+#: footer.php:21
+#@ _s
+msgid "https://wordpress.org/"
+msgstr ""
+
+#: footer.php:21
+#, php-format
+#@ _s
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: footer.php:23
+#, php-format
+#@ _s
+msgid "Theme: %1$s by %2$s."
+msgstr ""
+
+#: functions.php:47
+#@ _s
+msgid "Primary"
+msgstr ""
+
+#: functions.php:110
+#@ _s
+msgid "Sidebar"
+msgstr ""
+
+#: header.php:25
+#@ _s
+msgid "Skip to content"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:50
+#: inc/template-tags.php:56
+#@ _s
+msgid ", "
+msgstr ""
+
+#: inc/template-tags.php:64
+#@ _s
+msgid "Leave a comment"
+msgstr ""
+
+#: inc/template-tags.php:64
+#@ _s
+msgid "1 Comment"
+msgstr ""
+
+#: inc/template-tags.php:64
+#, php-format
+#@ _s
+msgid "% Comments"
+msgstr ""
+
+#. translators: %s: Name of current post
+#: inc/template-tags.php:71
+#: template-parts/content-page.php:33
+#, php-format
+#@ _s
+msgid "Edit %s"
+msgstr ""
+
+#: search.php:19
+#, php-format
+#@ _s
+msgid "Search Results for: %s"
+msgstr ""
+
+#: template-parts/content-none.php:14
+#@ _s
+msgid "Nothing Found"
+msgstr ""
+
+#: template-parts/content-none.php:21
+#, php-format
+#@ _s
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:25
+#@ _s
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:31
+#@ _s
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#: template-parts/content-page.php:22
+#: template-parts/content.php:38
+#@ _s
+msgid "Pages:"
+msgstr ""
+
+#. translators: %s: Name of current post.
+#: template-parts/content.php:33
+#, php-format
+#@ _s
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "tsumugi"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+#@ _s
+msgid "http://littlebird.mobi/"
+msgstr ""
+
+#. Description of the plugin/theme
+#@ _s
+msgid "tsumugi is a simple blog theme based on _s and Bootstrap. It consists of a single column layout which is suitable for mobile devices and tablets along with PCs. For it's readability and simplicity, this theme is user-friendly for everyone. (The name of \"tsumugi\" is inspired by the song of \"Hatsune\", a Japanese singer.)"
+msgstr ""
+
+#. Author of the plugin/theme
+#@ _s
+msgid "youthkee"
+msgstr ""
+
+#. Author URI of the plugin/theme
+#@ _s
+msgid "https://github.com/littlebirdjp/tsumugi/"
+msgstr ""

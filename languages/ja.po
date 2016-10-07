@@ -1,0 +1,212 @@
+# Copyright (C) 2016 littlebird
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: tsumugi 1.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-14 21:43:07+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-10-06 14:03+0900\n"
+"Last-Translator: Yusuke Takahashi <youthkee@gmail.com>\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.5.7\n"
+"Language: JAPANESE\n"
+"Plural-Forms: nplurals=2; plural=n == 1 ? 0 : 1;\n"
+
+# @ _s
+#: 404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "お探しのページが見つかりません。"
+
+# @ _s
+#: 404.php:21
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"ここには何も見つかりませんでした。以下のリンクまたは検索をお試しください。"
+
+# @ _s
+#: 404.php:33
+msgid "Most Used Categories"
+msgstr "よく使われているカテゴリー"
+
+# @ _s
+#. translators: %1$s: smiley
+#: 404.php:51
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "月別アーカイブを見てみてください。%1$s"
+
+# @ _s
+#: comments.php:31
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "「%2$s」への%1$s件のフィードバック"
+msgstr[1] "「%2$s」への%1$s件のフィードバック"
+
+# @ _s
+#: comments.php:40 comments.php:61
+msgid "Comment navigation"
+msgstr "コメントナビゲーション"
+
+# @ _s
+#: comments.php:43 comments.php:64
+msgid "Older Comments"
+msgstr "以前のコメント"
+
+# @ _s
+#: comments.php:44 comments.php:65
+msgid "Newer Comments"
+msgstr "新しいコメント"
+
+# @ _s
+#: comments.php:78
+msgid "Comments are closed."
+msgstr "コメントは受け付けていません。"
+
+# @ _s
+#: footer.php:21
+msgid "https://wordpress.org/"
+msgstr ""
+
+# @ _s
+#: footer.php:21
+#, php-format
+msgid "Proudly powered by %s"
+msgstr ""
+
+# @ _s
+#: footer.php:23
+#, php-format
+msgid "Theme: %1$s by %2$s."
+msgstr ""
+
+# @ _s
+#: functions.php:47
+msgid "Primary"
+msgstr "メイン"
+
+# @ _s
+#: functions.php:110
+msgid "Sidebar"
+msgstr "サイドバー"
+
+# @ _s
+#: header.php:25
+msgid "Skip to content"
+msgstr "コンテンツへスキップ"
+
+# @ _s
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:50 inc/template-tags.php:56
+msgid ", "
+msgstr ", "
+
+# @ _s
+#: inc/template-tags.php:64
+msgid "Leave a comment"
+msgstr "コメントを残す"
+
+# @ _s
+#: inc/template-tags.php:64
+msgid "1 Comment"
+msgstr "1件のコメント"
+
+# @ _s
+#: inc/template-tags.php:64
+msgid "% Comments"
+msgstr "%件のコメント"
+
+# @ _s
+#. translators: %s: Name of current post
+#: inc/template-tags.php:71 template-parts/content-page.php:33
+#, php-format
+msgid "Edit %s"
+msgstr "編集 %s"
+
+# @ _s
+#: search.php:19
+#, php-format
+msgid "Search Results for: %s"
+msgstr "検索結果: %s"
+
+# @ _s
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr "何も見つかりませんでした"
+
+# @ _s
+#: template-parts/content-none.php:21
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"最初の記事を投稿する準備はできましたか？ <a href=\"%1$s\">ここから始めましょ"
+"う</a>。"
+
+# @ _s
+#: template-parts/content-none.php:25
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"あなたが検索した単語に一致するものが見つかりませんでした。キーワードを変えて"
+"再度検索してください。"
+
+# @ _s
+#: template-parts/content-none.php:31
+#, php-format
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "お探しのコンテンツが見つかりません。検索をお試しください。"
+
+# @ _s
+#: template-parts/content-page.php:22 template-parts/content.php:38
+msgid "Pages:"
+msgstr "ページ:"
+
+# @ _s
+#. translators: %s: Name of current post.
+#: template-parts/content.php:33
+#, php-format
+msgid "Continue reading %s <span class=\"meta-nav\">&gt;</span>"
+msgstr "続きを読む %s <span class=\"meta-nav\">&gt;</span>"
+
+#. Theme Name of the plugin/theme
+msgid "tsumugi"
+msgstr ""
+
+# @ _s
+#. Theme URI of the plugin/theme
+msgid "http://littlebird.mobi/"
+msgstr ""
+
+# @ _s
+#. Description of the plugin/theme
+msgid ""
+"tsumugi is a simple blog theme based on _s and Bootstrap. It consists of a "
+"single column layout which is suitable for mobile devices and tablets along "
+"with PCs. For it's readability and simplicity, this theme is user-friendly "
+"for everyone. (The name of \"tsumugi\" is inspired by the song of \"Hatsune"
+"\", a Japanese singer.)"
+msgstr ""
+"tsumugiは、_sとBootstrapをベースにしたシンプルなブログ用テーマです。レスポン"
+"シブに対応したワンカラム・レイアウトで作られているので、PCだけでなく、スマー"
+"トフォンやタブレットでも最適に表示されます。読みやすさと、シンプルさを重視し"
+"ているので、誰にでも使いやすいのが特徴です。（\"tsumugi\"というネーミングは、"
+"シンガーソングライター・初音の曲名から名付けさせていただきました。）"
+
+# @ _s
+#. Author of the plugin/theme
+msgid "youthkee"
+msgstr ""
+
+# @ _s
+#. Author URI of the plugin/theme
+msgid "https://github.com/littlebirdjp/tsumugi/"
+msgstr ""
