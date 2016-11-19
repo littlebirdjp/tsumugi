@@ -8,7 +8,7 @@ tsumugi is a simple WordPress theme based on Underscores and Bootstrap. It consi
 
 - [Demo Site](http://tsumugi.halfmoon.jp/)
 - [デモサイト(日本語)](http://tsumugi.halfmoon.jp/ja/)
-- [制作過程はこちら(Development Process)](PROCESS.md)
+- [制作過程はこちら(Development Process)](https://github.com/littlebirdjp/tsumugi/wiki/%E5%88%B6%E4%BD%9C%E9%81%8E%E7%A8%8B)
 
 ## Usage
 
