@@ -1,0 +1,12 @@
+{
+    "block-indent": 2,
+    "always-semicolon": true,
+    "remove-empty-rulesets": true,
+    "vendor-prefix-align": true,
+    "lines-between-rulesets": 1,
+    "space-between-declarations": "\n",
+    "space-before-opening-brace": " ",
+    "space-after-opening-brace": "\n",
+    "space-after-selector-delimiter": "\n",
+    "space-before-closing-brace": "\n"
+}

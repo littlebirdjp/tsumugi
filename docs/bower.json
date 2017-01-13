@@ -1,0 +1,34 @@
+{
+  "name": "tsumugi official site",
+  "version": "1.0.0",
+  "description": "An official website of tsumugi.",
+  "authors": [
+    "Yusuke Takahashi <youthkee@gmail.com>"
+  ],
+  "homepage": "http://littlebirdjp.github.io/tsumugi/",
+  "license": "GPL-2.0",
+  "main": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.6",
+    "tether": "~1.4.0"
+  },
+  "preen": {
+    "bootstrap": [
+      "dist/css/*.min.css",
+      "dist/js/*.min.js"
+    ],
+    "jquery": [
+      "dist/jquery.min.js"
+    ],
+    "tether": [
+      "dist/js/tether.min.js"
+    ]
+  }
+}
