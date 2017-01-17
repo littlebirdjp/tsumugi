@@ -1,5 +1,5 @@
 {
-  "name": "tsumugi official site",
+  "name": "tsumugi-official-website",
   "version": "1.0.0",
   "description": "An official website of tsumugi.",
   "authors": [
@@ -21,8 +21,8 @@
   },
   "preen": {
     "bootstrap": [
-      "dist/css/*.min.css",
-      "dist/js/*.min.js"
+      "dist/css/bootstrap.min.css",
+      "dist/js/bootstrap.min.js"
     ],
     "jquery": [
       "dist/jquery.min.js"
