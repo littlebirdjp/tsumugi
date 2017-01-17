@@ -1,0 +1,36 @@
+extends ./_parts/_layout
+
+//------------------
+//- variable
+//------------------
+block var_block
+
+//------------------
+//- header meta
+//------------------
+block headMETA
+
+//------------------
+//- header Css
+//------------------
+block headCSS
+    link(rel="stylesheet", href=rootPath+"css/style.css")
+
+//------------------s
+//- header js
+//------------------
+block headJS
+
+//- -----------------
+//- Contents
+//- -----------------
+block header_block
+    include ./_parts/_header
+
+block contents_block
+    h2 A simple WordPress theme for blogs.
+    p.
+        Under Cunstruction.
+
+block footer_block
+    include ./_parts/_footer
