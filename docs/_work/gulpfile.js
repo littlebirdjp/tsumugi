@@ -30,7 +30,7 @@ gulp.task('html', function() {
     paths.src + '**/*.pug',
     '!' + paths.src + '**/_*.pug'
     ])
-    .pipe(pug({ pretty: true }))
+    .pipe(pug())
     .pipe(gulp.dest(paths.dist));
 });
 
@@ -42,7 +42,9 @@ gulp.task('prettify', ['html'], function() {
     .pipe(prettify({
       brace_style: 'collapse',
       indent_size: 2,
-      indent_char: ' '
+      indent_char: ' ',
+      unformatted: ['a'],
+      indent_inner_html: false
     }))
     .pipe(gulp.dest(paths.dist))
     .pipe(browserSync.reload({

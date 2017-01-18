@@ -14,23 +14,148 @@ block headMETA
 //- header Css
 //------------------
 block headCSS
-    link(rel="stylesheet", href=rootPath+"css/style.css")
-
-//------------------s
-//- header js
-//------------------
-block headJS
+  link(rel="stylesheet", href=rootPath+"css/style.css")
 
 //- -----------------
 //- Contents
 //- -----------------
 block header_block
-    include ./_parts/_header
+  include ./_parts/_header
 
 block contents_block
-    h2 A simple WordPress theme for blogs.
-    p.
-        Under Cunstruction.
+
+  section.section.main.mt-4.mb-5
+    .container
+      .row
+        .col.text-center
+          img.main__image(src=rootPath+"img/screenshot.png")
+          p.main__text.mt-3.mb-3
+            | A simple WordPress theme for blogs.
+            br
+            | Easy to use and mobile-friendly.
+          .external
+            a.btn.btn-primary.external__link(href="https://wordpress.org/themes/tsumugi/", target="_blank") Download
+            | &nbsp;
+            a.btn.btn-primary.external__link(href="http://tsumugi.halfmoon.jp/", target="_blank") Live Demo
+
+  section.section#concept
+    .container
+      .row
+        .col
+            h2.section__title.text-center.mb-4 Concept
+      .row
+        .col-md-4.mb-4
+          h3.section__subTitle.text-center Mobile Friendly
+          p.section__text
+            | Bring a comfortable readability by responsive web design adapted to mobile devices.
+          a.section__link(href="http://tsumugi.halfmoon.jp/", target="_blank")
+            i.fa.fa-angle-right(aria-hidden="true")
+            | &nbsp;
+            | Look “Live Demo” for actual look and feel.
+        .col-md-4.mb-4
+          h3.section__subTitle.text-center User Friendly
+          p.section__text
+            | Even beginners can use easily, because there are no complicated functions or options.
+          a.section__link(href="#features")
+            i.fa.fa-angle-right(aria-hidden="true")
+            | &nbsp;
+            |Look “Features” for available functions.
+        .col-md-4.mb-4
+          h3.section__subTitle.text-center Sustainability
+          p.section__text
+            | Easily update to the latest version of Bootstrap for it’s expansive structure.
+          a.section__link(href="#customization")
+            i.fa.fa-angle-right(aria-hidden="true")
+            | &nbsp;
+            | Look “Customization” for developer information.
+
+  section.section.mt-5#features
+    .container
+      .row
+        .col
+          h2.section__title.text-center.mb-4 Features
+      .row
+        .col-md-6
+          h3.section__subTitle
+            span.fa-stack.fa-lg
+              i.fa.fa-circle.fa-stack-2x(aria-hidden="true")
+              i.fa.fa-tablet.fa-stack-1x.fa-inverse(aria-hidden="true")
+            | Responsive Layout
+          p.section__text
+            | This theme consists of a single column layout which is suitable for mobile devices and tablets along with PCs.
+        .col-md-6
+          h3.section__subTitle
+            span.fa-stack.fa-lg
+              i.fa.fa-circle.fa-stack-2x(aria-hidden="true")
+              i.fa.fa-bars.fa-stack-1x.fa-inverse(aria-hidden="true")
+            | Custom Menu
+          p.section__text
+            | You can put a navigation menu in the header area. It can be edited in “Appearance” &gt; “Menus” on the admin panel.
+        .col-md-6
+          h3.section__subTitle
+            span.fa-stack.fa-lg
+              i.fa.fa-circle.fa-stack-2x(aria-hidden="true")
+              i.fa.fa-copyright.fa-stack-1x.fa-inverse(aria-hidden="true")
+            | Custom Logo
+          p.section__text
+            | You can put a logo image ahead of the site title. Also you can use the “tsumugi” logo in “img” folder of the theme directory.
+        .col-md-6
+          h3.section__subTitle
+            span.fa-stack.fa-lg
+              i.fa.fa-circle.fa-stack-2x(aria-hidden="true")
+              i.fa.fa-picture-o.fa-stack-1x.fa-inverse(aria-hidden="true")
+            | Custom Header
+          p.section__text
+            | You can put a header image below the site title. By the default, an original photo is placed there. (It can be removed if you like.)
+        .col-md-6
+          h3.section__subTitle
+            span.fa-stack.fa-lg
+              i.fa.fa-circle.fa-stack-2x(aria-hidden="true")
+              i.fa.fa-puzzle-piece.fa-stack-1x.fa-inverse(aria-hidden="true")
+            | Widgets
+          p.section__text
+            | You can put various components such as categories, tags, archives… and so on. It can be edited in “Appearance” &gt; “ Widgets” on the admin panel.
+        .col-md-6
+          h3.section__subTitle
+            span.fa-stack.fa-lg
+              i.fa.fa-circle.fa-stack-2x(aria-hidden="true")
+              i.fa.fa-paint-brush.fa-stack-1x.fa-inverse(aria-hidden="true")
+            | Theme Customizer
+          p.section__text
+            | You can edit more useful theme options with the “Theme Customizer”. It can be used in “Appearance” &gt; “ Customize” on the admin panel.
+
+  section.section.mt-5#customization
+    .container
+      .row
+        .col
+          h2.section__title.text-center.mb-4 Customization
+          p.section__subTitle.text-center For Developers and Designers
+          p.section__text
+            | If you want customize this theme comprehensively, It’s recommended to "git clone" from the GitHub repository.
+            br
+            | Please read a README and Wikis as a reference for theme development.
+            br
+            | Fork and Pull Request will be welcome too!
+          p.text-center
+            a.btn.btn-primary.external__link(href="https://github.com/littlebirdjp/tsumugi", target="_blank") View on GitHub
+
+  section.section.mt-5#special-thanks
+    .container
+      .row
+        .col
+          h2.section__title.text-center.mb-4 Special Thanks
+          p.section__text
+            | The name of "tsumugi" is inspired by the song of "
+            a(href="http://hatsune-official.com/", target="_blank") Hatsune
+            | ", a Japanese singer-songwriter.
+          p.text-center
+            .embed-responsive.embed-responsive-16by9
+              iframe.embed-responsive-item(src="https://www.youtube.com/embed/pAHZ9ATXV_Q", width="560", height="315", frameborder="0", allowfullscreen)
 
 block footer_block
-    include ./_parts/_footer
+  include ./_parts/_footer
+
+//------------------s
+//- footer js
+//------------------
+block footerJS

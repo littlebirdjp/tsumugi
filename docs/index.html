@@ -1,74 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>tsumugi</title>
-    <meta name="description" content="A simple WordPress theme for blogs.">
-    <meta name="keywords" content="">
-    <meta property="og:url" content="http://littlebirdjp.github.io/tsumugi/">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="tsumugi">
-    <meta property="og:title" content="tsumugi">
-    <meta property="og:image" content="http://littlebirdjp.github.io/tsumugi/img/ogimage.png">
-    <meta property="og:description" content="A simple WordPress theme for blogs.">
-    <meta property="fb:admins" content="youthkee">
-    <meta property="fb:app_id" content="1511260485840721">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@youthkee">
-    <meta name="twitter:url" content="http://littlebirdjp.github.io/tsumugi/">
-    <meta name="twitter:title" content="tsumugi">
-    <meta name="twitter:description" content="A simple WordPress theme for blogs.">
-    <meta name="twitter:image" content="http://littlebirdjp.github.io/tsumugi/img/ogimage.png">
-    <meta name="twitter:domain" content="littlebirdjp.github.io">
-    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="./manifest.json">
-    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#40a9cb">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/jquery.min.js"></script>
-    <script src="./js/tether.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-  </head>
-  <body>
-    <div id="fb-root"></div>
-    <script>
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=&version=v2.0";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-      (function(i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function() {
-          (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-          m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-      ga('create', 'UA-50835-7', 'auto');
-      ga('send', 'pageview');
-    </script>
-    <div class="wrapper">
-      <header>
-        <h1>tsumugi</h1>
-      </header>
-      <div class="content" id="content">
-        <h2>A simple WordPress theme for blogs.</h2>
-        <p> Under Cunstruction. </p>
-      </div>
-      <footer class="footer" id="footer">
-        <p class="copyright">&copy;littlebird</p>
-      </footer>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>tsumugi - A simple WordPress theme for blogs.</title>
+  <meta name="description" content="A simple WordPress theme for blogs.">
+  <meta name="keywords" content="">
+  <meta property="og:url" content="http://littlebirdjp.github.io/tsumugi/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="tsumugi">
+  <meta property="og:title" content="tsumugi">
+  <meta property="og:image" content="http://littlebirdjp.github.io/tsumugi/img/ogimage.png">
+  <meta property="og:description" content="A simple WordPress theme for blogs.">
+  <meta property="fb:admins" content="youthkee">
+  <meta property="fb:app_id" content="1511260485840721">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@youthkee">
+  <meta name="twitter:url" content="http://littlebirdjp.github.io/tsumugi/">
+  <meta name="twitter:title" content="tsumugi">
+  <meta name="twitter:description" content="A simple WordPress theme for blogs.">
+  <meta name="twitter:image" content="http://littlebirdjp.github.io/tsumugi/img/ogimage.png">
+  <meta name="twitter:domain" content="littlebirdjp.github.io">
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#40a9cb">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://use.fontawesome.com/1195f02cc8.js"></script>
+  <script>
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-50835-11', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+<body>
+  <div id="fb-root"></div>
+  <div class="wrapper">
+    <header class="header">
+      <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="./">
+          <h1 class="header__title">tsumugi</h1>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#concept">Concept</a></li>
+            <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+            <li class="nav-item"><a class="nav-link" href="#customization">Customization</a></li>
+            <li class="nav-item"><a class="nav-link" href="#special-thanks">Special Thanks</a></li>
+            <li class="nav-item"><a class="nav-link" href="http://littlebird.mobi/" target="_blank">Blog</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="content">
+      <section class="section main mt-4 mb-5">
+        <div class="container">
+          <div class="row">
+            <div class="col text-center">
+              <img class="main__image" src="./img/screenshot.png">
+              <p class="main__text mt-3 mb-3">A simple WordPress theme for blogs.
+                <br>Easy to use and mobile-friendly.</p>
+              <div class="external"><a class="btn btn-primary external__link" href="https://wordpress.org/themes/tsumugi/" target="_blank">Download</a>&nbsp;<a class="btn btn-primary external__link" href="http://tsumugi.halfmoon.jp/" target="_blank">Live Demo</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="concept">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h2 class="section__title text-center mb-4">Concept</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 mb-4">
+              <h3 class="section__subTitle text-center">Mobile Friendly</h3>
+              <p class="section__text">Bring a comfortable readability by responsive web design adapted to mobile devices.</p>
+              <a class="section__link" href="http://tsumugi.halfmoon.jp/" target="_blank">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp; Look “Live Demo” for actual look and feel.</a>
+            </div>
+            <div class="col-md-4 mb-4">
+              <h3 class="section__subTitle text-center">User Friendly</h3>
+              <p class="section__text">Even beginners can use easily, because there are no complicated functions or options.</p>
+              <a class="section__link" href="#features">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp; Look “Features” for available functions.</a>
+            </div>
+            <div class="col-md-4 mb-4">
+              <h3 class="section__subTitle text-center">Sustainability</h3>
+              <p class="section__text">Easily update to the latest version of Bootstrap for it’s expansive structure.</p>
+              <a class="section__link" href="#customization">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp; Look “Customization” for developer information.</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section mt-5" id="features">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h2 class="section__title text-center mb-4">Features</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <h3 class="section__subTitle">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+                  <i class="fa fa-tablet fa-stack-1x fa-inverse" aria-hidden="true"></i>
+                </span>Responsive Layout</h3>
+              <p class="section__text">This theme consists of a single column layout which is suitable for mobile devices and tablets along with PCs.</p>
+            </div>
+            <div class="col-md-6">
+              <h3 class="section__subTitle">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+                  <i class="fa fa-bars fa-stack-1x fa-inverse" aria-hidden="true"></i>
+                </span>Custom Menu</h3>
+              <p class="section__text">You can put a navigation menu in the header area. It can be edited in “Appearance” &gt; “Menus” on the admin panel.</p>
+            </div>
+            <div class="col-md-6">
+              <h3 class="section__subTitle">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+                  <i class="fa fa-copyright fa-stack-1x fa-inverse" aria-hidden="true"></i>
+                </span>Custom Logo</h3>
+              <p class="section__text">You can put a logo image ahead of the site title. Also you can use the “tsumugi” logo in “img” folder of the theme directory.</p>
+            </div>
+            <div class="col-md-6">
+              <h3 class="section__subTitle">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+                  <i class="fa fa-picture-o fa-stack-1x fa-inverse" aria-hidden="true"></i>
+                </span>Custom Header</h3>
+              <p class="section__text">You can put a header image below the site title. By the default, an original photo is placed there. (It can be removed if you like.)</p>
+            </div>
+            <div class="col-md-6">
+              <h3 class="section__subTitle">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+                  <i class="fa fa-puzzle-piece fa-stack-1x fa-inverse" aria-hidden="true"></i>
+                </span>Widgets</h3>
+              <p class="section__text">You can put various components such as categories, tags, archives… and so on. It can be edited in “Appearance” &gt; “ Widgets” on the admin panel.</p>
+            </div>
+            <div class="col-md-6">
+              <h3 class="section__subTitle">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+                  <i class="fa fa-paint-brush fa-stack-1x fa-inverse" aria-hidden="true"></i>
+                </span>Theme Customizer</h3>
+              <p class="section__text">You can edit more useful theme options with the “Theme Customizer”. It can be used in “Appearance” &gt; “ Customize” on the admin panel.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section mt-5" id="customization">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h2 class="section__title text-center mb-4">Customization</h2>
+              <p class="section__subTitle text-center">For Developers and Designers</p>
+              <p class="section__text">If you want customize this theme comprehensively, It’s recommended to "git clone" from the GitHub repository.
+                <br>Please read a README and Wikis as a reference for theme development.
+                <br>Fork and Pull Request will be welcome too!</p>
+              <p class="text-center"><a class="btn btn-primary external__link" href="https://github.com/littlebirdjp/tsumugi" target="_blank">View on GitHub</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section mt-5" id="special-thanks">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h2 class="section__title text-center mb-4">Special Thanks</h2>
+              <p class="section__text">The name of "tsumugi" is inspired by the song of "<a href="http://hatsune-official.com/" target="_blank">Hatsune</a>", a Japanese singer-songwriter.</p>
+              <p class="text-center">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/pAHZ9ATXV_Q" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+                </div>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-  </body>
+    <footer class="footer mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <p><a href="https://wordpress.org/" target="_blank">Proudly powered by WordPress</a>
+              <span class="hidden-sm-down"> |</span>
+              <br class="hidden-md-up">Theme by <a href="http://littlebird.mobi/" target="_blank">youthkee</a></p>
+            <p class="copyright">&copy; littlebird</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/tether.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+</body>
 </html>
