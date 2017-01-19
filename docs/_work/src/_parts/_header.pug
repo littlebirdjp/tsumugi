@@ -14,5 +14,9 @@ header.header
           a.nav-link(href='#customization') Customization
         li.nav-item
           a.nav-link(href='#special-thanks') Special Thanks
-        li.nav-item
-          a.nav-link(href='http://littlebird.mobi/', target="_blank") Blog
+        li.nav-item.dropdown
+          a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='http://example.com', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+            | Language
+          .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+            a.dropdown-item(href=rootPath) English
+            a.dropdown-item(href=rootPath+'ja/') Japanese
