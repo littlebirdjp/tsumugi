@@ -1,0 +1,171 @@
+extends ../_parts/_layout
+
+//------------------
+//- variable
+//------------------
+block var_block
+  - var title             = 'tsumugi - シンプルで使いやすいブログ用のWordPressテーマ。';//-meta title
+  - var description       = 'シンプルで使いやすいブログ用のWordPressテーマ。';//-meta description
+  - var og_description    = description;//-og description
+  - var og_url            = 'http://littlebirdjp.github.io/tsumugi/ja/';//-og url
+  - var tw_url            = og_url;
+  - var tw_description    = description;
+  - var rootPath          = '../'//-root path
+  - var lang              = 'ja'
+
+//------------------
+//- header meta
+//------------------
+block headMETA
+
+//------------------
+//- header Css
+//------------------
+block headCSS
+  link(rel="stylesheet", href=rootPath+"css/style.css")
+
+//- -----------------
+//- Contents
+//- -----------------
+block header_block
+  include ../_parts/_header_ja
+
+block contents_block
+
+  section.section.main.mt-4.mb-5
+    .container
+      .row
+        .col.text-center
+          p
+            img.main__image(src=rootPath+"img/screenshot.png", alt=title)
+          p.main__text.mt-3.mb-3
+            | 「tsumugi」は、文章が読みやすく、想いを伝えやすい、
+            br
+            | 誰にでも使えるシンプルなWordPressテーマです。
+          .external
+            a.btn.btn-primary.external__link.mr-2(href="https://ja.wordpress.org/themes/tsumugi/", target="_blank") 無料ダウンロード
+            a.btn.btn-primary.external__link(href="http://tsumugi.halfmoon.jp/ja/", target="_blank") デモサイト
+
+  section.section#concept
+    .container
+      .row
+        .col
+            h2.section__title.text-center.mb-4 コンセプト
+      .row
+        .col-md-4.mb-4
+          h3.section__subTitle.text-center モバイルフレンドリー
+          p.section__text
+            | スマートフォンやタブレットに最適化されているので、モバイル環境でも読みやすいデザインを実現します。
+          a.section__link(href="http://tsumugi.halfmoon.jp/ja/", target="_blank")
+            i.fa.fa-angle-right(aria-hidden="true")
+            | &nbsp;
+            | 実際の見え方は「デモサイト」をご覧ください。
+        .col-md-4.mb-4
+          h3.section__subTitle.text-center ユーザーフレンドリー
+          p.section__text
+            | 複雑な機能やオプションを搭載していないので、初心者の方でも簡単に利用することができます。
+          a.section__link(href="#features")
+            i.fa.fa-angle-right(aria-hidden="true")
+            | &nbsp;
+            | 利用できる機能については「特長」をご覧ください。
+        .col-md-4.mb-4
+          h3.section__subTitle.text-center サステイナビリティー
+          p.section__text
+            | 拡張しやすい作りになっているため、いつでも最新のフレームワークにアップデートすることができます。
+          a.section__link(href="#customization")
+            i.fa.fa-angle-right(aria-hidden="true")
+            | &nbsp;
+            | テーマの編集方法については「カスタマイズ」をご覧ください。
+
+  section.section.mt-5#features
+    .container
+      .row
+        .col
+          h2.section__title.text-center.mb-4 特長
+      .row
+        .col-md-6
+          h3.section__subTitle
+            span.fa-stack.fa-lg
+              i.fa.fa-circle.fa-stack-2x(aria-hidden="true")
+              i.fa.fa-tablet.fa-stack-1x.fa-inverse(aria-hidden="true")
+            | レスポンシブレイアウト
+          p.section__text
+            | レスポンシブレイアウトに対応しているため、PCでもモバイルデバイスでも、コンテンツが最適化されて表示されます。
+        .col-md-6
+          h3.section__subTitle
+            span.fa-stack.fa-lg
+              i.fa.fa-circle.fa-stack-2x(aria-hidden="true")
+              i.fa.fa-bars.fa-stack-1x.fa-inverse(aria-hidden="true")
+            | カスタムメニュー
+          p.section__text
+            | ヘッダーにメニューを追加することができます。項目の編集は、管理画面の「外観」→「メニュー」から簡単に行えます。
+        .col-md-6
+          h3.section__subTitle
+            span.fa-stack.fa-lg
+              i.fa.fa-circle.fa-stack-2x(aria-hidden="true")
+              i.fa.fa-copyright.fa-stack-1x.fa-inverse(aria-hidden="true")
+            | カスタムロゴ
+          p.section__text
+            | 好きな画像を選んでサイトのロゴを設置することができます。
+            br
+            | ※「tsumugi」のロゴを使いたい場合は、テーマディレクトリ内のimgフォルダに同梱されているファイルをご使用ください。
+        .col-md-6
+          h3.section__subTitle
+            span.fa-stack.fa-lg
+              i.fa.fa-circle.fa-stack-2x(aria-hidden="true")
+              i.fa.fa-picture-o.fa-stack-1x.fa-inverse(aria-hidden="true")
+            | カスタムヘッダー
+          p.section__text
+            | 好きな画像を選んでヘッダーに設置することができます。初期設定ではオリジナルの写真が表示されます。
+            br
+            | ※ヘッダー画像は削除することも可能です。
+        .col-md-6
+          h3.section__subTitle
+            span.fa-stack.fa-lg
+              i.fa.fa-circle.fa-stack-2x(aria-hidden="true")
+              i.fa.fa-puzzle-piece.fa-stack-1x.fa-inverse(aria-hidden="true")
+            | ウィジェット
+          p.section__text
+            | フッターにカテゴリーやタグ、アーカイブ等のリンクやパーツを設置できます。項目の編集は、管理画面の「外観」→「ウィジェット」から簡単に行えます。
+        .col-md-6
+          h3.section__subTitle
+            span.fa-stack.fa-lg
+              i.fa.fa-circle.fa-stack-2x(aria-hidden="true")
+              i.fa.fa-paint-brush.fa-stack-1x.fa-inverse(aria-hidden="true")
+            | テーマカスタマイザー
+          p.section__text
+            | その他、様々な項目やスタイルを「テーマカスタマイザー」を使って編集できます。テーマの編集は「外観」→「カスタマイズ」から簡単に行えます。
+
+  section.section.mt-5#customization
+    .container
+      .row
+        .col
+          h2.section__title.text-center.mb-4 カスタマイズ
+          p.section__subTitle.text-center 開発者・デザイナーの方へ
+          p.section__text
+            | 「tsumugi」を本格的にカスタマイズするには、ダウンロード版ではなく、開発用のファイルも含んだGitHubバージョンをご利用ください。
+            br
+            | こちらのリポジトリに、開発ツールの使用方法や、制作過程などが記載されています。また、本テーマはオープンソースで公開されているので、フォークやプルリクも歓迎しています。
+          p.text-center
+            a.btn.btn-primary.external__link(href="https://github.com/littlebirdjp/tsumugi", target="_blank") GitHubを見る
+
+  section.section.mt-5#special-thanks
+    .container
+      .row
+        .col
+          h2.section__title.text-center.mb-4 Special Thanks
+          p.section__text
+            | 「tsumugi」というテーマ名は、シンガーソングライター・
+            a(href="http://hatsune-official.com/", target="_blank") 初音
+            | さんの曲名から名付けさせていただきました。
+          p.text-center
+            .embed-responsive.embed-responsive-16by9
+              iframe.embed-responsive-item(src="https://www.youtube.com/embed/pAHZ9ATXV_Q", width="560", height="315", frameborder="0", allowfullscreen)
+
+block footer_block
+  include ../_parts/_footer
+
+//------------------s
+//- footer js
+//------------------
+block footerJS
