@@ -2,7 +2,7 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: tsumugi 1.1.0\n"
+"Project-Id-Version: tsumugi 1.1.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-16 19:02:07+00:00\n"
 "MIME-Version: 1.0\n"
@@ -81,6 +81,16 @@ msgstr ""
 #, php-format
 #@ _s
 msgid "Theme: %1$s by %2$s."
+msgstr ""
+
+#: footer.php:23
+#@ _s
+msgid "<a href=\"http://littlebirdjp.github.io/tsumugi/\">tsumugi</a>"
+msgstr ""
+
+#: footer.php:23
+#@ _s
+msgid "<a href=\"http://littlebird.mobi/\" rel=\"designer\">youthkee</a>"
 msgstr ""
 
 #: functions.php:47
@@ -175,7 +185,7 @@ msgstr ""
 
 #. Theme URI of the plugin/theme
 #@ _s
-msgid "http://littlebird.mobi/"
+msgid "http://littlebirdjp.github.io/tsumugi/"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -190,5 +200,5 @@ msgstr ""
 
 #. Author URI of the plugin/theme
 #@ _s
-msgid "https://github.com/littlebirdjp/tsumugi/"
+msgid "http://littlebird.mobi/"
 msgstr ""
