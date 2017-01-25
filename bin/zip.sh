@@ -9,7 +9,6 @@ function build_tsumugi() {
   cp -rpf img tsumugi/
   cp -rpf inc tsumugi/
   cp -rpf js tsumugi/
-  cp -rpf languages tsumugi/
   mkdir tsumugi/bower_components
   mkdir tsumugi/bower_components/bootstrap
   mkdir tsumugi/bower_components/tether
