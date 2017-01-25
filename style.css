@@ -1,10 +1,10 @@
 /*
 Theme Name: tsumugi
-Theme URI: https://github.com/littlebirdjp/tsumugi/
+Theme URI: http://littlebirdjp.github.io/tsumugi/
 Author: youthkee
 Author URI: http://littlebird.mobi/
 Description: tsumugi is a simple blog theme based on _s and Bootstrap. It consists of a single column layout which is suitable for mobile devices and tablets along with PCs. For it's readability and simplicity, this theme is user-friendly for everyone. (The name of "tsumugi" is inspired by the song of "Hatsune", a Japanese singer.)
-Version: 1.1.1
+Version: 1.1.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: tsumugi
@@ -149,7 +149,7 @@ dt {
 }
 
 dd {
-	margin: 0 1rem 1rem;
+	margin: 0 0 1rem;
 }
 
 img {
@@ -201,6 +201,7 @@ textarea:focus {
 
 select {
 	border: 1px solid #ccc;
+	height: 2rem;
 }
 
 input[type="text"],
@@ -228,6 +229,15 @@ input[type="search"] {
 textarea {
 	padding-left: 3px;
 	width: 100%;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	display: inline;
+}
+
+input[type="file"] {
+	line-height: 1rem;
 }
 
 /*--------------------------------------------------------------
@@ -492,6 +502,11 @@ a:active {
 }
 .widget a:hover {
 	color: #818a91;
+}
+
+.widget-area {
+	border-top: 1px dashed #165E83;
+	padding-top: 1.5rem;
 }
 
 .widget-title,

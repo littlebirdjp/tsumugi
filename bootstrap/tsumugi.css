@@ -72,7 +72,8 @@ table .table {
 
 .btn,
 input[type="submit"],
-.more-link {
+.more-link,
+input[type="reset"] {
 	display: inline-block;
 	font-weight: normal;
 	text-align: center;
@@ -89,21 +90,27 @@ input[type="submit"],
 .btn:focus,
 input[type="submit"]:focus,
 .more-link:focus,
+input[type="reset"]:focus,
 .btn.focus,
 input.focus[type="submit"],
 .focus.more-link,
+input.focus[type="reset"],
 .btn:active:focus,
 input[type="submit"]:active:focus,
 .more-link:active:focus,
+input[type="reset"]:active:focus,
 .btn:active.focus,
 input[type="submit"]:active.focus,
 .more-link:active.focus,
+input[type="reset"]:active.focus,
 .btn.active:focus,
 input.active[type="submit"]:focus,
 .active.more-link:focus,
+input.active[type="reset"]:focus,
 .btn.active.focus,
 input.active.focus[type="submit"],
-.active.focus.more-link {
+.active.focus.more-link,
+input.active.focus[type="reset"] {
 	outline: thin dotted;
 	outline: 5px auto -webkit-focus-ring-color;
 	outline-offset: -2px;
@@ -111,31 +118,38 @@ input.active.focus[type="submit"],
 .btn:focus,
 input[type="submit"]:focus,
 .more-link:focus,
+input[type="reset"]:focus,
 .btn:hover,
 input[type="submit"]:hover,
-.more-link:hover {
+.more-link:hover,
+input[type="reset"]:hover {
 	text-decoration: none;
 }
 .btn.focus,
 input.focus[type="submit"],
-.focus.more-link {
+.focus.more-link,
+input.focus[type="reset"] {
 	text-decoration: none;
 }
 .btn:active,
 input[type="submit"]:active,
 .more-link:active,
+input[type="reset"]:active,
 .btn.active,
 input.active[type="submit"],
-.active.more-link {
+.active.more-link,
+input.active[type="reset"] {
 	background-image: none;
 	outline: 0;
 }
 .btn.disabled,
 input.disabled[type="submit"],
 .disabled.more-link,
+input.disabled[type="reset"],
 .btn:disabled,
 input[type="submit"]:disabled,
-.more-link:disabled {
+.more-link:disabled,
+input[type="reset"]:disabled {
 	cursor: not-allowed;
 	opacity: .65;
 }
@@ -234,6 +248,78 @@ input[type="submit"]:disabled:hover,
 	border-color: #007BBB;
 }
 
+.btn-secondary,
+input[type="reset"] {
+	color: #373a3c;
+	background-color: #fff;
+	border-color: #ccc;
+}
+.btn-secondary:hover,
+input[type="reset"]:hover {
+	color: #373a3c;
+	background-color: #e6e6e6;
+	border-color: #adadad;
+}
+.btn-secondary:focus,
+input[type="reset"]:focus,
+.btn-secondary.focus,
+input.focus[type="reset"] {
+	color: #373a3c;
+	background-color: #e6e6e6;
+	border-color: #adadad;
+}
+.btn-secondary:active,
+input[type="reset"]:active,
+.btn-secondary.active,
+input.active[type="reset"],
+.open > .btn-secondary.dropdown-toggle,
+.open > input.dropdown-toggle[type="reset"] {
+	color: #373a3c;
+	background-color: #e6e6e6;
+	border-color: #adadad;
+	background-image: none;
+}
+.btn-secondary:active:hover,
+input[type="reset"]:active:hover,
+.btn-secondary:active:focus,
+input[type="reset"]:active:focus,
+.btn-secondary:active.focus,
+input[type="reset"]:active.focus,
+.btn-secondary.active:hover,
+input.active[type="reset"]:hover,
+.btn-secondary.active:focus,
+input.active[type="reset"]:focus,
+.btn-secondary.active.focus,
+input.active.focus[type="reset"],
+.open > .btn-secondary.dropdown-toggle:hover,
+.open > input.dropdown-toggle[type="reset"]:hover,
+.open > .btn-secondary.dropdown-toggle:focus,
+.open > input.dropdown-toggle[type="reset"]:focus,
+.open > .btn-secondary.dropdown-toggle.focus,
+.open > input.dropdown-toggle.focus[type="reset"] {
+	color: #373a3c;
+	background-color: #d4d4d4;
+	border-color: #8c8c8c;
+}
+.btn-secondary.disabled:focus,
+input.disabled[type="reset"]:focus,
+.btn-secondary.disabled.focus,
+input.disabled.focus[type="reset"],
+.btn-secondary:disabled:focus,
+input[type="reset"]:disabled:focus,
+.btn-secondary:disabled.focus,
+input[type="reset"]:disabled.focus {
+	background-color: #fff;
+	border-color: #ccc;
+}
+.btn-secondary.disabled:hover,
+input.disabled[type="reset"]:hover,
+.btn-secondary:disabled:hover,
+input[type="reset"]:disabled:hover {
+	background-color: #fff;
+	border-color: #ccc;
+}
+
 .navbar {
 	padding: 0 0;
 }
@@ -257,4 +343,8 @@ input[type="submit"],
 input[type="submit"]:visited,
 .more-link:visited {
 	color: #fff;
+}
+
+input[type="reset"] {
+	font-family: 'Source Sans Pro',sans-serif;
 }

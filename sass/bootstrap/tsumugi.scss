@@ -63,3 +63,8 @@ input[type="submit"],
     color: #fff;
   }
 }
+
+input[type="reset"] {
+  @extend .btn, .btn-secondary;
+  font-family: 'Source Sans Pro',sans-serif;
+}

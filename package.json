@@ -1,9 +1,9 @@
 {
   "name": "tsumugi",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A simple WordPress theme for blogs.",
   "author": "Yusuke Takahashi <youthkee@gmail.com>",
-  "homepage": "http://littlebird.mobi",
+  "homepage": "http://littlebirdjp.github.io/tsumugi/",
   "license": "GPL-2.0",
   "main": "index.php",
   "repository": {

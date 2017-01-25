@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION='1.1.1'
+VERSION='1.1.2'
 
 function build_tsumugi() {
   mkdir tsumugi
@@ -10,7 +10,6 @@ function build_tsumugi() {
   cp -rpf inc tsumugi/
   cp -rpf js tsumugi/
   cp -rpf languages tsumugi/
-  cp -rpf template-parts tsumugi/
   mkdir tsumugi/bower_components
   mkdir tsumugi/bower_components/bootstrap
   mkdir tsumugi/bower_components/tether
