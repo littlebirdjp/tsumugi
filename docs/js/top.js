@@ -17,7 +17,7 @@ var browserLanguage = function() {
 
 function urlChange() {
 	if( browserLanguage() == 'ja' ){
-	  location.href = '/ja';
+	  location.href = './ja';
 	}
 }
 
