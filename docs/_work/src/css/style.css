@@ -20,6 +20,10 @@ body {
 	}
 }
 
+.content {
+	position: relative;
+}
+
 .embed-responsive {
 	max-width: 560px;
 	margin-right: auto;
