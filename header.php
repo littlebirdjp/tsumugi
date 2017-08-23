@@ -26,11 +26,11 @@
 
 	<header id="masthead" class="site-header" role="banner">
 
-		<nav id="site-navigation" class="main-navigation navbar navbar-light" role="navigation">
-			<button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#primary-menu">
-				&#9776;
+		<nav id="site-navigation" class="main-navigation navbar navbar-light navbar-expand-md" role="navigation">
+			<button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#primary-menu">
+				<span class="navbar-toggler-icon"></span>
 			</button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class' => 'menu collapse navbar-toggleable-sm' ) ); ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class' => 'menu collapse navbar-collapse' ) ); ?>
 		</nav><!-- #site-navigation -->
 
 	<div class="container">
@@ -38,10 +38,10 @@
 		<div class="site-branding">
 			<?php
 			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><?php if ( function_exists( 'the_custom_logo' ) ) { the_custom_logo(); } ?><br class="hidden-md-up"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+				<h1 class="site-title"><?php if ( function_exists( 'the_custom_logo' ) ) { the_custom_logo(); } ?><br class="d-md-none"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 				</h1>
 			<?php else : ?>
-				<p class="site-title"><?php if ( function_exists( 'the_custom_logo' ) ) { the_custom_logo(); } ?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><br class="hidden-md-up"><?php bloginfo( 'name' ); ?></a></p>
+				<p class="site-title"><?php if ( function_exists( 'the_custom_logo' ) ) { the_custom_logo(); } ?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><br class="d-md-none"><?php bloginfo( 'name' ); ?></a></p>
 			<?php
 			endif;
 
