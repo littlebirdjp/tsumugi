@@ -31,8 +31,8 @@
       "dist/**"
     ],
     "popper.js": [
-      "dist/popper.js",
-      "dist/popper.min.js"
+      "dist/umd/popper.js",
+      "dist/umd/popper.min.js"
     ]
   }
 }
