@@ -43,10 +43,27 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
-@import "variables-site/variables-site";
+@import "bootstrap/functions";
 @import "bootstrap/variables_tm";
-@import "mixins/mixins-master";
 @import "bootstrap/mixins";
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
+
+// Migrate Bootstrap Variables
+
+$gray: $gray-700;
+$gray-light: $gray-600;
+$gray-lighter: $gray-200;
+$gray-lightest: $gray-100;
+
+$font-size-h1: $h1-font-size;
+$font-size-h2: $h2-font-size;
+$font-size-h3: $h3-font-size;
+$font-size-h4: $h4-font-size;
+$font-size-h5: $h5-font-size;
+$font-size-h6: $h6-font-size;
+
+$brand-primary: theme-color("primary");
 
 /*--------------------------------------------------------------
 # Normalize

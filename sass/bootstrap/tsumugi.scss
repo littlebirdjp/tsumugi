@@ -1,59 +1,43 @@
 /*!
- * tsumugi v1.1.0 (http://littlebird.mobi/)
- * Copyright 2016 littlebird
+ * tsumugi v2.0.0 (http://littlebirdjp.github.io/tsumugi/)
+ * Copyright 2017 littlebird
  * Licensed under GNU General Public License v2 or later
  */
 
-// Core variables and mixins
+@import "functions";
 @import "variables_tm";
 @import "mixins";
-
-// Reset and dependencies
-//@import "normalize_tm";
-//@import "print_tm";
-
-// Core CSS
+// @import "print";
 @import "reboot_tm";
 @import "type_tm";
-//@import "images_tm";
+// @import "images";
 @import "code_tm";
-//@import "grid_tm";
+// @import "grid";
 @import "tables_tm";
-//@import "forms_tm";
+// @import "forms";
 @import "buttons_tm";
-
-// Components
-//@import "animation_tm";
-//@import "dropdown_tm";
-//@import "button-group_tm";
-//@import "input-group_tm";
-//@import "custom-forms_tm";
-//@import "nav_tm";
+// @import "transitions";
+// @import "dropdown";
+// @import "button-group";
+// @import "input-group";
+// @import "custom-forms";
+// @import "nav";
 @import "navbar_tm";
-//@import "card_tm";
-//@import "breadcrumb_tm";
-//@import "pagination_tm";
-//@import "pager_tm";
-//@import "labels_tm";
-//@import "jumbotron_tm";
-//@import "alert_tm";
-//@import "progress_tm";
-//@import "media_tm";
-//@import "list-group_tm";
-//@import "responsive-embed_tm";
-//@import "close_tm";
-
-// Components w/ JavaScript
-//@import "modal_tm";
-//@import "tooltip_tm";
-//@import "popover_tm";
-//@import "carousel_tm";
-
-// Utility classes
-//@import "utilities_tm";
-//@import "utilities-background_tm";
-//@import "utilities-spacing_tm";
-//@import "utilities-responsive_tm
+// @import "card";
+// @import "breadcrumb";
+// @import "pagination";
+// @import "badge";
+// @import "jumbotron";
+// @import "alert";
+// @import "progress";
+// @import "media";
+// @import "list-group";
+// @import "close";
+// @import "modal";
+// @import "tooltip";
+// @import "popover";
+// @import "carousel";
+// @import "utilities";
 
 input[type="submit"],
 .more-link {
