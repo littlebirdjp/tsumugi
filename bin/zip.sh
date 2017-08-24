@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION='1.1.3'
+VERSION='2.0.0'
 
 function build_tsumugi() {
   mkdir tsumugi
@@ -12,9 +12,9 @@ function build_tsumugi() {
   cp -rpf template-parts tsumugi/
   mkdir tsumugi/bower_components
   mkdir tsumugi/bower_components/bootstrap
-  mkdir tsumugi/bower_components/tether
+  mkdir tsumugi/bower_components/popper.js
   cp -rpf bower_components/bootstrap/dist tsumugi/bower_components/bootstrap/
-  cp -rpf bower_components/tether/dist tsumugi/bower_components/tether/
+  cp -rpf bower_components/popper.js/dist tsumugi/bower_components/popper.js/
   cp *.php tsumugi/
   cp *.txt tsumugi/
   cp *.css tsumugi/

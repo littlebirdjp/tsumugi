@@ -32,8 +32,7 @@ package.json
 /node_modules/
 /release/
 /sass/
-/screenshots/
-/symbols-for-sketch-master/
+/sketch/
 *.md" > .gitignore
 
 git init
