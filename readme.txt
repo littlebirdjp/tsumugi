@@ -4,8 +4,8 @@ Contributors: youthkee
 Tags: blog, one-column, custom-background, custom-colors, custom-menu, custom-header, custom-logo, footer-widgets, flexible-header, full-width-template, threaded-comments, translation-ready
 
 Requires at least: 4.5
-Tested up to: 4.7.2
-Stable tag: 1.1.3
+Tested up to: 4.8.1
+Stable tag: 2.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,6 +29,9 @@ tsumugi is a simple blog theme based on _s and Bootstrap. It consists of a singl
 3. Click Activate to use your new theme right away.
 
 == Changelog ==
+
+= 2.0.0 - Aug 24 2017 =
+* Update Bootstrap from v4-alpha2 to v4-beta.
 
 = 1.1.3 - Mar 4 2017 =
 * Change a 404 page to display customized widgets.
@@ -70,9 +73,9 @@ tsumugi is a simple blog theme based on _s and Bootstrap. It consists of a singl
 
 Bootstrap 4
 License: MIT
-Source : http://v4-alpha.getbootstrap.com/
+Source : http://getbootstrap.com/
 
-Google Fonts:
+Google Fonts
 License: SIL Open Font License, 1.1
 Source:  http://www.google.com/fonts
 
@@ -81,10 +84,9 @@ Font License: SIL OFL 1.1
 Code License: MIT License
 Source      : https://fortawesome.github.io/Font-Awesome/
 
-Tether
+Popper.js
 License: MIT
-Source : http://tether.io/
+Source : https://popper.js.org/
 
 * Based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
-* normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
 * Sample Logo and Default Header Images(used in screenshot.png) are created by theme author, [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
