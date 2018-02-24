@@ -4,8 +4,8 @@ Contributors: youthkee
 Tags: blog, one-column, custom-background, custom-colors, custom-menu, custom-header, custom-logo, footer-widgets, flexible-header, full-width-template, threaded-comments, translation-ready
 
 Requires at least: 4.5
-Tested up to: 4.8.2
-Stable tag: 2.0.1
+Tested up to: 4.9.4
+Stable tag: 2.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
