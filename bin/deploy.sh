@@ -15,17 +15,13 @@ fi
 rm -rf .git
 rm -r .gitignore
 
-echo ".csscomb.json
-.editorconfig
+echo ".editorconfig
 .jscsrc
 .jshintignore
 .travis.yml
-bower.json
-Gemfile
-Gemfile.lock
-gulpfile.js
 LICENSE
 package.json
+package-lock.json
 /bin/
 /docs/
 /layouts/
