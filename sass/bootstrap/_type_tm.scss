@@ -1,3 +1,5 @@
+// // stylelint-disable declaration-no-important, selector-list-comma-newline-after
+//
 // //
 // // Headings
 // //
@@ -10,14 +12,14 @@
 //   line-height: $headings-line-height;
 //   color: $headings-color;
 // }
-//
+
 h1, .h1 { font-size: $h1-font-size; }
 h2, .h2 { font-size: $h2-font-size; }
 h3, .h3 { font-size: $h3-font-size; }
 h4, .h4 { font-size: $h4-font-size; }
 h5, .h5 { font-size: $h5-font-size; }
 h6, .h6 { font-size: $h6-font-size; }
-//
+
 // .lead {
 //   font-size: $lead-font-size;
 //   font-weight: $lead-font-weight;
@@ -51,8 +53,8 @@ h6, .h6 { font-size: $h6-font-size; }
 // //
 //
 // hr {
-//   margin-top: 1rem;
-//   margin-bottom: 1rem;
+//   margin-top: $hr-margin-y;
+//   margin-bottom: $hr-margin-y;
 //   border: 0;
 //   border-top: $hr-border-width solid $hr-border-color;
 // }

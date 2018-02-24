@@ -8,24 +8,23 @@
 //
 // // Inline code
 code {
-//   padding: $code-padding-y $code-padding-x;
-//   font-size: $code-font-size;
+  // font-size: $code-font-size;
   color: $code-color;
-//   background-color: $code-bg;
-//   @include border-radius($border-radius);
-//
-//   // Streamline the style when inside anchors to avoid broken underline and more
-//   a > & {
-//     padding: 0;
-//     color: inherit;
-//     background-color: inherit;
-//   }
+  background-color: $gray-100;
+  padding: .2rem .4rem;
+  border-radius: .25rem;
+  // word-break: break-word;
+  //
+  // // Streamline the style when inside anchors to avoid broken underline and more
+  // a > & {
+  //   color: inherit;
+  // }
 }
-//
-// // User input typically entered via keyboard
+
+// User input typically entered via keyboard
 // kbd {
-//   padding: $code-padding-y $code-padding-x;
-//   font-size: $code-font-size;
+//   padding: $kbd-padding-y $kbd-padding-x;
+//   font-size: $kbd-font-size;
 //   color: $kbd-color;
 //   background-color: $kbd-bg;
 //   @include border-radius($border-radius-sm);
@@ -38,31 +37,27 @@ code {
 //     @include box-shadow(none);
 //   }
 // }
-//
-// // Blocks of code
+
+// Blocks of code
 pre {
-//   display: block;
-//   margin-top: 0;
-//   margin-bottom: 1rem;
-//   font-size: $code-font-size;
-//   color: $pre-color;
-  background-color: $code-bg;
+  // display: block;
+  // font-size: $code-font-size;
+  // color: $pre-color;
+  background-color: $gray-100;
   @include border-radius($border-radius);
   padding: 1.5rem;
   overflow: auto;
-//
-//   // Account for some code outputs that place code tags in pre tags
+
+  // Account for some code outputs that place code tags in pre tags
   code {
-//     padding: 0;
-//     font-size: inherit;
-//     color: inherit;
-//     background-color: transparent;
-//     border-radius: 0;
+    // font-size: inherit;
+    // color: inherit;
+    background-color: transparent;
+    word-break: normal;
     overflow: initial;
-    word-wrap: normal;
   }
 }
-//
+
 // // Enable scrollable blocks of code
 // .pre-scrollable {
 //   max-height: $pre-scrollable-max-height;
