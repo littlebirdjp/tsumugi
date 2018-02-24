@@ -27,7 +27,7 @@
 	<header id="masthead" class="site-header" role="banner">
 
 		<nav id="site-navigation" class="main-navigation navbar navbar-expand-md" role="navigation">
-			<button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#primary-menu">
+			<button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#primary-menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				&#9776;
 			</button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class' => 'menu collapse navbar-collapse' ) ); ?>
