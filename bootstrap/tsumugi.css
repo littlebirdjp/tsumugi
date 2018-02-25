@@ -80,7 +80,8 @@ table table {
 }
 
 .btn, input[type="submit"],
-.more-link, input[type="reset"] {
+.more-link,
+.wp-custom-header-video-button, input[type="reset"] {
 	display: inline-block;
 	font-weight: 400;
 	text-align: center;
@@ -97,82 +98,105 @@ table table {
 }
 
 .btn:hover, input[type="submit"]:hover,
-.more-link:hover, input[type="reset"]:hover, .btn:focus, input[type="submit"]:focus,
-.more-link:focus, input[type="reset"]:focus {
+.more-link:hover,
+.wp-custom-header-video-button:hover, input[type="reset"]:hover, .btn:focus, input[type="submit"]:focus,
+.more-link:focus,
+.wp-custom-header-video-button:focus, input[type="reset"]:focus {
 	text-decoration: none;
 }
 
 .btn:focus, input[type="submit"]:focus,
-.more-link:focus, input[type="reset"]:focus, .btn.focus, input.focus[type="submit"],
-.focus.more-link, input.focus[type="reset"] {
+.more-link:focus,
+.wp-custom-header-video-button:focus, input[type="reset"]:focus, .btn.focus, input.focus[type="submit"],
+.focus.more-link,
+.focus.wp-custom-header-video-button, input.focus[type="reset"] {
 	outline: 0;
 	box-shadow: 0 0 0 0.2rem rgba(0, 123, 187, 0.25);
 }
 
 .btn.disabled, input.disabled[type="submit"],
-.disabled.more-link, input.disabled[type="reset"], .btn:disabled, input[type="submit"]:disabled,
-.more-link:disabled, input[type="reset"]:disabled {
+.disabled.more-link,
+.disabled.wp-custom-header-video-button, input.disabled[type="reset"], .btn:disabled, input[type="submit"]:disabled,
+.more-link:disabled,
+.wp-custom-header-video-button:disabled, input[type="reset"]:disabled {
 	opacity: 0.65;
 }
 
 .btn:not(:disabled):not(.disabled), input[type="submit"]:not(:disabled):not(.disabled),
-.more-link:not(:disabled):not(.disabled), input[type="reset"]:not(:disabled):not(.disabled) {
+.more-link:not(:disabled):not(.disabled),
+.wp-custom-header-video-button:not(:disabled):not(.disabled), input[type="reset"]:not(:disabled):not(.disabled) {
 	cursor: pointer;
 }
 
 .btn:not(:disabled):not(.disabled):active, input[type="submit"]:not(:disabled):not(.disabled):active,
-.more-link:not(:disabled):not(.disabled):active, input[type="reset"]:not(:disabled):not(.disabled):active, .btn:not(:disabled):not(.disabled).active, input[type="submit"]:not(:disabled):not(.disabled).active,
-.more-link:not(:disabled):not(.disabled).active, input[type="reset"]:not(:disabled):not(.disabled).active {
+.more-link:not(:disabled):not(.disabled):active,
+.wp-custom-header-video-button:not(:disabled):not(.disabled):active, input[type="reset"]:not(:disabled):not(.disabled):active, .btn:not(:disabled):not(.disabled).active, input[type="submit"]:not(:disabled):not(.disabled).active,
+.more-link:not(:disabled):not(.disabled).active,
+.wp-custom-header-video-button:not(:disabled):not(.disabled).active, input[type="reset"]:not(:disabled):not(.disabled).active {
 	background-image: none;
 }
 
 .btn-primary, input[type="submit"],
-.more-link {
+.more-link,
+.wp-custom-header-video-button {
 	color: #fff;
 	background-color: #007bbb;
 	border-color: #007bbb;
 }
 
 .btn-primary:hover, input[type="submit"]:hover,
-.more-link:hover {
+.more-link:hover,
+.wp-custom-header-video-button:hover {
 	color: #fff;
 	background-color: #006295;
 	border-color: #005988;
 }
 
 .btn-primary:focus, input[type="submit"]:focus,
-.more-link:focus, .btn-primary.focus, input.focus[type="submit"],
-.focus.more-link {
+.more-link:focus,
+.wp-custom-header-video-button:focus, .btn-primary.focus, input.focus[type="submit"],
+.focus.more-link,
+.focus.wp-custom-header-video-button {
 	box-shadow: 0 0 0 0.2rem rgba(0, 123, 187, 0.5);
 }
 
 .btn-primary.disabled, input.disabled[type="submit"],
-.disabled.more-link, .btn-primary:disabled, input[type="submit"]:disabled,
-.more-link:disabled {
+.disabled.more-link,
+.disabled.wp-custom-header-video-button, .btn-primary:disabled, input[type="submit"]:disabled,
+.more-link:disabled,
+.wp-custom-header-video-button:disabled {
 	color: #fff;
 	background-color: #007bbb;
 	border-color: #007bbb;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active, input[type="submit"]:not(:disabled):not(.disabled):active,
-.more-link:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, input[type="submit"]:not(:disabled):not(.disabled).active,
+.more-link:not(:disabled):not(.disabled):active,
+.wp-custom-header-video-button:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, input[type="submit"]:not(:disabled):not(.disabled).active,
 .more-link:not(:disabled):not(.disabled).active,
+.wp-custom-header-video-button:not(:disabled):not(.disabled).active,
 .show > .btn-primary.dropdown-toggle,
 .show > input.dropdown-toggle[type="submit"],
 .show >
-.dropdown-toggle.more-link {
+.dropdown-toggle.more-link,
+.show >
+.dropdown-toggle.wp-custom-header-video-button {
 	color: #fff;
 	background-color: #005988;
 	border-color: #00517b;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active:focus, input[type="submit"]:not(:disabled):not(.disabled):active:focus,
-.more-link:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, input[type="submit"]:not(:disabled):not(.disabled).active:focus,
+.more-link:not(:disabled):not(.disabled):active:focus,
+.wp-custom-header-video-button:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, input[type="submit"]:not(:disabled):not(.disabled).active:focus,
 .more-link:not(:disabled):not(.disabled).active:focus,
+.wp-custom-header-video-button:not(:disabled):not(.disabled).active:focus,
 .show > .btn-primary.dropdown-toggle:focus,
 .show > input.dropdown-toggle[type="submit"]:focus,
 .show >
-.dropdown-toggle.more-link:focus {
+.dropdown-toggle.more-link:focus,
+.show >
+.dropdown-toggle.wp-custom-header-video-button:focus {
 	box-shadow: 0 0 0 0.2rem rgba(0, 123, 187, 0.5);
 }
 
@@ -233,13 +257,21 @@ table table {
 }
 
 input[type="submit"],
-.more-link {
+.more-link,
+.wp-custom-header-video-button {
 	font-family: 'Source Sans Pro',sans-serif;
 }
 
 input[type="submit"]:visited,
-.more-link:visited {
+.more-link:visited,
+.wp-custom-header-video-button:visited {
 	color: #fff;
+}
+
+input[type="submit"]:focus,
+.more-link:focus,
+.wp-custom-header-video-button:focus {
+	box-shadow: none;
 }
 
 input[type="reset"] {

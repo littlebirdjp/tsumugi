@@ -51,11 +51,31 @@
 			<?php
 			endif; ?>
 
-			<?php if ( get_header_image() ) : ?>
-				<div class="custom-header">
-					<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
-				</div>
-			<?php endif; // End header image check. ?>
+			<?php if ( has_custom_header() ) : ?>
+				<?php if ( has_header_video() ) { ?>
+
+					<?php if(strpos(get_header_video_url(),'.mp4') !== false) { ?>
+
+						<div class="custom-header header-video-mp4">
+							<?php the_custom_header_markup(); ?>
+						</div>
+
+					<?php } else { ?>
+
+						<div class="custom-header header-video-youtube embed-responsive embed-responsive-16by9">
+							<?php the_custom_header_markup(); ?>
+						</div>
+
+					<?php } ?>
+
+				<?php } else { ?>
+
+					<div class="custom-header header-image">
+						<?php the_custom_header_markup(); ?>
+					</div>
+
+				<?php } ?>
+			<?php endif; // End custom header check. ?>
 
 		</div><!-- .site-branding -->
 

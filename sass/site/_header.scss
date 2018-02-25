@@ -66,3 +66,33 @@
 .custom-header {
   margin-bottom: 1rem;
 }
+
+.header-video-mp4 video {
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
+
+.header-video-youtube {
+  margin-bottom: 4rem;
+  overflow: visible;
+}
+
+.wp-custom-header-video-button {
+  margin-top: 1rem;
+}
+
+.header-video-youtube .wp-custom-header-video-button {
+  margin-top: .6rem;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+}
+
+.header-video-youtube .wp-custom-header-video-play {
+  margin-left: -2.9rem;
+}
+
+.header-video-youtube .wp-custom-header-video-pause {
+  margin-left: -2.9rem;
+}
