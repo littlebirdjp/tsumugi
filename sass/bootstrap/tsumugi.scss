@@ -41,11 +41,15 @@
 // @import "print";
 
 input[type="submit"],
-.more-link {
+.more-link,
+.wp-custom-header-video-button {
   @extend .btn, .btn-primary;
   font-family: 'Source Sans Pro',sans-serif;
   &:visited {
     color: #fff;
+  }
+  &:focus {
+    box-shadow: none;
   }
 }
 
