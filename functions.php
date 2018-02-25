@@ -84,6 +84,71 @@ function tsumugi_setup() {
 		'flex-width'  => true,
 	) );
 
+	// Define and register starter content to showcase the theme on new sites.
+	$starter_content = array(
+		'widgets' => array(
+			'sidebar-1' => array(
+				'search',
+				'text_about',
+				'recent-posts',
+				'recent-comments',
+				'archives',
+				'categories',
+				'meta',
+			),
+		),
+
+		// Specify the core-defined pages to create and add custom thumbnails to some of them.
+		'posts' => array(
+			'home',
+			'about',
+			'contact',
+			'blog',
+		),
+
+		// Create the custom image attachments used as post thumbnails for pages.
+		'attachments' => array(
+			'logo' => array(
+				'post_title' => _x( 'Logo', 'Theme starter content', 'tsumugi' ),
+				'file' => 'img/tsumugi-logo.png', // URL relative to the template directory.
+			),
+		),
+
+		// Default to a static front page and assign the front and posts pages.
+		'options' => array(
+			'show_on_front' => 'page',
+			'page_on_front' => '{{home}}',
+			'page_for_posts' => '{{blog}}',
+		),
+
+		// Set the front page section theme mods to the IDs of the core-registered pages.
+		'theme_mods' => array(
+			'custom_logo' => '{{logo}}',
+		),
+
+		// Set up nav menus for each of the two areas registered in the theme.
+		'nav_menus' => array(
+			// Assign a menu to the "top" location.
+			'primary' => array(
+				'name' => __( 'Main Menu', 'tsumugi' ),
+				'items' => array(
+					'link_home', // Note that the core "home" page is actually a link in case a static front page is not used.
+					'page_about',
+					'page_blog',
+					'page_contact',
+				),
+			),
+		),
+	);
+
+	/**
+	 * Filters array of starter content.
+	 *
+	 * @param array $starter_content Array of starter content.
+	 */
+	$starter_content = apply_filters( 'tsumugi_starter_content', $starter_content );
+
+	add_theme_support( 'starter-content', $starter_content );
 }
 endif;
 add_action( 'after_setup_theme', 'tsumugi_setup' );
