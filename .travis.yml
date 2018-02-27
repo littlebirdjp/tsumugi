@@ -9,9 +9,8 @@ branches:
 script:
     - ls -al style.css
     - ls -al bootstrap/tsumugi.css
-    - ls -al bower_components/bootstrap/dist/css/bootstrap.min.css
-    - ls -al bower_components/bootstrap/dist/js/bootstrap.min.js
-    - ls -al bower_components/popper.js/dist/umd/popper.min.js
+    - ls -al bootstrap/bootstrap.min.css
+    - ls -al js/bootstrap.bundle.min.js
     - ls -al js/navigation.js
     - ls -al js/skip-link-focus-fix.js
 
