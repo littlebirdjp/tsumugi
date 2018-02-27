@@ -1,0 +1,491 @@
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+}
+
+dfn, cite, em, i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1rem;
+	padding: 0 1rem;
+	border-left: 5px solid #429BBF;
+}
+
+address {
+	margin: 0 0 1rem;
+}
+
+abbr, acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark, ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+big {
+	font-size: 1.25rem;
+}
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: #fff;
+	/* Fallback for when there is no custom background color defined. */
+}
+
+blockquote, q {
+	quotes: "" "";
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: "";
+}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+ul, ol {
+	margin: 0 0 1rem 0;
+	padding-left: 1.5rem;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 0 1rem;
+}
+
+img {
+	height: auto;
+	/* Make sure images are scaled correctly. */
+	max-width: 100%;
+	/* Adhere to container width. */
+}
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	color: #666;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+	color: #111;
+}
+
+select {
+	border: 1px solid #ccc;
+	height: 2rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"] {
+	padding: 3px;
+}
+
+input[type="password"],
+input[type="search"] {
+	padding: .5rem;
+	margin-right: .5rem;
+}
+
+textarea {
+	padding-left: 3px;
+	width: 100%;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	display: inline;
+}
+
+input[type="file"] {
+	line-height: 1rem;
+}
+
+.search-field {
+	font-size: 1rem;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+	clear: both;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+.mce-content-body {
+	margin: 10px 15px;
+}
+
+.site-content {
+	word-wrap: break-word;
+}
+
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.byline,
+.updated:not(.published) {
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-title {
+	font-size: 2rem;
+	border-bottom: 5px solid #429BBF;
+	padding-bottom: .45rem;
+	margin-bottom: 1.5rem;
+}
+
+.taxonomy-description {
+	margin-bottom: 1rem;
+}
+
+.entry-title {
+	line-height: 1.4;
+}
+
+.entry-title a {
+	color: #212529;
+}
+
+.entry-title a:hover {
+	color: #6c757d;
+}
+
+.entry-meta {
+	font-size: 0.875rem;
+	color: #495057;
+}
+
+.entry-meta a {
+	color: #495057;
+}
+
+.entry-meta a:hover {
+	color: #6c757d;
+}
+
+.entry-meta span {
+	margin-right: .25rem;
+}
+
+.post-thumbnail {
+	margin: 1em 0 0;
+	text-align: center;
+}
+
+.post-thumbnail img {
+	max-height: 315px;
+	width: auto;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1em 0 0;
+}
+
+.entry-content pre,
+.mce-content-body pre {
+	line-height: 1;
+}
+
+.entry-content h1,
+.mce-content-body h1 {
+	border-bottom: 5px solid #429BBF;
+	padding-bottom: .45rem;
+	margin-bottom: 1rem;
+	line-height: 1.4;
+}
+
+.entry-content h2,
+.mce-content-body h2 {
+	border-bottom: 1px solid #c2c1c1;
+	padding-bottom: .45rem;
+	margin-bottom: 1rem;
+	line-height: 1.4;
+}
+
+.entry-content h3,
+.mce-content-body h3 {
+	border-left: 4px solid #007bbb;
+	padding: 0 .5rem;
+	margin-bottom: 1rem;
+	line-height: 1.4;
+}
+
+.entry-content h4,
+.mce-content-body h4 {
+	background: #e9ecef;
+	padding: .25rem .5rem;
+	margin-bottom: 1rem;
+	line-height: 1.4;
+}
+
+.entry-content h5,
+.mce-content-body h5 {
+	font-weight: 700;
+	margin-bottom: 1rem;
+	line-height: 1.4;
+}
+
+.entry-content h6,
+.mce-content-body h6 {
+	font-weight: 700;
+	margin-bottom: 1rem;
+	line-height: 1.4;
+}
+
+.entry-footer {
+	font-size: 0.875rem;
+	color: #495057;
+}
+
+.entry-footer a {
+	color: #495057;
+}
+
+.entry-footer a:hover {
+	color: #6c757d;
+}
+
+.entry-footer span {
+	margin-right: .25rem;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+	color: #6c757d;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text,
+.wp-caption-dd {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
