@@ -1,8 +1,0 @@
-{
-    "block-indent": "\t",
-    "space-between-declarations": "\n",
-    "space-before-opening-brace": " ",
-    "space-after-opening-brace": "\n",
-    "space-after-selector-delimiter": "\n",
-    "space-before-closing-brace": "\n"
-}

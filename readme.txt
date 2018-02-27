@@ -1,11 +1,11 @@
 === tsumugi ===
 
 Contributors: youthkee
-Tags: blog, one-column, custom-background, custom-colors, custom-menu, custom-header, custom-logo, footer-widgets, flexible-header, full-width-template, threaded-comments, translation-ready
+Tags: blog, one-column, custom-background, custom-colors, custom-menu, custom-header, custom-logo, footer-widgets, flexible-header, full-width-template, threaded-comments, translation-ready, editor-style, featured-images
 
 Requires at least: 4.5
-Tested up to: 4.8.2
-Stable tag: 2.0.1
+Tested up to: 4.9.4
+Stable tag: 2.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,6 +21,9 @@ tsumugi is a simple blog theme based on _s and Bootstrap. It consists of a singl
 * Theme Customizer
 * Custom Header
 * Custom Logo
+* Featured Image
+* Editor Style
+* Starter Content
 
 == Installation ==
 
@@ -29,6 +32,14 @@ tsumugi is a simple blog theme based on _s and Bootstrap. It consists of a singl
 3. Click Activate to use your new theme right away.
 
 == Changelog ==
+
+= 2.1.0 - Feb 28 2018 =
+* Update Bootstrap from v4-beta to v4.
+* Improve the Customizer's user experience.
+* Add Video Header functions.
+* Add Starter Content functions.
+* Add Featured Image functions.
+* Improve the Visual Editor's user experience.
 
 = 2.0.1 - Oct 21 2017 =
 * Update a screenshot.
@@ -86,10 +97,6 @@ Font Awesome
 Font License: SIL OFL 1.1
 Code License: MIT License
 Source      : https://fortawesome.github.io/Font-Awesome/
-
-Popper.js
-License: MIT
-Source : https://popper.js.org/
 
 * Based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * Sample Logo and Default Header Images(used in screenshot.png) are created by theme author, [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)

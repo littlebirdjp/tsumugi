@@ -40,7 +40,7 @@ function tsumugi_setup() {
 	 *
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
-	// add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -84,9 +84,79 @@ function tsumugi_setup() {
 		'flex-width'  => true,
 	) );
 
+	// Define and register starter content to showcase the theme on new sites.
+	$starter_content = array(
+		'widgets' => array(
+			'sidebar-1' => array(
+				'search',
+				'text_about',
+				'recent-posts',
+				'recent-comments',
+				'archives',
+				'categories',
+				'meta',
+			),
+		),
+
+		// Specify the core-defined pages to create and add custom thumbnails to some of them.
+		'posts' => array(
+			'home',
+			'about',
+			'contact',
+			'blog',
+		),
+
+		// Create the custom image attachments used as post thumbnails for pages.
+		'attachments' => array(
+			'logo' => array(
+				'post_title' => _x( 'Logo', 'Theme starter content', 'tsumugi' ),
+				'file' => 'img/tsumugi-logo.png', // URL relative to the template directory.
+			),
+		),
+
+		// Default to a static front page and assign the front and posts pages.
+		'options' => array(
+			'show_on_front' => 'page',
+			'page_on_front' => '{{home}}',
+			'page_for_posts' => '{{blog}}',
+		),
+
+		// Set the front page section theme mods to the IDs of the core-registered pages.
+		'theme_mods' => array(
+			'custom_logo' => '{{logo}}',
+		),
+
+		// Set up nav menus for each of the two areas registered in the theme.
+		'nav_menus' => array(
+			// Assign a menu to the "top" location.
+			'primary' => array(
+				'name' => __( 'Main Menu', 'tsumugi' ),
+				'items' => array(
+					'link_home', // Note that the core "home" page is actually a link in case a static front page is not used.
+					'page_about',
+					'page_blog',
+					'page_contact',
+				),
+			),
+		),
+	);
+
+	/**
+	 * Filters array of starter content.
+	 *
+	 * @param array $starter_content Array of starter content.
+	 */
+	$starter_content = apply_filters( 'tsumugi_starter_content', $starter_content );
+
+	add_theme_support( 'starter-content', $starter_content );
 }
 endif;
 add_action( 'after_setup_theme', 'tsumugi_setup' );
+
+// Add theme support for selective refresh for widgets.
+add_theme_support( 'customize-selective-refresh-widgets' );
+
+add_editor_style( array( 'bootstrap/bootstrap.min.css', 'bootstrap/tsumugi.css', 'editor-style.css'  ) );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -150,15 +220,14 @@ endif;
  * Enqueue scripts and styles.
  */
 function tsumugi_scripts() {
-	wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/bower_components/bootstrap/dist/css/bootstrap.min.css', array(), '4.0.0-beta', 'all' );
-	wp_enqueue_style( 'underscores-style', get_stylesheet_uri(), array('bootstrap-style'), '2.0.1', 'all' );
-	wp_enqueue_style( 'tsumugi-style', get_template_directory_uri() . '/bootstrap/tsumugi.css', array('underscores-style'), '2.0.1', 'all' );
+	wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/bootstrap/bootstrap.min.css', array(), '4.0.0', 'all' );
+	wp_enqueue_style( 'tsumugi-style', get_template_directory_uri() . '/bootstrap/tsumugi.css', array('bootstrap-style'), '2.1.0', 'all' );
+	wp_enqueue_style( 'underscores-style', get_stylesheet_uri(), array('tsumugi-style'), '2.1.0', 'all' );
 
 	wp_enqueue_style( 'tsumugi-fonts', tsumugi_fonts_url(), array(), null );
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/font-awesome/css/font-awesome.min.css', array(), '4.6.3', 'all' );
 
-	wp_enqueue_script( 'popper-js', get_template_directory_uri() . '/bower_components/popper.js/dist/umd/popper.min.js', array('jquery'), '1.12.3', true );
-	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/bower_components/bootstrap/dist/js/bootstrap.min.js', array('popper-js'), '4.0.0-beta', true );
+	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array('jquery'), '4.0.0', true );
 
 	wp_enqueue_script( 'tsumugi-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

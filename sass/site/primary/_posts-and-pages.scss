@@ -57,13 +57,24 @@
 	}
 }
 
+.post-thumbnail {
+	margin: 1em 0 0;
+	text-align: center;
+}
+
+.post-thumbnail img {
+	max-height: 315px;
+	width: auto;
+}
+
 .page-content,
 .entry-content,
 .entry-summary {
 	margin: 1em 0 0;
 }
 
-.entry-content {
+.entry-content,
+.mce-content-body {
 	pre {
 		line-height: 1;
 	}

@@ -1,13 +1,13 @@
 /*!
- * tsumugi v2.0.0 (http://littlebirdjp.github.io/tsumugi/)
- * Copyright 2017 littlebird
+ * tsumugi v2.1.0 (http://littlebirdjp.github.io/tsumugi/)
+ * Copyright 2018 littlebird
  * Licensed under GNU General Public License v2 or later
  */
 
 @import "functions";
 @import "variables_tm";
 @import "mixins";
-// @import "print";
+// @import "root";
 @import "reboot_tm";
 @import "type_tm";
 // @import "images";
@@ -38,13 +38,18 @@
 // @import "popover";
 // @import "carousel";
 // @import "utilities";
+// @import "print";
 
 input[type="submit"],
-.more-link {
+.more-link,
+.wp-custom-header-video-button {
   @extend .btn, .btn-primary;
   font-family: 'Source Sans Pro',sans-serif;
   &:visited {
     color: #fff;
+  }
+  &:focus {
+    box-shadow: none;
   }
 }
 

@@ -27,7 +27,7 @@
 	<header id="masthead" class="site-header" role="banner">
 
 		<nav id="site-navigation" class="main-navigation navbar navbar-expand-md" role="navigation">
-			<button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#primary-menu">
+			<button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#primary-menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				&#9776;
 			</button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class' => 'menu collapse navbar-collapse' ) ); ?>
@@ -51,11 +51,31 @@
 			<?php
 			endif; ?>
 
-			<?php if ( get_header_image() ) : ?>
-				<div class="custom-header">
-					<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
-				</div>
-			<?php endif; // End header image check. ?>
+			<?php if ( has_custom_header() ) : ?>
+				<?php if ( has_header_video() ) { ?>
+
+					<?php if(strpos(get_header_video_url(),'.mp4') !== false) { ?>
+
+						<div class="custom-header header-video-mp4">
+							<?php the_custom_header_markup(); ?>
+						</div>
+
+					<?php } else { ?>
+
+						<div class="custom-header header-video-youtube embed-responsive embed-responsive-16by9">
+							<?php the_custom_header_markup(); ?>
+						</div>
+
+					<?php } ?>
+
+				<?php } else { ?>
+
+					<div class="custom-header header-image">
+						<?php the_custom_header_markup(); ?>
+					</div>
+
+				<?php } ?>
+			<?php endif; // End custom header check. ?>
 
 		</div><!-- .site-branding -->
 

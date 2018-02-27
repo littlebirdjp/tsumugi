@@ -28,6 +28,7 @@ function tsumugi_custom_header_setup() {
 		'height'                 => 400,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'tsumugi_header_style',
+		'video' => true,
 	) ) );
 }
 add_action( 'after_setup_theme', 'tsumugi_custom_header_setup' );

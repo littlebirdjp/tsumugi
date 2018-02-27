@@ -4,26 +4,22 @@ Theme URI: http://littlebirdjp.github.io/tsumugi/
 Author: youthkee
 Author URI: http://littlebird.mobi/
 Description: tsumugi is a simple blog theme based on _s and Bootstrap. It consists of a single column layout which is suitable for mobile devices and tablets along with PCs. For it's readability and simplicity, this theme is user-friendly for everyone. (The name of "tsumugi" is inspired by the song of "Hatsune", a Japanese singer.)
-Version: 2.0.1
+Version: 2.1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: tsumugi
-Tags: blog, one-column, custom-background, custom-colors, custom-menu, custom-header, custom-logo, footer-widgets, flexible-header, full-width-template, threaded-comments, translation-ready
+Tags: blog, one-column, custom-background, custom-colors, custom-menu, custom-header, custom-logo, footer-widgets, flexible-header, full-width-template, threaded-comments, translation-ready, editor-style, featured-images
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
 tsumugi is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-# Normalize
 # Typography
 # Elements
 # Forms
@@ -64,11 +60,6 @@ $font-size-h5: $h5-font-size;
 $font-size-h6: $h6-font-size;
 
 $brand-primary: theme-color("primary");
-
-/*--------------------------------------------------------------
-# Normalize
---------------------------------------------------------------*/
-//@import "normalize";
 
 /*--------------------------------------------------------------
 # Typography
