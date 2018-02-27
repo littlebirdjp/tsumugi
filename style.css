@@ -653,6 +653,12 @@ a:hover, a:focus, a:active {
 	overflow: visible;
 }
 
+@media (max-width: 767.98px) {
+	.header-video-youtube {
+		display: none;
+	}
+}
+
 .wp-custom-header-video-button {
 	margin-top: 1rem;
 }

@@ -76,6 +76,9 @@
 .header-video-youtube {
   margin-bottom: 4rem;
   overflow: visible;
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
 }
 
 .wp-custom-header-video-button {
