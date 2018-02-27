@@ -8,7 +8,7 @@ Version: 2.1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: tsumugi
-Tags: blog, one-column, custom-background, custom-colors, custom-menu, custom-header, custom-logo, footer-widgets, flexible-header, full-width-template, threaded-comments, translation-ready
+Tags: blog, one-column, custom-background, custom-colors, custom-menu, custom-header, custom-logo, footer-widgets, flexible-header, full-width-template, threaded-comments, translation-ready, editor-style, featured-images
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -737,51 +737,68 @@ a:hover, a:focus, a:active {
 	margin-right: .25rem;
 }
 
+.post-thumbnail {
+	margin: 1em 0 0;
+	text-align: center;
+}
+
+.post-thumbnail img {
+	max-height: 315px;
+	width: auto;
+}
+
 .page-content,
 .entry-content,
 .entry-summary {
 	margin: 1em 0 0;
 }
 
-.entry-content pre {
+.entry-content pre,
+.mce-content-body pre {
 	line-height: 1;
 }
 
-.entry-content h1 {
+.entry-content h1,
+.mce-content-body h1 {
 	border-bottom: 5px solid #429BBF;
 	padding-bottom: .45rem;
 	margin-bottom: 1rem;
 	line-height: 1.4;
 }
 
-.entry-content h2 {
+.entry-content h2,
+.mce-content-body h2 {
 	border-bottom: 1px solid #c2c1c1;
 	padding-bottom: .45rem;
 	margin-bottom: 1rem;
 	line-height: 1.4;
 }
 
-.entry-content h3 {
+.entry-content h3,
+.mce-content-body h3 {
 	border-left: 4px solid #007bbb;
 	padding: 0 .5rem;
 	margin-bottom: 1rem;
 	line-height: 1.4;
 }
 
-.entry-content h4 {
+.entry-content h4,
+.mce-content-body h4 {
 	background: #e9ecef;
 	padding: .25rem .5rem;
 	margin-bottom: 1rem;
 	line-height: 1.4;
 }
 
-.entry-content h5 {
+.entry-content h5,
+.mce-content-body h5 {
 	font-weight: 700;
 	margin-bottom: 1rem;
 	line-height: 1.4;
 }
 
-.entry-content h6 {
+.entry-content h6,
+.mce-content-body h6 {
 	font-weight: 700;
 	margin-bottom: 1rem;
 	line-height: 1.4;
@@ -942,7 +959,8 @@ object {
 	margin: 0.8075em 0;
 }
 
-.wp-caption-text {
+.wp-caption-text,
+.wp-caption-dd {
 	text-align: center;
 }
 

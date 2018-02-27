@@ -156,6 +156,8 @@ add_action( 'after_setup_theme', 'tsumugi_setup' );
 // Add theme support for selective refresh for widgets.
 add_theme_support( 'customize-selective-refresh-widgets' );
 
+add_editor_style( array( 'bootstrap/bootstrap.min.css', 'bootstrap/tsumugi.css', 'editor-style.css'  ) );
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
