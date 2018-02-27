@@ -47,6 +47,7 @@ pre {
   @include border-radius($border-radius);
   padding: 1.5rem;
   overflow: auto;
+  word-wrap: normal;
 
   // Account for some code outputs that place code tags in pre tags
   code {

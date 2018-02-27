@@ -44,6 +44,7 @@ pre {
 	border-radius: 0;
 	padding: 1.5rem;
 	overflow: auto;
+	word-wrap: normal;
 }
 
 pre code {
