@@ -2,13 +2,7 @@ var gulp = require('gulp');
 var pug = require('gulp-pug');
 var prettify = require('gulp-prettify');
 var browserSync = require('browser-sync');
-var postcss = require('gulp-postcss');
-var cssnext = require('postcss-cssnext');
-var PostcssSimpleVars = require('postcss-simple-vars');
-var PostcssNested = require('postcss-nested');
-var PostcssMixins = require('postcss-mixins');
-var PostcssImport = require('postcss-import');
-var csscomb = require('gulp-csscomb');
+var sass = require('gulp-sass');
 
 var paths = {
   'src': 'src/',
@@ -52,29 +46,20 @@ gulp.task('prettify', ['html'], function() {
     }));
 });
 
-gulp.task('css', function() {
-  var processors = [
-      cssnext({browsers: ['last 2 version']}),
-      PostcssMixins(),
-      PostcssSimpleVars(),
-      PostcssNested(),
-      PostcssImport(),
-  ];
-  return gulp.src([
-    paths.src + '**/*.css',
-    '!' + paths.src + '**/_*.css'
-    ])
-    .pipe(postcss(processors))
-    .pipe(csscomb())
-    .pipe(gulp.dest(paths.dist))
-    .pipe(browserSync.reload({
-      stream: true
-    }));
+gulp.task('sass', function () {
+ return gulp.src([
+    paths.src + '**/*.scss'
+  ])
+   .pipe(sass({
+     outputStyle: 'expanded',
+     precision: 6
+   }).on('error', sass.logError))
+   .pipe(gulp.dest(paths.dist));
 });
 
 gulp.task('watch', function() {
   gulp.watch([paths.src + '**/*.pug'], ['prettify']);
-  gulp.watch([paths.src + '**/*.css'], ['css']);
+  gulp.watch([paths.src + '**/*.scss'], ['sass']);
 });
 
-gulp.task('default', ['bs', 'prettify', 'css', 'watch']);
+gulp.task('default', ['bs', 'prettify', 'sass', 'watch']);
