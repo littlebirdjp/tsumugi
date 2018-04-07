@@ -32,60 +32,85 @@ block header_block
 
 block contents_block
 
-  section.section.main.pt-4.mb-5
+  section.section.main
     .container
       .row
-        .col.text-center
-          p
-            img.main__image(src=rootPath+"img/screenshot.png", alt=title)
-          p.main__text.mt-3.mb-3
-            | 「tsumugi」は、文章が読みやすく、
-            br.hidden-md-up
-            | 想いを伝えやすい、
-            br
-            | 誰にでも使えるシンプルなWordPressテーマです。
-          .external
-            a.btn.btn-primary.external__link.mr-2(href="https://ja.wordpress.org/themes/tsumugi/", target="_blank") 無料ダウンロード
-            a.btn.btn-primary.external__link(href="http://tsumugi.halfmoon.jp/ja/", target="_blank") デモサイト
+        .col-8.text-center
+          p.main__text
+            | あまねく想いを紡ぐために…
+          p.main__text2
+            | シンプルで読みやすいブログテーマ「tsumugi」で、
+            br.d-none.d-md-block
+            | いますぐホームページを作成しよう
+          div
+            a.btn.btn-primary.main__button(href="https://dock.readyship.co/website/create/a53c4365-dda8-4ba9-b2c6-808c2d0d7bc1") ホームページ作成
+          div
+            a.btn.btn-outline-primary.main__button2.mr-3(href="https://ja.wordpress.org/themes/tsumugi/", target="_blank") 無料ダウンロード
+            a.btn.btn-outline-primary.main__button2(href="http://tsumugi.halfmoon.jp/ja/", target="_blank") デモサイト
+        .col-4
 
-  section.section#concept
+  section.section.mt-3.mb-3.mb-lg-0
     .container
       .row
-        .col
-            h2.section__title.text-center.mb-4 コンセプト
-      .row
-        .col-md-4.mb-4
-          h3.section__subTitle.text-center モバイルフレンドリー
+        .col-lg-8
+          p
+            img.section__image(src=rootPath+"ja/img/screen1.png", alt="Simple for Everyone")
+        .col-lg-4
+          h2.section__title.mt-xl-5 誰にでも簡単に
           p.section__text
-            | スマートフォンやタブレットに最適化されているので、モバイル環境でも読みやすいデザインを実現します。
+            | 専門的な知識がなくても、あっという間にホームページが作成できます。
+            br
+            | 必要なレイアウトやパーツが揃っているので、あとは文章を追加するだけ。
+            br
+            | 高速な専用サーバーにWordPressがインストール済みなので安心です。
+          a.section__link(href="https://dock.readyship.co/website/create/a53c4365-dda8-4ba9-b2c6-808c2d0d7bc1")
+            i.fa.fa-angle-right(aria-hidden="true")
+            | &nbsp;
+            | 今すぐはじめる
+
+  section.section.sub
+    .container
+      .row
+        .col-md-8
+          h2.section__title.sub__title デザインはおまかせで
+          p.section__text
+            | シンプルで美しいデザインテーマが適用済み。
+            br
+            | スマートフォンやタブレットでも読みやすいホームページが作成できます。
+            br
+            | テーマの使い方はHTML5認定資格を持った作者が丁寧にサポート。
           a.section__link(href="http://tsumugi.halfmoon.jp/ja/", target="_blank")
             i.fa.fa-angle-right(aria-hidden="true")
             | &nbsp;
-            | 実際の見え方は「デモサイト」をご覧ください。
-        .col-md-4.mb-4
-          h3.section__subTitle.text-center ユーザーフレンドリー
+            | デモサイトを見る
+        .col-md-4
+          
+  section.section.mt-3
+    .container
+      .row
+        .col-lg-8
+          p
+            img.section__image(src=rootPath+"ja/img/screen2.png", alt="Edit in 3 minutes")
+        .col-lg-4
+          h2.section__title.mt-lg-5 カスタマイズも思いのまま
           p.section__text
-            | 複雑な機能やオプションを搭載していないので、初心者の方でも簡単に利用することができます。
-          a.section__link(href="#features")
+            | サイトのロゴやヘッダー画像、メニューやウィジェットは自由に編集可能。
+            br
+            | 直感的な操作とドラッグ＆ドロップで簡単にアップロード。
+            br
+            | 5万種類以上の便利な公式プラグインも使用できます。
+          a.section__link(href="https://dock.readyship.co/website/create/a53c4365-dda8-4ba9-b2c6-808c2d0d7bc1")
             i.fa.fa-angle-right(aria-hidden="true")
             | &nbsp;
-            | 利用できる機能については「特長」をご覧ください。
-        .col-md-4.mb-4
-          h3.section__subTitle.text-center サステイナビリティー
-          p.section__text
-            | 拡張しやすい作りになっているため、いつでも最新のフレームワークにアップデートすることができます。（Bootstrap v4.0.0対応）
-          a.section__link(href="#customization")
-            i.fa.fa-angle-right(aria-hidden="true")
-            | &nbsp;
-            | テーマの編集方法については「カスタマイズ」をご覧ください。
+            | 今すぐはじめる
 
-  section.section.mt-5#features
+  section.section#features
     .container
       .row
         .col
           h2.section__title.text-center.mb-4 特長
       .row
-        .col-md-6
+        .col-md-6.col-lg-4
           h3.section__subTitle
             span.fa-stack.fa-lg
               i.fa.fa-circle.fa-stack-2x(aria-hidden="true")
@@ -93,7 +118,7 @@ block contents_block
             | レスポンシブレイアウト
           p.section__text
             | Bootstrap 4のレスポンシブレイアウトに対応しているため、PCでもモバイルデバイスでも、コンテンツが最適化されて表示されます。
-        .col-md-6
+        .col-md-6.col-lg-4
           h3.section__subTitle
             span.fa-stack.fa-lg
               i.fa.fa-circle.fa-stack-2x(aria-hidden="true")
@@ -101,7 +126,7 @@ block contents_block
             | カスタムメニュー
           p.section__text
             | ヘッダーにメニューを追加することができます。項目の編集は、管理画面の「外観」→「メニュー」から簡単に行えます。
-        .col-md-6
+        .col-md-6.col-lg-4
           h3.section__subTitle
             span.fa-stack.fa-lg
               i.fa.fa-circle.fa-stack-2x(aria-hidden="true")
@@ -111,7 +136,7 @@ block contents_block
             | 好きな画像を選んでサイトのロゴを設置することができます。
             br
             | ※「tsumugi」のロゴを使いたい場合は、テーマディレクトリ内のimgフォルダに同梱されているファイルをご使用ください。
-        .col-md-6
+        .col-md-6.col-lg-4
           h3.section__subTitle
             span.fa-stack.fa-lg
               i.fa.fa-circle.fa-stack-2x(aria-hidden="true")
@@ -121,7 +146,7 @@ block contents_block
             | 好きな画像を選んでヘッダーに設置することができます。初期設定ではオリジナルの写真が表示されます。
             br
             | ※ヘッダー画像は削除することも可能です。
-        .col-md-6
+        .col-md-6.col-lg-4
           h3.section__subTitle
             span.fa-stack.fa-lg
               i.fa.fa-circle.fa-stack-2x(aria-hidden="true")
@@ -129,7 +154,7 @@ block contents_block
             | ウィジェット
           p.section__text
             | フッターにカテゴリーやタグ、アーカイブ等のリンクやパーツを設置できます。項目の編集は、管理画面の「外観」→「ウィジェット」から簡単に行えます。
-        .col-md-6
+        .col-md-6.col-lg-4
           h3.section__subTitle
             span.fa-stack.fa-lg
               i.fa.fa-circle.fa-stack-2x(aria-hidden="true")
@@ -137,33 +162,12 @@ block contents_block
             | テーマカスタマイザー
           p.section__text
             | その他、様々な項目やスタイルを「テーマカスタマイザー」を使って編集できます。テーマの編集は「外観」→「カスタマイズ」から簡単に行えます。
-
-  section.section.mt-5#customization
-    .container
-      .row
-        .col
-          h2.section__title.text-center.mb-4 カスタマイズ
-          p.section__subTitle.text-center 開発者・デザイナーの方へ
-          p.section__text
-            | 「tsumugi」を本格的にカスタマイズするには、ダウンロード版ではなく、開発用のファイルも含んだGitHubバージョンをご利用ください。
-            br
-            | こちらのリポジトリに、開発ツールの使用方法や、制作過程などが記載されています。また、本テーマはオープンソースで公開されているので、フォークやプルリクも歓迎しています。
-          p.text-center
-            a.btn.btn-primary.external__link(href="https://github.com/littlebirdjp/tsumugi", target="_blank")
-              i.fa.fa-github(aria-hidden="true")
-              |  GitHubを見る
-
-  section.section.mt-5#contact
-    .container
-      .row
-        .col
-          h2.section__title.text-center.mb-4 お問い合わせ
-          p.section__text
-            | テーマの使い方に関するご質問や、ご意見・ご感想などありましたら、こちらのお問い合わせフォームからご連絡ください。
-          p.text-center
-            a.btn.btn-primary.external__link(href="https://docs.google.com/forms/d/e/1FAIpQLSfeSnbJy7wZVLcSBl39JHLr86c5oRUPQDNqpEmsOvt5LhcSCg/viewform", target="_blank")
-              i.fa.fa-envelope(aria-hidden="true")
-              |  お問い合わせフォーム
+        .col-12.text-center
+          div
+            a.btn.btn-primary.main__button(href="https://dock.readyship.co/website/create/a53c4365-dda8-4ba9-b2c6-808c2d0d7bc1") ホームページ作成
+          div
+            a.btn.btn-outline-primary.main__button2.mr-3(href="https://ja.wordpress.org/themes/tsumugi/", target="_blank") 無料ダウンロード
+            a.btn.btn-outline-primary.main__button2(href="http://tsumugi.halfmoon.jp/ja/", target="_blank") デモサイト
 
   section.section.mt-5#special-thanks
     .container
@@ -227,8 +231,8 @@ block contents_block
           <div class="suzuri-widget-product" data-suzuri-product-id="1306427" data-suzuri-item-variant-id="635"><a href="https://suzuri.jp/littlebird/681189/long-sleeve-t-shirt/s/turquoiseblue"><img src="https://d1q9av5b648rmv.cloudfront.net/v3/323x323/long-sleeve-t-shirt/s/turquoiseblue/681189/1489205219-660x662.png.1.0+0.36897+0.0.jpg?h=8f6371b84f56d911351262cbaee51dbdedd49e78" width="323" height="323"></a></div>
 
 
-  .github-corner-wrap.
-    <a href="https://github.com/littlebirdjp/tsumugi" target="_blank" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:991px){.github-corner{display:none}}</style>
+  //- .github-corner-wrap.
+  //-   <a href="https://github.com/littlebirdjp/tsumugi" target="_blank" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:991px){.github-corner{display:none}}</style>
 
 block footer_block
   include ../_parts/_footer_ja
