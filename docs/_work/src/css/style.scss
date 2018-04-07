@@ -134,6 +134,70 @@ body {
 	}
 }
 
+.sub {
+  background-image: url(../img/main2.jpg);
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+	//height: 680px;
+	padding-bottom: 5rem;
+	@include media-breakpoint-down(lg) {
+		padding-bottom: 4rem;
+	}
+	@include media-breakpoint-down(md) {
+		padding-bottom: 4rem;
+	}
+	@include media-breakpoint-down(sm) {
+		padding-bottom: 1rem;
+	}
+	@include media-breakpoint-down(xs) {
+		padding-bottom: 1rem;
+	}
+	&__title {
+		margin-top: 42rem;
+		@include media-breakpoint-down(lg) {
+			margin-top: 30rem;
+		}
+		@include media-breakpoint-down(md) {
+			margin-top: 19rem;
+		}
+		@include media-breakpoint-down(sm) {
+			margin-top: 16rem;
+		}
+		@include media-breakpoint-down(xs) {
+			margin-top: 4rem;
+		}
+	}
+}
+
+.section {
+	&__title {
+		@include media-breakpoint-down(sm) {
+			font-size: 1.5rem;
+		}
+		@include media-breakpoint-down(xs) {
+			font-size: 1.25rem;
+		}
+	}
+	&__subTitle {
+		font-size: 1.5rem;
+		@include media-breakpoint-down(md) {
+			font-size: 1.25rem;
+		}
+		@include media-breakpoint-down(sm) {
+			font-size: 1.25rem;
+		}
+		@include media-breakpoint-down(xs) {
+			font-size: 1.125rem;
+		}
+	}
+	&__text {
+		@include media-breakpoint-down(xs) {
+			font-size: .75rem;
+		}
+	}
+}
+
 .content {
 	position: relative;
 }
@@ -142,4 +206,13 @@ body {
 	max-width: 560px;
 	margin-right: auto;
 	margin-left: auto;
+}
+
+.footer {
+	@include media-breakpoint-down(sm) {
+		font-size: .75rem;
+	}
+	@include media-breakpoint-down(xs) {
+		font-size: .75rem;
+	}
 }

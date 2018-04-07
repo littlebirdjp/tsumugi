@@ -40,36 +40,58 @@ block contents_block
             a.btn.btn-outline-primary.main__button2(href="http://tsumugi.halfmoon.jp/", target="_blank") Live Demo
         .col-4
 
-  section.section#concept
+  section.section
     .container
       .row
-        .col
-            h2.section__title.text-center.mb-4 Concept
-      .row
-        .col-md-4.mb-4
-          h3.section__subTitle.text-center Mobile Friendly
+        .col-md-4
+          
+        .col-md-8
+          h2.section__title Simple for Everyone
           p.section__text
+            | You can build a website quick and easy with no technical knowledge.
+            br
+            | Just you need is writing. All templates and components are prepared.
+            br
+            | It’s installed with WordPress in fast and reliable server.
+          a.section__link(href="#", target="_blank")
+            i.fa.fa-angle-right(aria-hidden="true")
+            | &nbsp;
+            | Get Started
+
+  section.section.sub
+    .container
+      .row
+        .col-md-8
+          h2.section__title.sub__title Mobile Friendly
+          p.section__text
+            | Beautiful and simple design theme is activated.
+            br
             | Bring a comfortable readability by responsive web design adapted to mobile devices.
+            br
+            | The theme author whom expert of HTML5 supports usage and customization.
           a.section__link(href="http://tsumugi.halfmoon.jp/", target="_blank")
             i.fa.fa-angle-right(aria-hidden="true")
             | &nbsp;
-            | Look “Live Demo” for actual look and feel.
-        .col-md-4.mb-4
-          h3.section__subTitle.text-center User Friendly
+            | View Live Demo
+        .col-md-4
+          
+  section.section
+    .container
+      .row
+        .col-md-4
+          
+        .col-md-8
+          h2.section__title Edit in 3 minutes
           p.section__text
-            | Even beginners can use easily, because there are no complicated functions or options.
-          a.section__link(href="#features")
+            | You can edit the site logo, header image, menus and all widgets as you want.
+            br
+            | Intuitive user interface and drag-and-drop uploader is provided.
+            br
+            | Over 5 thousand functional plugins are available too.
+          a.section__link(href="#", target="_blank")
             i.fa.fa-angle-right(aria-hidden="true")
             | &nbsp;
-            |Look “Features” for available functions.
-        .col-md-4.mb-4
-          h3.section__subTitle.text-center Sustainability
-          p.section__text
-            | Easily update to the latest version of Bootstrap for it’s expansive structure. (Latest version is Bootstrap v4.0.0)
-          a.section__link(href="#customization")
-            i.fa.fa-angle-right(aria-hidden="true")
-            | &nbsp;
-            | Look “Customization” for developer information.
+            | Get Started
 
   section.section.mt-5#features
     .container
@@ -77,7 +99,7 @@ block contents_block
         .col
           h2.section__title.text-center.mb-4 Features
       .row
-        .col-md-6
+        .col-md-6.col-lg-4
           h3.section__subTitle
             span.fa-stack.fa-lg
               i.fa.fa-circle.fa-stack-2x(aria-hidden="true")
@@ -85,7 +107,7 @@ block contents_block
             | Responsive Layout
           p.section__text
             | This theme consists of a single column layout which is suitable for mobile devices and tablets along with PCs.
-        .col-md-6
+        .col-md-6.col-lg-4
           h3.section__subTitle
             span.fa-stack.fa-lg
               i.fa.fa-circle.fa-stack-2x(aria-hidden="true")
@@ -93,7 +115,7 @@ block contents_block
             | Custom Menu
           p.section__text
             | You can put a navigation menu in the header area. It can be edited in “Appearance” &gt; “Menus” on the admin panel.
-        .col-md-6
+        .col-md-6.col-lg-4
           h3.section__subTitle
             span.fa-stack.fa-lg
               i.fa.fa-circle.fa-stack-2x(aria-hidden="true")
@@ -101,7 +123,7 @@ block contents_block
             | Custom Logo
           p.section__text
             | You can put a logo image ahead of the site title. Also you can use the “tsumugi” logo in “img” folder of the theme directory.
-        .col-md-6
+        .col-md-6.col-lg-4
           h3.section__subTitle
             span.fa-stack.fa-lg
               i.fa.fa-circle.fa-stack-2x(aria-hidden="true")
@@ -109,7 +131,7 @@ block contents_block
             | Custom Header
           p.section__text
             | You can put a header image below the site title. By the default, an original photo is placed there. (It can be removed if you like.)
-        .col-md-6
+        .col-md-6.col-lg-4
           h3.section__subTitle
             span.fa-stack.fa-lg
               i.fa.fa-circle.fa-stack-2x(aria-hidden="true")
@@ -117,7 +139,7 @@ block contents_block
             | Widgets
           p.section__text
             | You can put various components such as categories, tags, archives… and so on. It can be edited in “Appearance” &gt; “ Widgets” on the admin panel.
-        .col-md-6
+        .col-md-6.col-lg-4
           h3.section__subTitle
             span.fa-stack.fa-lg
               i.fa.fa-circle.fa-stack-2x(aria-hidden="true")
@@ -125,35 +147,6 @@ block contents_block
             | Theme Customizer
           p.section__text
             | You can edit more useful theme options with the “Theme Customizer”. It can be used in “Appearance” &gt; “ Customize” on the admin panel.
-
-  section.section.mt-5#customization
-    .container
-      .row
-        .col
-          h2.section__title.text-center.mb-4 Customization
-          p.section__subTitle.text-center For Developers and Designers
-          p.section__text
-            | If you want customize this theme comprehensively, It’s recommended to "git clone" from the GitHub repository.
-            br
-            | Please read a README and Wikis as a reference for theme development.
-            br
-            | Fork and Pull Request will be welcome too!
-          p.text-center
-            a.btn.btn-primary.external__link(href="https://github.com/littlebirdjp/tsumugi", target="_blank")
-              i.fa.fa-github(aria-hidden="true")
-              |  View on GitHub
-
-  section.section.mt-5#contact
-    .container
-      .row
-        .col
-          h2.section__title.text-center.mb-4 Contact
-          p.section__text
-            | If you have any questions or feedbacks to this theme. Please send a message from the contact form.
-          p.text-center
-            a.btn.btn-primary.external__link(href="https://docs.google.com/forms/d/e/1FAIpQLSeIb4iUj2Qh5Wky7B3qeEUH18nKciS3kSp8kmZol7j0Z0aYoQ/viewform", target="_blank")
-              i.fa.fa-envelope(aria-hidden="true")
-              |  Contact Form
 
   section.section.mt-5#special-thanks
     .container
