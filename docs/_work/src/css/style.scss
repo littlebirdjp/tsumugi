@@ -48,19 +48,87 @@ body {
 
 .header {
 	&__title {
-		font-size: 2rem;
+		font-size: 1.75rem;
 	}
 }
 
 .main {
   background-image: url(../img/main.jpg);
-  background-position: center -100px;
+  background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
+	//height: 680px;
+	padding-bottom: 12rem;
+  @include media-breakpoint-up(xl) {
+  	background-position: center -100px;
+  }
+  @include media-breakpoint-down(md) {
+  	background-position: center -50px;
+		padding-bottom: 4rem;
+  }
+  @include media-breakpoint-down(sm) {
+  	background-position: center -50px;
+		padding-bottom: 3rem;
+  }
+  @include media-breakpoint-down(xs) {
+  	background-position: center top;
+		padding-bottom: 2rem;
+  }
+	&__text {
+		font-size: 2rem;
+		margin-top: 12rem;
+	  @include media-breakpoint-down(md) {
+	    margin-top: 4rem;
+	  }
+	  @include media-breakpoint-down(sm) {
+	    font-size: 1.5rem;
+	    margin-top: 3rem;
+	  }
+	  @include media-breakpoint-down(xs) {
+	    font-size: 1.25rem;
+	    margin-top: 2rem;
+	  }
+	}
+	&__text2 {
+		font-size: 1.125rem;
+		margin-top: 3rem;
+	  @include media-breakpoint-down(sm) {
+	    font-size: 1rem;
+	    margin-top: 1rem;
+	  }
+	  @include media-breakpoint-down(xs) {
+	    font-size: .75rem;
+	    margin-top: 1rem;
+	  }
+	}
+	&__button {
+		font-size: 1.5rem;
+		margin-top: 1.5rem;
+	  @include media-breakpoint-down(sm) {
+	    font-size: 1.125rem;
+	    margin-top: .5rem;
+	  }
+	  @include media-breakpoint-down(xs) {
+	    font-size: 1rem;
+	    margin-top: 0;
+	  }
+	}
+	&__button2 {
+		font-size: 1.125rem;
+		margin-top: 1.5rem;
+	  @include media-breakpoint-down(sm) {
+	    font-size: 1rem;
+			margin-top: 1rem;
+	  }
+	  @include media-breakpoint-down(xs) {
+	    font-size: .5rem;
+	    margin-top: .5rem;
+	  }
+	}
 	&__image {
 		width: 600px;
 		border: 1px solid #ccc;
-		@include media-breakpoint-down(sm) {
+		@include media-breakpoint-down(xs) {
 			width: 100%;
 		}
 	}

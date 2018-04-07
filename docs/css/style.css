@@ -5303,14 +5303,124 @@ body {
 }
 
 .header__title {
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
 
 .main {
   background-image: url(../img/main.jpg);
-  background-position: center -100px;
+  background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
+  padding-bottom: 12rem;
+}
+
+@media (min-width: 1200px) {
+  .main {
+    background-position: center -100px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .main {
+    background-position: center -50px;
+    padding-bottom: 4rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .main {
+    background-position: center -50px;
+    padding-bottom: 3rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .main {
+    background-position: center top;
+    padding-bottom: 2rem;
+  }
+}
+
+.main__text {
+  font-size: 2rem;
+  margin-top: 12rem;
+}
+
+@media (max-width: 991.98px) {
+  .main__text {
+    margin-top: 4rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .main__text {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .main__text {
+    font-size: 1.25rem;
+    margin-top: 2rem;
+  }
+}
+
+.main__text2 {
+  font-size: 1.125rem;
+  margin-top: 3rem;
+}
+
+@media (max-width: 767.98px) {
+  .main__text2 {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .main__text2 {
+    font-size: .75rem;
+    margin-top: 1rem;
+  }
+}
+
+.main__button {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 767.98px) {
+  .main__button {
+    font-size: 1.125rem;
+    margin-top: .5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .main__button {
+    font-size: 1rem;
+    margin-top: 0;
+  }
+}
+
+.main__button2 {
+  font-size: 1.125rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 767.98px) {
+  .main__button2 {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .main__button2 {
+    font-size: .5rem;
+    margin-top: .5rem;
+  }
 }
 
 .main__image {
@@ -5318,7 +5428,7 @@ body {
   border: 1px solid #ccc;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 575.98px) {
   .main__image {
     width: 100%;
   }
