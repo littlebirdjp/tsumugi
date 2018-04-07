@@ -5534,6 +5534,10 @@ body {
   }
 }
 
+.section__image {
+  width: 100%;
+}
+
 .content {
   position: relative;
 }

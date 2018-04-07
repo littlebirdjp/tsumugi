@@ -1,17 +1,17 @@
 header.header
-  nav.navbar.navbar-expand-md.navbar-light.bg-light
+  nav.navbar.navbar-expand-md.navbar-light.bg-light.justify-content-between
     button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
       span.navbar-toggler-icon
     a.navbar-brand(href=rootPath+'?lang=en')
       h1.header__title tsumugi
     #navbarNav.collapse.navbar-collapse
-      ul.navbar-nav
+      ul.navbar-nav.mr-auto
         li.nav-item
-          a.nav-link(href='#', target='_blank') Create a Website
-        li.nav-item
-          a.nav-link(href='https://wordpress.org/themes/tsumugi/', target='_blank') Free Download
+          a.nav-link(href='#features') Features
         li.nav-item
           a.nav-link(href='http://tsumugi.halfmoon.jp/', target='_blank') Live Demo
+        li.nav-item
+          a.nav-link(href='https://wordpress.org/themes/tsumugi/', target='_blank') Free Download
         li.nav-item
           a.nav-link(href='http://littlebird.mobi/', target='_blank') Blog
         li.nav-item
@@ -24,3 +24,4 @@ header.header
           .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
             a.dropdown-item(href=rootPath+'?lang=en') English
             a.dropdown-item(href=rootPath+'ja/') Japanese
+      a.btn.btn-outline-primary(href="https://dock.readyship.co/website/create/a0628931-83f0-4029-b762-d983747af200") Create a Website
