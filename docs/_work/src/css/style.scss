@@ -1,0 +1,227 @@
+/*!
+ * Bootstrap v4.0.0 (https://getbootstrap.com)
+ * Copyright 2011-2018 The Bootstrap Authors
+ * Copyright 2011-2018 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/root";
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/type";
+// @import "node_modules/bootstrap/scss/images";
+// @import "node_modules/bootstrap/scss/code";
+@import "node_modules/bootstrap/scss/grid";
+// @import "node_modules/bootstrap/scss/tables";
+// @import "node_modules/bootstrap/scss/forms";
+@import "node_modules/bootstrap/scss/buttons";
+@import "node_modules/bootstrap/scss/transitions";
+@import "node_modules/bootstrap/scss/dropdown";
+// @import "node_modules/bootstrap/scss/button-group";
+// @import "node_modules/bootstrap/scss/input-group";
+// @import "node_modules/bootstrap/scss/custom-forms";
+@import "node_modules/bootstrap/scss/nav";
+@import "node_modules/bootstrap/scss/navbar";
+// @import "node_modules/bootstrap/scss/card";
+// @import "node_modules/bootstrap/scss/breadcrumb";
+// @import "node_modules/bootstrap/scss/pagination";
+// @import "node_modules/bootstrap/scss/badge";
+// @import "node_modules/bootstrap/scss/jumbotron";
+// @import "node_modules/bootstrap/scss/alert";
+// @import "node_modules/bootstrap/scss/progress";
+// @import "node_modules/bootstrap/scss/media";
+// @import "node_modules/bootstrap/scss/list-group";
+// @import "node_modules/bootstrap/scss/close";
+// @import "node_modules/bootstrap/scss/modal";
+// @import "node_modules/bootstrap/scss/tooltip";
+// @import "node_modules/bootstrap/scss/popover";
+// @import "node_modules/bootstrap/scss/carousel";
+@import "node_modules/bootstrap/scss/utilities";
+@import "node_modules/bootstrap/scss/print";
+
+body {
+	font-family: sans-serif;
+	line-height: 1.8;
+}
+
+.header {
+	&__title {
+		font-size: 1.75rem;
+	}
+}
+
+.main {
+  background-image: url(../img/main.jpg);
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+	//height: 680px;
+	padding-bottom: 12rem;
+  @include media-breakpoint-up(xl) {
+  	background-position: center -100px;
+  }
+  @include media-breakpoint-down(md) {
+  	background-position: center -50px;
+		padding-bottom: 4rem;
+  }
+  @include media-breakpoint-down(sm) {
+  	background-position: center -50px;
+		padding-bottom: 3rem;
+  }
+  @include media-breakpoint-down(xs) {
+  	background-position: center top;
+		padding-bottom: 2rem;
+  }
+	&__ja {
+		background-image: url(../ja/img/main.jpg);
+	}
+	&__text {
+		font-size: 2rem;
+		margin-top: 12rem;
+	  @include media-breakpoint-down(md) {
+	    margin-top: 4rem;
+	  }
+	  @include media-breakpoint-down(sm) {
+	    font-size: 1.5rem;
+	    margin-top: 3rem;
+	  }
+	  @include media-breakpoint-down(xs) {
+	    font-size: 1.25rem;
+	    margin-top: 2rem;
+	  }
+	}
+	&__text2 {
+		font-size: 1.125rem;
+		margin-top: 3rem;
+	  @include media-breakpoint-down(sm) {
+	    font-size: 1rem;
+	    margin-top: 1rem;
+	  }
+	  @include media-breakpoint-down(xs) {
+	    font-size: .75rem;
+	    margin-top: 1rem;
+	  }
+	}
+	&__button {
+		font-size: 1.5rem;
+		margin-top: 1.5rem;
+	  @include media-breakpoint-down(sm) {
+	    font-size: 1.125rem;
+	    margin-top: .5rem;
+	  }
+	  @include media-breakpoint-down(xs) {
+	    font-size: 1rem;
+	    margin-top: 0;
+	  }
+	}
+	&__button2 {
+		font-size: 1.125rem;
+		margin-top: 1.5rem;
+	  @include media-breakpoint-down(sm) {
+	    font-size: 1rem;
+			margin-top: 1rem;
+	  }
+	  @include media-breakpoint-down(xs) {
+	    font-size: .5rem;
+	    margin-top: .5rem;
+	  }
+	}
+	&__image {
+		width: 600px;
+		border: 1px solid #ccc;
+		@include media-breakpoint-down(xs) {
+			width: 100%;
+		}
+	}
+}
+
+.sub {
+  background-image: url(../img/main2.jpg);
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+	//height: 680px;
+	padding-bottom: 4rem;
+	@include media-breakpoint-down(lg) {
+		padding-bottom: 4rem;
+	}
+	@include media-breakpoint-down(md) {
+		padding-bottom: 4rem;
+	}
+	@include media-breakpoint-down(sm) {
+		padding-bottom: 1rem;
+	}
+	@include media-breakpoint-down(xs) {
+		padding-bottom: 1rem;
+	}
+	&__ja {
+		background-image: url(../ja/img/main2.jpg);
+	}
+	&__title {
+		margin-top: 43rem;
+		@include media-breakpoint-down(lg) {
+			margin-top: 30rem;
+		}
+		@include media-breakpoint-down(md) {
+			margin-top: 19rem;
+		}
+		@include media-breakpoint-down(sm) {
+			margin-top: 16rem;
+		}
+		@include media-breakpoint-down(xs) {
+			margin-top: 4rem;
+		}
+	}
+}
+
+.section {
+	&__title {
+		@include media-breakpoint-down(sm) {
+			font-size: 1.5rem;
+		}
+		@include media-breakpoint-down(xs) {
+			font-size: 1.25rem;
+		}
+	}
+	&__subTitle {
+		font-size: 1.5rem;
+		@include media-breakpoint-down(md) {
+			font-size: 1.25rem;
+		}
+		@include media-breakpoint-down(sm) {
+			font-size: 1.25rem;
+		}
+		@include media-breakpoint-down(xs) {
+			font-size: 1.125rem;
+		}
+	}
+	&__text {
+		@include media-breakpoint-down(xs) {
+			font-size: .75rem;
+		}
+	}
+	&__image {
+		width: 100%;
+	}
+}
+
+.content {
+	position: relative;
+}
+
+.embed-responsive {
+	max-width: 560px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.footer {
+	@include media-breakpoint-down(sm) {
+		font-size: .75rem;
+	}
+	@include media-breakpoint-down(xs) {
+		font-size: .75rem;
+	}
+}
