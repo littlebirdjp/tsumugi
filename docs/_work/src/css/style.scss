@@ -143,18 +143,19 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 	//height: 680px;
-	padding-bottom: 4rem;
+	//padding-bottom: 4rem;
+	height: 54rem;
 	@include media-breakpoint-down(lg) {
-		padding-bottom: 4rem;
+		height: 42rem;
 	}
 	@include media-breakpoint-down(md) {
-		padding-bottom: 4rem;
+		height: 31rem;
 	}
 	@include media-breakpoint-down(sm) {
-		padding-bottom: 1rem;
+		height: 30rem;
 	}
 	@include media-breakpoint-down(xs) {
-		padding-bottom: 1rem;
+		height: 17rem;
 	}
 	&__ja {
 		background-image: url(../ja/img/main2.jpg);
@@ -173,6 +174,16 @@ body {
 		@include media-breakpoint-down(xs) {
 			margin-top: 4rem;
 		}
+	}
+}
+
+.sub2 {
+	margin-top: -12rem;
+	@include media-breakpoint-down(lg) {
+		margin-top: -12rem;
+	}
+	@include media-breakpoint-down(md) {
+		margin-top: 1.5rem;
 	}
 }
 

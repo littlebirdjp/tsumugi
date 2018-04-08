@@ -5443,30 +5443,30 @@ body {
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-bottom: 4rem;
+  height: 54rem;
 }
 
 @media (max-width: 1199.98px) {
   .sub {
-    padding-bottom: 4rem;
+    height: 42rem;
   }
 }
 
 @media (max-width: 991.98px) {
   .sub {
-    padding-bottom: 4rem;
+    height: 31rem;
   }
 }
 
 @media (max-width: 767.98px) {
   .sub {
-    padding-bottom: 1rem;
+    height: 30rem;
   }
 }
 
 @media (max-width: 575.98px) {
   .sub {
-    padding-bottom: 1rem;
+    height: 17rem;
   }
 }
 
@@ -5499,6 +5499,22 @@ body {
 @media (max-width: 575.98px) {
   .sub__title {
     margin-top: 4rem;
+  }
+}
+
+.sub2 {
+  margin-top: -12rem;
+}
+
+@media (max-width: 1199.98px) {
+  .sub2 {
+    margin-top: -12rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .sub2 {
+    margin-top: 1.5rem;
   }
 }
 
