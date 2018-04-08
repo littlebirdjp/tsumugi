@@ -74,6 +74,9 @@ body {
   	background-position: center top;
 		padding-bottom: 2rem;
   }
+	&__ja {
+		background-image: url(../ja/img/main.jpg);
+	}
 	&__text {
 		font-size: 2rem;
 		margin-top: 12rem;
@@ -140,7 +143,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 	//height: 680px;
-	padding-bottom: 5rem;
+	padding-bottom: 4rem;
 	@include media-breakpoint-down(lg) {
 		padding-bottom: 4rem;
 	}
@@ -153,8 +156,11 @@ body {
 	@include media-breakpoint-down(xs) {
 		padding-bottom: 1rem;
 	}
+	&__ja {
+		background-image: url(../ja/img/main2.jpg);
+	}
 	&__title {
-		margin-top: 42rem;
+		margin-top: 43rem;
 		@include media-breakpoint-down(lg) {
 			margin-top: 30rem;
 		}

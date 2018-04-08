@@ -5341,6 +5341,10 @@ body {
   }
 }
 
+.main__ja {
+  background-image: url(../ja/img/main.jpg);
+}
+
 .main__text {
   font-size: 2rem;
   margin-top: 12rem;
@@ -5439,7 +5443,7 @@ body {
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-bottom: 5rem;
+  padding-bottom: 4rem;
 }
 
 @media (max-width: 1199.98px) {
@@ -5466,8 +5470,12 @@ body {
   }
 }
 
+.sub__ja {
+  background-image: url(../ja/img/main2.jpg);
+}
+
 .sub__title {
-  margin-top: 42rem;
+  margin-top: 43rem;
 }
 
 @media (max-width: 1199.98px) {
