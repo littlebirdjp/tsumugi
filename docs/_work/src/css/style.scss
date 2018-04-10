@@ -5,6 +5,18 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1600px
+);
+
+$font-family-sans-serif: sans-serif;
+$line-height-base: 1.8;
+
 @import "node_modules/bootstrap/scss/functions";
 @import "node_modules/bootstrap/scss/variables";
 @import "node_modules/bootstrap/scss/mixins";
@@ -41,11 +53,6 @@
 @import "node_modules/bootstrap/scss/utilities";
 @import "node_modules/bootstrap/scss/print";
 
-body {
-	font-family: sans-serif;
-	line-height: 1.8;
-}
-
 .header {
 	&__title {
 		font-size: 1.75rem;
@@ -61,6 +68,9 @@ body {
 	padding-bottom: 12rem;
   @include media-breakpoint-up(xl) {
   	background-position: center -100px;
+  }
+  @include media-breakpoint-up(xxl) {
+  	background-position: center -150px;
   }
   @include media-breakpoint-down(md) {
   	background-position: center -50px;
@@ -128,13 +138,6 @@ body {
 	    margin-top: .5rem;
 	  }
 	}
-	&__image {
-		width: 600px;
-		border: 1px solid #ccc;
-		@include media-breakpoint-down(xs) {
-			width: 100%;
-		}
-	}
 }
 
 .sub {
@@ -159,21 +162,6 @@ body {
 	}
 	&__ja {
 		background-image: url(../ja/img/main2.jpg);
-	}
-	&__title {
-		margin-top: 43rem;
-		@include media-breakpoint-down(lg) {
-			margin-top: 30rem;
-		}
-		@include media-breakpoint-down(md) {
-			margin-top: 19rem;
-		}
-		@include media-breakpoint-down(sm) {
-			margin-top: 16rem;
-		}
-		@include media-breakpoint-down(xs) {
-			margin-top: 4rem;
-		}
 	}
 }
 
