@@ -11,7 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-tsumugi is a simple blog theme based on _s and Bootstrap. It consists of a single column layout which is suitable for mobile devices and tablets along with PCs. For it's readability and simplicity, this theme is user-friendly for everyone. (The name of "tsumugi" is inspired by the song of "Hatsune", a Japanese singer.)
+tsumugi is a simple blog theme based on _s and Bootstrap. It consists of a single column layout which is suitable for mobile devices and tablets along with PCs. Its readability and simplicity make this theme user-friendly for everyone. (The name of "tsumugi" is inspired by the song of "Hatsune", a Japanese singer.)
 
 === Features ===
 
