@@ -1,0 +1,15 @@
+.editorconfig
+.jscsrc
+.jshintignore
+.travis.yml
+LICENSE
+package.json
+package-lock.json
+/bin/
+/docs/
+/layouts/
+/node_modules/
+/release/
+/sass/
+/sketch/
+*.md
