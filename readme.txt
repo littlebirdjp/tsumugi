@@ -5,7 +5,7 @@ Tags: blog, one-column, custom-background, custom-colors, custom-menu, custom-he
 
 Requires at least: 4.5
 Tested up to: 4.9.4
-Stable tag: 2.1.0
+Stable tag: 2.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,6 +32,9 @@ tsumugi is a simple blog theme based on _s and Bootstrap. It consists of a singl
 3. Click Activate to use your new theme right away.
 
 == Changelog ==
+
+= 2.1.1 - Apr 11 2018 =
+* Fix a description text.
 
 = 2.1.0 - Feb 27 2018 =
 * Update Bootstrap from v4-beta to v4.
