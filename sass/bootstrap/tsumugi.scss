@@ -40,20 +40,5 @@
 // @import "utilities";
 // @import "print";
 
-input[type="submit"],
-.more-link,
-.wp-custom-header-video-button {
-  @extend .btn, .btn-primary;
-  font-family: 'Source Sans Pro',sans-serif;
-  &:visited {
-    color: #fff;
-  }
-  &:focus {
-    box-shadow: none;
-  }
-}
-
-input[type="reset"] {
-  @extend .btn, .btn-secondary;
-  font-family: 'Source Sans Pro',sans-serif;
-}
+// tsumugi Original Style
+@import "tsumugi-style";
