@@ -268,5 +268,6 @@ require get_template_directory() . '/inc/jetpack.php';
 
 function tsumugi_custom_editor_style_for_gutenberg() {
 	wp_enqueue_style( 'tsumugi-editor-style', get_template_directory_uri() . '/gutenberg.css', array(), '2.1.1', 'all' );
+	wp_enqueue_style( 'tsumugi-fonts', tsumugi_fonts_url(), array(), null );
 }
 add_action('enqueue_block_editor_assets', 'tsumugi_custom_editor_style_for_gutenberg');

@@ -71,10 +71,54 @@
 	@import "site/primary/posts-and-pages";
 	@import "media/media";
 
-	font-family: sans-serif;
+	font-family: sans-serif; // 2
+	line-height: 1.15; // 3
+	-webkit-text-size-adjust: 100%; // 4
+	-ms-text-size-adjust: 100%; // 4
+	-ms-overflow-style: scrollbar; // 5
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0); // 6
+  
+	font-family: $font-family-base;
+	font-size: $font-size-base;
+	font-weight: $font-weight-base;
+	line-height: $line-height-base;
+	color: $body-color;
+	text-align: left; // 3
+	background-color: $body-bg; // 2
+  
+	.editor-block-list__layout {
+		margin: 1em 0 0;
+		>.editor-block-list__block>.editor-block-list__block-edit,
+		>.editor-block-list__layout>.editor-block-list__block>.editor-block-list__block-edit,
+		>.editor-default-block-appender__content {
+			margin-bottom: 0;
+			margin-top: 0;
+		}
+	}
+
+	.editor-post-title__block,
+	.editor-block-list__block {
+		@include media-breakpoint-up(sm) {
+			max-width: map-get($container-max-widths, 'sm') !important;
+		}
+		@include media-breakpoint-up(md) {
+			max-width: map-get($container-max-widths, 'md') !important;
+		}
+		@include media-breakpoint-up(lg) {
+			max-width: map-get($container-max-widths, 'lg') !important;
+		}
+		@include media-breakpoint-up(xl) {
+			max-width: map-get($container-max-widths, 'xl') !important;
+		}
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 
 	.editor-post-title__block {
-		max-width: none !important;
+		> div {
+			margin-right: 0;
+			margin-left: 0;
+		}
 		.editor-post-title__input {
 			margin-bottom: .5rem;
 			line-height: 1.4;
@@ -82,17 +126,22 @@
 			font-size: $h1-font-size;
 			font-weight: 500;
 			color: $body-color;
+			padding: 0;
 		}
 	}
 	.editor-block-list__block {
-		max-width: none !important;
 		font-family: $font-family-base;
+		.editor-block-list__block-edit {
+			margin-left: auto;
+			margin-right: auto;
+		}
 		ul.editor-rich-text__tinymce,
 		ol.editor-rich-text__tinymce {
 			margin: 0 0 1rem 0;
 			padding-left: 1.5rem;
 		}
 	}
+	
 	h1 {
 		font-size: $h1-font-size;
 	}

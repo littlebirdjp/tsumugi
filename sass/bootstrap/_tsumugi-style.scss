@@ -15,3 +15,28 @@ input[type="reset"] {
   @extend .btn, .btn-secondary;
   font-family: 'Source Sans Pro',sans-serif;
 }
+
+.wp-block-more {
+  text-align: left;
+  margin-bottom: 1rem;
+  > input[type="text"] {
+    @extend .btn, .btn-primary;
+    font-family: 'Source Sans Pro',sans-serif;
+    cursor: auto !important;
+    width: 9rem;
+    height: auto;
+    text-transform: none;
+  }
+  // &::after {
+  //   content: ">";
+  //   margin-left: -1.5rem;
+  //   color: #fff;
+  // }
+}
+
+.more-link {
+  margin-bottom: 1rem;
+  p > & {
+    margin-bottom: 0;
+  }
+}
