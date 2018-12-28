@@ -49,11 +49,105 @@ $brand-primary: theme-color("primary");
 # Content
 --------------------------------------------------------------*/
 
-.mce-content-body {
+@import "site/primary/posts-and-pages";
+
+//Link Color
+a {
+	color: $color__link;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+
+	&:visited {
+		color: $color__link-visited;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__link-hover;
+		text-decoration: none;
+	}
+}
+
+//Crasssic Editor Wrap
+body.mce-content-body {
 	margin: 10px 15px;
 }
 
-@import "site/primary/posts-and-pages";
+//Block Toolbar
+@media (min-width: 600px) {
+	.editor-block-toolbar {
+		overflow: hidden;
+	}
+}
+
+//Content Width
+.editor-post-title__block,
+.editor-block-list__block {
+	@include media-breakpoint-up(sm) {
+		max-width: map-get($container-max-widths, 'sm') !important;
+	}
+	@include media-breakpoint-up(md) {
+		max-width: map-get($container-max-widths, 'md') !important;
+	}
+	@include media-breakpoint-up(lg) {
+		max-width: map-get($container-max-widths, 'lg') !important;
+	}
+	@include media-breakpoint-up(xl) {
+		max-width: map-get($container-max-widths, 'xl') !important;
+	}
+}
+
+//Post Title
+.editor-post-title__block {
+	.editor-post-title__input {
+		line-height: 1.4;
+		font-family: $font-family-base;
+		font-size: $h1-font-size;
+		font-weight: 500;
+		color: $body-color;
+	}
+}
+
+.editor-block-list__block {
+	//List
+	ul, ol {
+		padding-left: 1.5rem;
+		margin-left: 0;
+		ul {
+			list-style-type: disc;
+		}
+	}
+	//Table
+	th, td {
+		padding: 0;
+		border: 1px solid currentColor;
+	}
+	.is-style-stripes {
+		th, td {
+			border-color: transparent;
+		}
+	}
+}
+
+//Read More
+.wp-block-more::before {
+    content: none;
+}
+
+//Subheading
+p.wp-block-subhead {
+    color: unset;
+    opacity: .75;
+}
+
+//Blockquote
+.wp-block-quote {
+	border-left: 5px solid #429BBF !important;
+	&.is-large {
+		.wp-block-quote__citation {
+			font-size: 18px;
+		}
+	}
+}
 
 /*--------------------------------------------------------------
 # Media

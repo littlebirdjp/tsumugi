@@ -17,7 +17,7 @@
     "postinstall": "",
     "bwupdate": "bash bin/bootstrap.sh",
     "build": "bash bin/zip.sh",
-    "css-compile": "node-sass --output-style expanded --indent-type tab --indent-width 1 --precision 10 sass/style.scss style.css && node-sass --output-style expanded --indent-type tab --indent-width 1 --precision 10 sass/editor-style.scss editor-style.css && node-sass --output-style expanded --indent-type tab --indent-width 1 --precision 10 sass/gutenberg.scss gutenberg.css && node-sass --output-style expanded --indent-type tab --indent-width 1 --precision 10 sass/bootstrap/tsumugi.scss bootstrap/tsumugi.css",
+    "css-compile": "node-sass --output-style expanded --indent-type tab --indent-width 1 --precision 10 sass/style.scss style.css && node-sass --output-style expanded --indent-type tab --indent-width 1 --precision 10 sass/editor-style.scss editor-style.css && node-sass --output-style expanded --indent-type tab --indent-width 1 --precision 10 sass/bootstrap/tsumugi.scss bootstrap/tsumugi.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {

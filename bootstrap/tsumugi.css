@@ -82,7 +82,7 @@ table table {
 
 .btn, input[type="submit"],
 .more-link,
-.wp-custom-header-video-button, input[type="reset"] {
+.wp-custom-header-video-button, input[type="reset"], .wp-block-more > input[type="text"], .wp-block-button__link {
 	display: inline-block;
 	font-weight: 400;
 	text-align: center;
@@ -100,46 +100,46 @@ table table {
 
 .btn:hover, input[type="submit"]:hover,
 .more-link:hover,
-.wp-custom-header-video-button:hover, input[type="reset"]:hover, .btn:focus, input[type="submit"]:focus,
+.wp-custom-header-video-button:hover, input[type="reset"]:hover, .wp-block-more > input[type="text"]:hover, .wp-block-button__link:hover, .btn:focus, input[type="submit"]:focus,
 .more-link:focus,
-.wp-custom-header-video-button:focus, input[type="reset"]:focus {
+.wp-custom-header-video-button:focus, input[type="reset"]:focus, .wp-block-more > input[type="text"]:focus, .wp-block-button__link:focus {
 	text-decoration: none;
 }
 
 .btn:focus, input[type="submit"]:focus,
 .more-link:focus,
-.wp-custom-header-video-button:focus, input[type="reset"]:focus, .btn.focus, input.focus[type="submit"],
+.wp-custom-header-video-button:focus, input[type="reset"]:focus, .wp-block-more > input[type="text"]:focus, .wp-block-button__link:focus, .btn.focus, input.focus[type="submit"],
 .focus.more-link,
-.focus.wp-custom-header-video-button, input.focus[type="reset"] {
+.focus.wp-custom-header-video-button, input.focus[type="reset"], .wp-block-more > input.focus[type="text"], .focus.wp-block-button__link {
 	outline: 0;
 	box-shadow: 0 0 0 0.2rem rgba(0, 123, 187, 0.25);
 }
 
 .btn.disabled, input.disabled[type="submit"],
 .disabled.more-link,
-.disabled.wp-custom-header-video-button, input.disabled[type="reset"], .btn:disabled, input[type="submit"]:disabled,
+.disabled.wp-custom-header-video-button, input.disabled[type="reset"], .wp-block-more > input.disabled[type="text"], .disabled.wp-block-button__link, .btn:disabled, input[type="submit"]:disabled,
 .more-link:disabled,
-.wp-custom-header-video-button:disabled, input[type="reset"]:disabled {
+.wp-custom-header-video-button:disabled, input[type="reset"]:disabled, .wp-block-more > input[type="text"]:disabled, .wp-block-button__link:disabled {
 	opacity: 0.65;
 }
 
 .btn:not(:disabled):not(.disabled), input[type="submit"]:not(:disabled):not(.disabled),
 .more-link:not(:disabled):not(.disabled),
-.wp-custom-header-video-button:not(:disabled):not(.disabled), input[type="reset"]:not(:disabled):not(.disabled) {
+.wp-custom-header-video-button:not(:disabled):not(.disabled), input[type="reset"]:not(:disabled):not(.disabled), .wp-block-more > input[type="text"]:not(:disabled):not(.disabled), .wp-block-button__link:not(:disabled):not(.disabled) {
 	cursor: pointer;
 }
 
 .btn:not(:disabled):not(.disabled):active, input[type="submit"]:not(:disabled):not(.disabled):active,
 .more-link:not(:disabled):not(.disabled):active,
-.wp-custom-header-video-button:not(:disabled):not(.disabled):active, input[type="reset"]:not(:disabled):not(.disabled):active, .btn:not(:disabled):not(.disabled).active, input[type="submit"]:not(:disabled):not(.disabled).active,
+.wp-custom-header-video-button:not(:disabled):not(.disabled):active, input[type="reset"]:not(:disabled):not(.disabled):active, .wp-block-more > input[type="text"]:not(:disabled):not(.disabled):active, .wp-block-button__link:not(:disabled):not(.disabled):active, .btn:not(:disabled):not(.disabled).active, input[type="submit"]:not(:disabled):not(.disabled).active,
 .more-link:not(:disabled):not(.disabled).active,
-.wp-custom-header-video-button:not(:disabled):not(.disabled).active, input[type="reset"]:not(:disabled):not(.disabled).active {
+.wp-custom-header-video-button:not(:disabled):not(.disabled).active, input[type="reset"]:not(:disabled):not(.disabled).active, .wp-block-more > input[type="text"]:not(:disabled):not(.disabled).active, .wp-block-button__link:not(:disabled):not(.disabled).active {
 	background-image: none;
 }
 
 .btn-primary, input[type="submit"],
 .more-link,
-.wp-custom-header-video-button {
+.wp-custom-header-video-button, .wp-block-more > input[type="text"], .wp-block-button__link {
 	color: #fff;
 	background-color: #007bbb;
 	border-color: #007bbb;
@@ -147,7 +147,7 @@ table table {
 
 .btn-primary:hover, input[type="submit"]:hover,
 .more-link:hover,
-.wp-custom-header-video-button:hover {
+.wp-custom-header-video-button:hover, .wp-block-more > input[type="text"]:hover, .wp-block-button__link:hover {
 	color: #fff;
 	background-color: #006295;
 	border-color: #005988;
@@ -155,17 +155,17 @@ table table {
 
 .btn-primary:focus, input[type="submit"]:focus,
 .more-link:focus,
-.wp-custom-header-video-button:focus, .btn-primary.focus, input.focus[type="submit"],
+.wp-custom-header-video-button:focus, .wp-block-more > input[type="text"]:focus, .wp-block-button__link:focus, .btn-primary.focus, input.focus[type="submit"],
 .focus.more-link,
-.focus.wp-custom-header-video-button {
+.focus.wp-custom-header-video-button, .wp-block-more > input.focus[type="text"], .focus.wp-block-button__link {
 	box-shadow: 0 0 0 0.2rem rgba(0, 123, 187, 0.5);
 }
 
 .btn-primary.disabled, input.disabled[type="submit"],
 .disabled.more-link,
-.disabled.wp-custom-header-video-button, .btn-primary:disabled, input[type="submit"]:disabled,
+.disabled.wp-custom-header-video-button, .wp-block-more > input.disabled[type="text"], .disabled.wp-block-button__link, .btn-primary:disabled, input[type="submit"]:disabled,
 .more-link:disabled,
-.wp-custom-header-video-button:disabled {
+.wp-custom-header-video-button:disabled, .wp-block-more > input[type="text"]:disabled, .wp-block-button__link:disabled {
 	color: #fff;
 	background-color: #007bbb;
 	border-color: #007bbb;
@@ -173,15 +173,17 @@ table table {
 
 .btn-primary:not(:disabled):not(.disabled):active, input[type="submit"]:not(:disabled):not(.disabled):active,
 .more-link:not(:disabled):not(.disabled):active,
-.wp-custom-header-video-button:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, input[type="submit"]:not(:disabled):not(.disabled).active,
+.wp-custom-header-video-button:not(:disabled):not(.disabled):active, .wp-block-more > input[type="text"]:not(:disabled):not(.disabled):active, .wp-block-button__link:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, input[type="submit"]:not(:disabled):not(.disabled).active,
 .more-link:not(:disabled):not(.disabled).active,
-.wp-custom-header-video-button:not(:disabled):not(.disabled).active,
+.wp-custom-header-video-button:not(:disabled):not(.disabled).active, .wp-block-more > input[type="text"]:not(:disabled):not(.disabled).active, .wp-block-button__link:not(:disabled):not(.disabled).active,
 .show > .btn-primary.dropdown-toggle,
 .show > input.dropdown-toggle[type="submit"],
 .show >
 .dropdown-toggle.more-link,
 .show >
-.dropdown-toggle.wp-custom-header-video-button {
+.dropdown-toggle.wp-custom-header-video-button,
+.wp-block-more.show > input.dropdown-toggle[type="text"],
+.show > .dropdown-toggle.wp-block-button__link {
 	color: #fff;
 	background-color: #005988;
 	border-color: #00517b;
@@ -189,15 +191,17 @@ table table {
 
 .btn-primary:not(:disabled):not(.disabled):active:focus, input[type="submit"]:not(:disabled):not(.disabled):active:focus,
 .more-link:not(:disabled):not(.disabled):active:focus,
-.wp-custom-header-video-button:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, input[type="submit"]:not(:disabled):not(.disabled).active:focus,
+.wp-custom-header-video-button:not(:disabled):not(.disabled):active:focus, .wp-block-more > input[type="text"]:not(:disabled):not(.disabled):active:focus, .wp-block-button__link:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, input[type="submit"]:not(:disabled):not(.disabled).active:focus,
 .more-link:not(:disabled):not(.disabled).active:focus,
-.wp-custom-header-video-button:not(:disabled):not(.disabled).active:focus,
+.wp-custom-header-video-button:not(:disabled):not(.disabled).active:focus, .wp-block-more > input[type="text"]:not(:disabled):not(.disabled).active:focus, .wp-block-button__link:not(:disabled):not(.disabled).active:focus,
 .show > .btn-primary.dropdown-toggle:focus,
 .show > input.dropdown-toggle[type="submit"]:focus,
 .show >
 .dropdown-toggle.more-link:focus,
 .show >
-.dropdown-toggle.wp-custom-header-video-button:focus {
+.dropdown-toggle.wp-custom-header-video-button:focus,
+.wp-block-more.show > input.dropdown-toggle[type="text"]:focus,
+.show > .dropdown-toggle.wp-block-button__link:focus {
 	box-shadow: 0 0 0 0.2rem rgba(0, 123, 187, 0.5);
 }
 
@@ -441,6 +445,280 @@ table table {
 	box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
 }
 
+.btn-outline-primary, .is-style-outline .wp-block-button__link {
+	color: #007bbb;
+	background-color: transparent;
+	background-image: none;
+	border-color: #007bbb;
+}
+
+.btn-outline-primary:hover, .is-style-outline .wp-block-button__link:hover {
+	color: #fff;
+	background-color: #007bbb;
+	border-color: #007bbb;
+}
+
+.btn-outline-primary:focus, .is-style-outline .wp-block-button__link:focus, .btn-outline-primary.focus, .is-style-outline .focus.wp-block-button__link {
+	box-shadow: 0 0 0 0.2rem rgba(0, 123, 187, 0.5);
+}
+
+.btn-outline-primary.disabled, .is-style-outline .disabled.wp-block-button__link, .btn-outline-primary:disabled, .is-style-outline .wp-block-button__link:disabled {
+	color: #007bbb;
+	background-color: transparent;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active, .is-style-outline .wp-block-button__link:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active, .is-style-outline .wp-block-button__link:not(:disabled):not(.disabled).active,
+.show > .btn-outline-primary.dropdown-toggle, .is-style-outline
+.show > .dropdown-toggle.wp-block-button__link {
+	color: #fff;
+	background-color: #007bbb;
+	border-color: #007bbb;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus, .is-style-outline .wp-block-button__link:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus, .is-style-outline .wp-block-button__link:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-primary.dropdown-toggle:focus, .is-style-outline
+.show > .dropdown-toggle.wp-block-button__link:focus {
+	box-shadow: 0 0 0 0.2rem rgba(0, 123, 187, 0.5);
+}
+
+.btn-outline-secondary {
+	color: #6c757d;
+	background-color: transparent;
+	background-image: none;
+	border-color: #6c757d;
+}
+
+.btn-outline-secondary:hover {
+	color: #fff;
+	background-color: #6c757d;
+	border-color: #6c757d;
+}
+
+.btn-outline-secondary:focus, .btn-outline-secondary.focus {
+	box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
+}
+
+.btn-outline-secondary.disabled, .btn-outline-secondary:disabled {
+	color: #6c757d;
+	background-color: transparent;
+}
+
+.btn-outline-secondary:not(:disabled):not(.disabled):active, .btn-outline-secondary:not(:disabled):not(.disabled).active,
+.show > .btn-outline-secondary.dropdown-toggle {
+	color: #fff;
+	background-color: #6c757d;
+	border-color: #6c757d;
+}
+
+.btn-outline-secondary:not(:disabled):not(.disabled):active:focus, .btn-outline-secondary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-secondary.dropdown-toggle:focus {
+	box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
+}
+
+.btn-outline-success {
+	color: #28a745;
+	background-color: transparent;
+	background-image: none;
+	border-color: #28a745;
+}
+
+.btn-outline-success:hover {
+	color: #fff;
+	background-color: #28a745;
+	border-color: #28a745;
+}
+
+.btn-outline-success:focus, .btn-outline-success.focus {
+	box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+}
+
+.btn-outline-success.disabled, .btn-outline-success:disabled {
+	color: #28a745;
+	background-color: transparent;
+}
+
+.btn-outline-success:not(:disabled):not(.disabled):active, .btn-outline-success:not(:disabled):not(.disabled).active,
+.show > .btn-outline-success.dropdown-toggle {
+	color: #fff;
+	background-color: #28a745;
+	border-color: #28a745;
+}
+
+.btn-outline-success:not(:disabled):not(.disabled):active:focus, .btn-outline-success:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-success.dropdown-toggle:focus {
+	box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+}
+
+.btn-outline-info {
+	color: #17a2b8;
+	background-color: transparent;
+	background-image: none;
+	border-color: #17a2b8;
+}
+
+.btn-outline-info:hover {
+	color: #fff;
+	background-color: #17a2b8;
+	border-color: #17a2b8;
+}
+
+.btn-outline-info:focus, .btn-outline-info.focus {
+	box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5);
+}
+
+.btn-outline-info.disabled, .btn-outline-info:disabled {
+	color: #17a2b8;
+	background-color: transparent;
+}
+
+.btn-outline-info:not(:disabled):not(.disabled):active, .btn-outline-info:not(:disabled):not(.disabled).active,
+.show > .btn-outline-info.dropdown-toggle {
+	color: #fff;
+	background-color: #17a2b8;
+	border-color: #17a2b8;
+}
+
+.btn-outline-info:not(:disabled):not(.disabled):active:focus, .btn-outline-info:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-info.dropdown-toggle:focus {
+	box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5);
+}
+
+.btn-outline-warning {
+	color: #ffc107;
+	background-color: transparent;
+	background-image: none;
+	border-color: #ffc107;
+}
+
+.btn-outline-warning:hover {
+	color: #212529;
+	background-color: #ffc107;
+	border-color: #ffc107;
+}
+
+.btn-outline-warning:focus, .btn-outline-warning.focus {
+	box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5);
+}
+
+.btn-outline-warning.disabled, .btn-outline-warning:disabled {
+	color: #ffc107;
+	background-color: transparent;
+}
+
+.btn-outline-warning:not(:disabled):not(.disabled):active, .btn-outline-warning:not(:disabled):not(.disabled).active,
+.show > .btn-outline-warning.dropdown-toggle {
+	color: #212529;
+	background-color: #ffc107;
+	border-color: #ffc107;
+}
+
+.btn-outline-warning:not(:disabled):not(.disabled):active:focus, .btn-outline-warning:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-warning.dropdown-toggle:focus {
+	box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5);
+}
+
+.btn-outline-danger {
+	color: #dc3545;
+	background-color: transparent;
+	background-image: none;
+	border-color: #dc3545;
+}
+
+.btn-outline-danger:hover {
+	color: #fff;
+	background-color: #dc3545;
+	border-color: #dc3545;
+}
+
+.btn-outline-danger:focus, .btn-outline-danger.focus {
+	box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
+}
+
+.btn-outline-danger.disabled, .btn-outline-danger:disabled {
+	color: #dc3545;
+	background-color: transparent;
+}
+
+.btn-outline-danger:not(:disabled):not(.disabled):active, .btn-outline-danger:not(:disabled):not(.disabled).active,
+.show > .btn-outline-danger.dropdown-toggle {
+	color: #fff;
+	background-color: #dc3545;
+	border-color: #dc3545;
+}
+
+.btn-outline-danger:not(:disabled):not(.disabled):active:focus, .btn-outline-danger:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-danger.dropdown-toggle:focus {
+	box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
+}
+
+.btn-outline-light {
+	color: #f8f9fa;
+	background-color: transparent;
+	background-image: none;
+	border-color: #f8f9fa;
+}
+
+.btn-outline-light:hover {
+	color: #212529;
+	background-color: #f8f9fa;
+	border-color: #f8f9fa;
+}
+
+.btn-outline-light:focus, .btn-outline-light.focus {
+	box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+}
+
+.btn-outline-light.disabled, .btn-outline-light:disabled {
+	color: #f8f9fa;
+	background-color: transparent;
+}
+
+.btn-outline-light:not(:disabled):not(.disabled):active, .btn-outline-light:not(:disabled):not(.disabled).active,
+.show > .btn-outline-light.dropdown-toggle {
+	color: #212529;
+	background-color: #f8f9fa;
+	border-color: #f8f9fa;
+}
+
+.btn-outline-light:not(:disabled):not(.disabled):active:focus, .btn-outline-light:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-light.dropdown-toggle:focus {
+	box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+}
+
+.btn-outline-dark {
+	color: #343a40;
+	background-color: transparent;
+	background-image: none;
+	border-color: #343a40;
+}
+
+.btn-outline-dark:hover {
+	color: #fff;
+	background-color: #343a40;
+	border-color: #343a40;
+}
+
+.btn-outline-dark:focus, .btn-outline-dark.focus {
+	box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
+}
+
+.btn-outline-dark.disabled, .btn-outline-dark:disabled {
+	color: #343a40;
+	background-color: transparent;
+}
+
+.btn-outline-dark:not(:disabled):not(.disabled):active, .btn-outline-dark:not(:disabled):not(.disabled).active,
+.show > .btn-outline-dark.dropdown-toggle {
+	color: #fff;
+	background-color: #343a40;
+	border-color: #343a40;
+}
+
+.btn-outline-dark:not(:disabled):not(.disabled):active:focus, .btn-outline-dark:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-dark.dropdown-toggle:focus {
+	box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
+}
+
 .navbar {
 	padding: 0 0;
 }
@@ -481,4 +759,106 @@ input[type="submit"]:focus,
 
 input[type="reset"] {
 	font-family: 'Source Sans Pro',sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Block Styles
+--------------------------------------------------------------*/
+.wp-block-more {
+	text-align: left;
+	margin-bottom: 1rem;
+}
+
+.wp-block-more > input[type="text"] {
+	font-family: 'Source Sans Pro',sans-serif;
+	cursor: auto !important;
+	width: 9rem;
+	height: auto;
+	text-transform: none;
+}
+
+.more-link {
+	margin-bottom: 1rem;
+}
+
+p > .more-link {
+	margin-bottom: 0;
+}
+
+.wp-block-button__link {
+	border-radius: 5px;
+}
+
+.wp-block-button__link:visited {
+	color: #fff;
+}
+
+.wp-block-button__link.is-style-squared {
+	border-radius: 0;
+}
+
+.is-style-outline .wp-block-button__link {
+	border-width: 1px;
+}
+
+.is-style-outline .wp-block-button__link:visited {
+	color: #007bbb;
+}
+
+.is-style-outline .wp-block-button__link:hover {
+	color: #fff;
+}
+
+.wp-block-separator {
+	border-bottom: none;
+}
+
+.wp-block-quote {
+	margin: 0 1rem;
+	padding: 0 1rem;
+	border-left: 5px solid #429BBF !important;
+}
+
+.wp-block-pullquote {
+	border-color: #007bbb;
+	padding: 5em 0;
+}
+
+.wp-block-pullquote blockquote {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+.wp-block-pullquote.is-style-solid-color blockquote {
+	text-align: center;
+	max-width: none;
+}
+
+.wp-block-pullquote.is-style-solid-color blockquote p {
+	margin-bottom: 1rem;
+	font-size: 28px;
+}
+
+.wp-block-pullquote cite, .wp-block-pullquote footer, .wp-block-pullquote__citation {
+	text-transform: none;
+}
+
+.wp-block-latest-posts.is-grid li {
+	padding-top: 1rem;
+	border-top: 1px solid #ccc;
+}
+
+.alignfull {
+	margin-left: calc(50% - 50vw);
+	margin-right: calc(50% - 50vw);
+	width: auto;
+	max-width: 1000%;
+}
+
+.alignwide {
+	margin-left: calc(25% - 25vw);
+	margin-right: calc(25% - 25vw);
+	width: auto;
+	max-width: 1000%;
 }
