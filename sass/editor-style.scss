@@ -116,6 +116,10 @@ body.mce-content-body {
 			list-style-type: disc;
 		}
 	}
+	ul.wp-block-gallery {
+		padding: 0;
+		margin: 0;
+	}
 	//Table
 	th, td {
 		padding: 0;
@@ -129,8 +133,18 @@ body.mce-content-body {
 }
 
 //Read More
-.wp-block-more::before {
-    content: none;
+.wp-block-more {
+	position: relative;
+	&::before {
+		content: none;
+	}
+	&::after {
+		content: " \003e";
+		color: #fff;
+		position: absolute;
+		top: .3rem;
+		left: 7.5em;
+	}
 }
 
 //Subheading
@@ -146,6 +160,15 @@ p.wp-block-subhead {
 		.wp-block-quote__citation {
 			font-size: 18px;
 		}
+	}
+}
+
+//Code
+
+.wp-block-code {
+	background-color: $gray-100;
+	textarea {
+		background-color: $gray-100;
 	}
 }
 

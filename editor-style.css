@@ -469,6 +469,11 @@ body.mce-content-body {
 	list-style-type: disc;
 }
 
+.editor-block-list__block ul.wp-block-gallery {
+	padding: 0;
+	margin: 0;
+}
+
 .editor-block-list__block th, .editor-block-list__block td {
 	padding: 0;
 	border: 1px solid currentColor;
@@ -478,8 +483,20 @@ body.mce-content-body {
 	border-color: transparent;
 }
 
+.wp-block-more {
+	position: relative;
+}
+
 .wp-block-more::before {
 	content: none;
+}
+
+.wp-block-more::after {
+	content: " \003e";
+	color: #fff;
+	position: absolute;
+	top: .3rem;
+	left: 7.5em;
 }
 
 p.wp-block-subhead {
@@ -493,6 +510,14 @@ p.wp-block-subhead {
 
 .wp-block-quote.is-large .wp-block-quote__citation {
 	font-size: 18px;
+}
+
+.wp-block-code {
+	background-color: #f8f9fa;
+}
+
+.wp-block-code textarea {
+	background-color: #f8f9fa;
 }
 
 /*--------------------------------------------------------------
