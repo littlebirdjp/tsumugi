@@ -761,6 +761,11 @@ input[type="reset"] {
 	font-family: 'Source Sans Pro',sans-serif;
 }
 
+input[type="submit"],
+input[type="reset"] {
+	vertical-align: inherit;
+}
+
 /*--------------------------------------------------------------
 # Block Styles
 --------------------------------------------------------------*/
