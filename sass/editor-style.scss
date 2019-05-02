@@ -163,6 +163,16 @@ p.wp-block-subhead {
 	}
 }
 
+//Pull quotes
+.wp-block-pullquote {
+	&.alignleft,
+	&.alignright {
+		blockquote>.editor-rich-text p {
+			font-size: 20px;
+		}
+	}
+}
+
 //Code
 
 .wp-block-code {

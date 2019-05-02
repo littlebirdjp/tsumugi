@@ -512,6 +512,10 @@ p.wp-block-subhead {
 	font-size: 18px;
 }
 
+.wp-block-pullquote.alignleft blockquote > .editor-rich-text p, .wp-block-pullquote.alignright blockquote > .editor-rich-text p {
+	font-size: 20px;
+}
+
 .wp-block-code {
 	background-color: #f8f9fa;
 }
