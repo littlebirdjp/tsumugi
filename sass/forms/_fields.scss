@@ -17,6 +17,8 @@ textarea {
 	color: $color__text-input;
 	border: 1px solid $color__border-input;
 	border-radius: 3px;
+	-webkit-appearance: none;
+	outline-offset: 0;
 
 	&:focus {
 		color: $color__text-input-focus;
@@ -48,6 +50,7 @@ input[type="password"],
 input[type="search"] {
 	padding: .5rem;
 	margin-right: .5rem;
+	width: 12rem;
 }
 
 textarea {
@@ -66,4 +69,20 @@ input[type="file"] {
 
 .search-field {
 	font-size: 1rem;
+}
+
+.entry-content input[type="text"],
+.entry-content input[type="email"],
+.entry-content input[type="url"] {
+	@include media-breakpoint-down(sm) {
+		width: 100%;
+	}
+}
+
+.comment-form input[type="text"],
+.comment-form input[type="email"],
+.comment-form input[type="url"] {
+	@include media-breakpoint-down(sm) {
+		width: 100%;
+	}
 }
