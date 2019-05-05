@@ -162,6 +162,8 @@ textarea {
 	color: #666;
 	border: 1px solid #ccc;
 	border-radius: 3px;
+	-webkit-appearance: none;
+	outline-offset: 0;
 }
 
 input[type="text"]:focus,
@@ -208,6 +210,7 @@ input[type="password"],
 input[type="search"] {
 	padding: .5rem;
 	margin-right: .5rem;
+	width: 12rem;
 }
 
 textarea {
@@ -226,6 +229,22 @@ input[type="file"] {
 
 .search-field {
 	font-size: 1rem;
+}
+
+@media (max-width: 767.98px) {
+	.entry-content input[type="text"],
+	.entry-content input[type="email"],
+	.entry-content input[type="url"] {
+		width: 100%;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.comment-form input[type="text"],
+	.comment-form input[type="email"],
+	.comment-form input[type="url"] {
+		width: 100%;
+	}
 }
 
 /*--------------------------------------------------------------
@@ -760,12 +779,14 @@ a:hover, a:focus, a:active {
 }
 
 .entry-content pre,
-.mce-content-body pre {
+.mce-content-body pre,
+.editor-block-list__block pre {
 	line-height: 1;
 }
 
 .entry-content h1,
-.mce-content-body h1 {
+.mce-content-body h1,
+.editor-block-list__block h1 {
 	border-bottom: 5px solid #429BBF;
 	padding-bottom: .45rem;
 	margin-bottom: 1rem;
@@ -773,7 +794,8 @@ a:hover, a:focus, a:active {
 }
 
 .entry-content h2,
-.mce-content-body h2 {
+.mce-content-body h2,
+.editor-block-list__block h2 {
 	border-bottom: 1px solid #c2c1c1;
 	padding-bottom: .45rem;
 	margin-bottom: 1rem;
@@ -781,7 +803,8 @@ a:hover, a:focus, a:active {
 }
 
 .entry-content h3,
-.mce-content-body h3 {
+.mce-content-body h3,
+.editor-block-list__block h3 {
 	border-left: 4px solid #007bbb;
 	padding: 0 .5rem;
 	margin-bottom: 1rem;
@@ -789,7 +812,8 @@ a:hover, a:focus, a:active {
 }
 
 .entry-content h4,
-.mce-content-body h4 {
+.mce-content-body h4,
+.editor-block-list__block h4 {
 	background: #e9ecef;
 	padding: .25rem .5rem;
 	margin-bottom: 1rem;
@@ -797,14 +821,16 @@ a:hover, a:focus, a:active {
 }
 
 .entry-content h5,
-.mce-content-body h5 {
+.mce-content-body h5,
+.editor-block-list__block h5 {
 	font-weight: 700;
 	margin-bottom: 1rem;
 	line-height: 1.4;
 }
 
 .entry-content h6,
-.mce-content-body h6 {
+.mce-content-body h6,
+.editor-block-list__block h6 {
 	font-weight: 700;
 	margin-bottom: 1rem;
 	line-height: 1.4;
