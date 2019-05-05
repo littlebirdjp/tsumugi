@@ -1,11 +1,11 @@
 === tsumugi ===
 
 Contributors: youthkee
-Tags: blog, one-column, custom-background, custom-colors, custom-menu, custom-header, custom-logo, footer-widgets, flexible-header, full-width-template, threaded-comments, translation-ready, editor-style, featured-images
+Tags: blog, one-column, custom-background, custom-colors, custom-menu, custom-header, custom-logo, footer-widgets, flexible-header, full-width-template, threaded-comments, translation-ready, editor-style, featured-images, block-styles, wide-blocks
 
 Requires at least: 4.5
-Tested up to: 4.9.4
-Stable tag: 2.1.1
+Tested up to: 5.1.1
+Stable tag: 2.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,6 +32,10 @@ tsumugi is a simple blog theme based on _s and Bootstrap. It consists of a singl
 3. Click Activate to use your new theme right away.
 
 == Changelog ==
+
+= 2.2.1 - Mar 5 2019 =
+* Add support for the Block Editor.
+* Fix form styles.
 
 = 2.1.1 - Apr 11 2018 =
 * Fix a description text.

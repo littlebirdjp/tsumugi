@@ -225,8 +225,8 @@ endif;
  */
 function tsumugi_scripts() {
 	wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/bootstrap/bootstrap.min.css', array(), '4.0.0', 'all' );
-	wp_enqueue_style( 'tsumugi-style', get_template_directory_uri() . '/bootstrap/tsumugi.css', array('bootstrap-style'), '2.1.1', 'all' );
-	wp_enqueue_style( 'underscores-style', get_stylesheet_uri(), array('tsumugi-style'), '2.1.1', 'all' );
+	wp_enqueue_style( 'tsumugi-style', get_template_directory_uri() . '/bootstrap/tsumugi.css', array('bootstrap-style'), '2.2.1', 'all' );
+	wp_enqueue_style( 'underscores-style', get_stylesheet_uri(), array('tsumugi-style'), '2.2.1', 'all' );
 
 	wp_enqueue_style( 'tsumugi-fonts', tsumugi_fonts_url(), array(), null );
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/font-awesome/css/font-awesome.min.css', array(), '4.6.3', 'all' );
